@@ -1,16 +1,16 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: e aí? Camilo aquí
+subtitle: Data Scientist, Traveler, Researcher
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+This guy's name is Camilo Cabrera.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Some random facts about him:
 
-What else do you need?
+- Loves to surf, to play guitar, to cook, and automate things.
+- Speaks spanish, english and portuguese.
+- Has traveled more than 20 countries.
+- Master of Science (MSc) in Industrial Engineering.
 
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Interested in my professional profile? Check out my [LinkedIn Profile](https://www.linkedin.com/in/camilo-cabrera-21663b17/)
