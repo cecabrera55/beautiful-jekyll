@@ -1,6 +1,6 @@
 ---
 layout: page
-title: e aí? Camilo aquí
+title: About me
 subtitle: Data Scientist, Traveler, Researcher
 ---
 
