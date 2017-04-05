@@ -1,7 +1,13 @@
 ---
 layout: post
 title: Mi primer post!
-tags: [primerblog, ansioso, github, deanatttali, R]
+tags:
+  - primerblog
+  - ansioso
+  - github
+  - deanatttali
+  - R
+published: true
 ---
 
 Siempre quise tener mi propia página web. Un sitio donde pudiese escribir cosas personales, profesionales e incluso random y que pudiese acudir a él en caso quisiera recordar un contenido valioso.
@@ -12,6 +18,4 @@ Conocí Git en Brasil mientras trabajaba como Big Data Analyst y me costaba ente
 
 Esto me abrió un mundo de posibilidades en la comunidad open source: empecé a replicar (fork) las carpetas de mis colegas data scientists y desarrolladores con el ánimo de aprovechar su código y buscar formas de mejorarlo. ¿el resultado? dashboards listos para el cliente con relativo poco esfuerzo.
 
-Espero esta breve introducción te sirva como inspiración a desarrollar código en el lenguaje que más te apetezca. 
-
-No dudes en contactarme si tienes alguna duda.
+Espero esta breve introducción te sirva como inspiración a desarrollar código en el lenguaje que más te apetezca.
