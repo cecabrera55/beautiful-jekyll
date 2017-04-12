@@ -1,6 +1,5 @@
 ---
 layout: post
-comments: true
 title: Mi primer post!
 tags:
   - primerblog
