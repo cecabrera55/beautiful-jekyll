@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mi primer post!
+comments:true
 tags:
   - primerblog
   - ansioso
