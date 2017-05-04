@@ -7,7 +7,7 @@ tags:
   - Analítica
   - Modelos predictivos
   - Python
-published: false
+published: true
 ---
 
 # Introducción
