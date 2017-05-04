@@ -42,13 +42,28 @@ css: "/css/aboutme.css"
 </div>
 
 <div id="contactme-section">
-  <h1>Contact</h1>
+  <h1 id="contact">Contact</h1>
   
-  <form action="https://formspree.io/cecabrera55@gmail.com"
-      method="POST" class="form" id="contact-form">
-    <p>You can also send a message using the form below:</p>
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <input type="submit" value="Send">
+  <p>You can <a href="mailto:cecabrera55@gmail.com?subject=Hello from cecabrera.github.io">email me</a> or find me <a href="https://twitter.com/CamiloECabrera">on Twitter</a> if you want to get in touch. As I enjoy conversations with new people so don't hesitate to send a message!</p>
+  
+  <p>I do a lot of consulting work in R and Python, so feel free to get in touch if you want to discuss potential projects or need any paid help.</p>
+  
+  <p>If you'd like to set up a meeting with me, <a href="https://calendly.com/cecabrera55/meeting">click here to schedule a meeting</a> based on your (and my) availability.</p>
+
+  <form action="https://formspree.io/cecabrera55@gmail.com" method="POST" class="form" id="contact-form">
+    <p>You can also send me a quick message using the form below:</p>
+    <div class="row">
+      <div class="col-xs-6">
+        <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email" title="Email">
+      </div>
+      <div class="col-xs-6">
+        <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
+      </div>
+    </div>
+    <input type="hidden" name="_subject" value="New submission from cecabrera.github.io">
+    <textarea type="text" name="content" class="form-control input-lg" placeholder="Message" title="Message" required="required" rows="3"></textarea>
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_next" value="./aboutme?message=Your message was sent successfully, thanks!" />
+    <button type="submit" class="btn btn-lg btn-primary">Submit</button>
   </form>
 </div>
