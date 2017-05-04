@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Data Scientist, Traveler, Researcher
+subtitle: or why would you be interested in a cup of colombian coffee with me
 bigimg:
   - "/img/bigimg/termopilas_rest.jpg" : "Resting at Termópilas (Colombia, 2016)"
   - "/img/bigimg/rijimountain.jpg" : "Riji Mountain (Switzerland, 2013)"
