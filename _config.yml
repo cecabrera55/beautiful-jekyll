@@ -59,9 +59,9 @@ footer-links-active:
   telephone: true
   rss: false
   linkedin: true
-  github: true
+  github: false
   facebook: true
-  twitter: true
+  twitter: false
   email: true
   xing: false
   stackoverflow: false
