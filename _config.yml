@@ -25,6 +25,7 @@ description: Web page for data science, business intelligence, analytics, dashbo
 navbar-links:
   Home: ""
   About Me: "aboutme"
+  Projects: "projects"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
