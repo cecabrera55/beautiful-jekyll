@@ -8,7 +8,7 @@ tags:
   - Modelos predictivos
   - Python
   - Español
-published: true
+published: false
 ---
 
 # Introducción
@@ -21,10 +21,10 @@ A diferencia de la industria automotriz, el mercado inmobiliario siempre se valo
 
 2. El comportamiento de la industria, a través de la innovación, genera valor y esto aumenta el poder adquisitivo de las personas. Por lo tanto, una persona estará cada vez más en capacidad de pagar por un mayor precio que unos años atrás.
 
-Contenido 
+# Contenido 
 
 De pequeño adoraba jugar monopolio: Tener propiedades y negociar con ellas. Si combinas eso con un papá arquitecto y constructor. 
 
 Luego de desarrollar un bot (código de máquina para desempeñar tareas humanas), descargué la información de 50.000 propiedades en Colombia porque quería graficar con esos predios un mapa de las principales ciudades de Colombia. Comencé por Bogotá. 
 
-Conclusión 
+# Conclusión 

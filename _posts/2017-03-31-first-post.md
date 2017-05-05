@@ -1,16 +1,16 @@
 ---
 layout: post
-title: El poder de GitHub
+title: Los superpoderes de GitHub
 tags:
+  - Español
   - GitHub
-  - Visualización de datos
   - Desarrollo
   - R
   - Python
 published: true
 ---
 
-Siempre quise tener mi propia página web. Un sitio donde pudiese escribir cosas personales, profesionales e incluso random y que pudiese acudir a él en caso quisiera recordar un contenido valioso.
+Esta página web, junto con sus add-ins y blogs fue realizada en Github. Esta red social de programadores funciona también como host de páginas estáticas para exponer proyectos. 
 
 Para hacerla, tuve un excelente maestro: [Dean Attali](http://deanattali.com/). Un emprendedor y viajero de Tal Aviv que trabajó en Google como desarrollador de software y ahora tiene su propia start up de desarrollo y consultoría en R / Shiny, llamada Attali Consulting. Él ha redactado blogs sobre R, JavaScript e incluso uno sobre cómo hacer tu propia página web en 3 minutos usando Pages de [GitHub](http://github.com) y la librería [Beautiful Jekyll](http://deanattali.com/beautiful-jekyll/).
 
