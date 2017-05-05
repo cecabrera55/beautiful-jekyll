@@ -54,6 +54,8 @@ author:
 
 # Select which links to show in the footer
 footer-links-active:
+  calendly: true
+  telephone: true
   rss: false
   linkedin: true
   github: true
@@ -64,8 +66,6 @@ footer-links-active:
   stackoverflow: false
   instagram: false
   youtube: false
-  calendly: true
-  telephone: true
 
 # Select which share links to show in posts
 share-links-active:
