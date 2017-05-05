@@ -49,6 +49,8 @@ author:
   stackoverflow: yourlink  # eg. "3943160/daattali"
   instagram: yourname # eg. daattali
   youtube: yourlink # eg. user/daattali or channel/daattali
+  calendly: "cecabrera55/meeting"
+  telephone: +573164711686
 
 # Select which links to show in the footer
 footer-links-active:
@@ -62,6 +64,8 @@ footer-links-active:
   stackoverflow: false
   instagram: false
   youtube: false
+  calendly: true
+  telephone: true
 
 # Select which share links to show in posts
 share-links-active:
