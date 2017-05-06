@@ -23,13 +23,14 @@ description: Web page for data science, business intelligence, analytics, dashbo
 
 # List of links in the navigation bar
 navbar-links:
-  Home: ""
+  Blog: ""
   About Me: "aboutme"
   Services: "services"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
+nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -43,13 +44,13 @@ author:
   name: Camilo Cabrera
   email: "cecabrera55@gmail.com"
   linkedin: camilo-cabrera-21663b17
-  github: cecabrera    # eg. daattali
-  twitter: CamiloECabrera   # eg. daattali
+  github: cecabrera   
+  twitter: CamiloECabrera
   facebook: cecabrera55
-  xing: yourname      # eg. daattali
-  stackoverflow: yourlink  # eg. "3943160/daattali"
-  instagram: yourname # eg. daattali
-  youtube: yourlink # eg. user/daattali or channel/daattali
+  xing: yourname
+  stackoverflow: yourlink
+  instagram: yourname 
+  youtube: yourlink # eg. user/cecabrera or channel/cecabrera
   calendly: "cecabrera55/meeting"
   telephone: +57 316 4711686
 
