@@ -3,13 +3,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if page.meta-title %}
+  <title>{{ page.meta-title }}</title>
+  {% elsif page.title %}
+  <title>{{ page.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
 
   <meta name="author" content="{{ site.author.name }}" />
   
-  {% if page.subtitle %}
+  {% if page.meta-description %}
+  <meta name="description" content="{{ page.meta-description }}">
+  {% elsif page.subtitle %}
   <meta name="description" content="{{ page.subtitle }}">
+  {% else %}
+  <meta name="description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
   {% endif %}
+
+  <meta name="keywords" content="analytics, big data, machine learning, deep learning, artificial intelligence, business intelligence, rstats,r,r shiny,shiny apps,r shiny apps,shiny developer,r shiny developer,shiny consultant,web application development with r using shiny, python, pandas, dashboards, tableau, consultant, javascript, d3, dc">
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -50,21 +62,30 @@
   {% endif %}
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:type" content="website" />
-  {% if page.id %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  {% if page.meta-title %}
+  <meta property="og:title" content="{{ page.meta-title }}" />
+  {% elsif page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
   {% else %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
-  {% endif %}
-  {% if page.share-img %}
-  <meta property="og:image" content="{{ page.share-img }}" />
-  {% elsif site.avatar %}
-  <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
-  {% else %}
-  <meta property="og:image" content="" />
+  <meta property="og:title" content="{{ site.title }}" />
   {% endif %}
   
+  <meta property="og:type" content="website" />
+  
+  {% if page.id %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  {% else %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
+  {% endif %}
+  
+  {% if page.share-img %}
+  <meta property="og:image" content="{{ page.share-img }}" />
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
+  {% endif %}
+
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
