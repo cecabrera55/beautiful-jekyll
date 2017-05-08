@@ -25,4 +25,4 @@ Hay también trabajos de grandes compañías tecnológicas como Google, Facebook
 1. [Deck.gl](http://uber.github.io/deck.gl/#/): desarrollado por Uber en Python y JavaScript cuyo objetivo es el análisis exploratorio y visual de grandes cantidades de datos.
 2. [Superset](https://github.com/airbnb/superset): desarrollado por Airbnb en Python y D3 (JavaScript) cuyo objetivo es tener una plataforma de exploración de datos diseñada para ser visual, intuitiva e interactiva.
 
-GitHub es una red social (y de conocimiento) poderosísima que puede ampliar tus capacidades de desarrollo de código en proyectos personales y profesionales. ¿Tienes una historia de GitHub que quieras compartir? 
+GitHub es una red social y de conocimiento poderosísima que ha ampliado mis capacidades de desarrollo de código en proyectos personales y profesionales. Me gustaría conocer más historias sobre el uso de la herramienta, ¿tienes alguna?
