@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitHub, una red social de desarrolladores
+title: Mi experiencia en GitHub
 tags:
   - Español
   - GitHub
