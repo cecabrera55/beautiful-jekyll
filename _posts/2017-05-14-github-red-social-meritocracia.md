@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitHub: una red social basada en meritocracia
+title: "GitHub: una red social basada en meritocracia"
 tags:
   - Español
   - GitHub
