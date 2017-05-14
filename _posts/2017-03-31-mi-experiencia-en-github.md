@@ -9,11 +9,10 @@ tags:
   - Python
 published: true
 ---
+[//]: # This kind of meritocratic social network will also be an important component of online education. It is all well and good to take courses online, but a big part of the value of higher education is the connections you make to peers pursuing similar interests. Networks that reward access through constructive work should be a key aspects of online educational efforts.
+[//]: # https://www.forbes.com/sites/anthonykosner/2012/07/15/github-is-the-next-big-social-network-powered-by-what-you-do-not-who-you-know/#55a4c08145ce
 
-[//]: # Comentario en el blog que no debería aparecer
-Comentario fuera?
-
-Esta página web, sus blog y add-ins (complementos) fueron desarrollados usando [Pages](https://pages.github.com/) de [Github](https://github.com/). Esta red social para entusiastas de la programación funciona también como host de páginas estáticas y proyectos. Puedes encontrar códigos, imágenes, páginas webs enteras y hasta programas desarrollados y publicados por grandes compañías.
+Esta página web, sus blogs y add-ins (complementos) fueron desarrollados en [Github](https://github.com/). Esta red social para entusiastas de la programación funciona también como host de páginas estáticas y proyectos. Puedes encontrar códigos, imágenes, páginas webs enteras y hasta programas desarrollados y publicados por grandes compañías.
 
 Además de su característica de red social, GitHub utiliza una tecnología llamada Git desarrollada para llevar el control de cambios sobre líneas de código, archivos y carpetas. Características adicionales de Git incluyen combinación de códigos, retroceso en versiones y desarrollo local, entre otras.
 
