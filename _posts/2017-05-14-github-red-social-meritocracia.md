@@ -8,6 +8,7 @@ tags:
   - Meritocracia
 published: true
 ---
+
 Esta página web, sus blogs y add-ins (complementos) fueron desarrollados en [Github](https://github.com/). Esta red social para entusiastas de la programación funciona también como host de páginas estáticas y proyectos. Puedes encontrar códigos, imágenes, páginas webs enteras y hasta programas desarrollados y publicados por grandes compañías.
 
 Además de su característica de red social, GitHub utiliza una tecnología llamada Git desarrollada para llevar el control de cambios sobre líneas de código, archivos y carpetas. Características adicionales de Git incluyen combinación de códigos, retroceso en versiones y desarrollo local, entre otras.
