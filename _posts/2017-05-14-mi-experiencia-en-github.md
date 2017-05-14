@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Mi experiencia en GitHub
+title: GitHub: una red social basada en meritocracia
 tags:
   - Español
   - GitHub
   - Desarrollo
+  - Meritocracia
 published: true
 ---
 Esta página web, sus blogs y add-ins (complementos) fueron desarrollados en [Github](https://github.com/). Esta red social para entusiastas de la programación funciona también como host de páginas estáticas y proyectos. Puedes encontrar códigos, imágenes, páginas webs enteras y hasta programas desarrollados y publicados por grandes compañías.
