@@ -30,7 +30,7 @@ El proceso fue divertido. Utilizamos una combinación de códigos en R y Python 
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. Lo publicamos en dos servidores:
 
 1. En [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
-2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y tener la última versión; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
+2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y hacer futuras modificaciones; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
 
 Divimos el proyecto en 3 métricas relevantes:
 1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá. En este caso era interesante ver cómo Chapinero, a través de la Caracas, era la zona más densa de semáforos. Desarrollado en R y Javascript.
