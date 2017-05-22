@@ -8,6 +8,7 @@ tags:
   - HTML5
   - ViveLabBogotá
 published: true
+bigimg: "/img/posts/semaforos.png"
 ---
 [DataJam: Datos DC Suba](http://datosdc.vivelabbogota.com/) fue un evento realizado el 20 y 21 de mayo en el Punto Vive Digital de Suba. Organizados por la Alta Consejería Distrital de TIC en alianza con ViveLabBogotá y la Universidad Nacional de Colombia, esta serie de eventos buscan que el asistente aprenda, proponga y prototipe ideas para la resolución de problemas reales mediante el uso de [datos abiertos](http://www.datos.gov.co) y el desarrollo de mashup apps. 
 
@@ -22,13 +23,19 @@ Los retos que debíamos escoger en este DataJam fueron:
 
 Todos en el equipo concordamos en atacar el primer reto: ayudar a los ciudadanos de Bogotá y/o a las entidades prestadoras de servicios de transporte público a reducir los tiempos de desplazamiento.
 
+## El proyecto
+
 El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estilos de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
 
-## El proyecto
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. Lo publicamos en dos servidores:
 
 1. En [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
 2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y aprovechar las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de GitHub de publicar proyectos. 
+
+Divimos el proyecto en 3 insights:
+1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá.
+2. [Mapa de puntos](https://cecabrera.github.io/datosbogota/mapa2.html). Muestra los destinos hacia donde llegan los bogotanos en cuyo color cambia en función de la velocidad promedio recorrida.
+3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. 
 
 El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
