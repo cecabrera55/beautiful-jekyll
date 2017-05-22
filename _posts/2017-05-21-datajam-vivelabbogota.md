@@ -25,24 +25,24 @@ Todos en el equipo concordamos en atacar el primer reto: ayudar a los ciudadanos
 
 ## El proyecto
 
-El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estilos de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
+El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estética de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
 
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. Lo publicamos en dos servidores:
 
 1. En [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
-2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y aprovechar las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de GitHub de publicar proyectos. 
+2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y tener la última versión; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de GitHub de publicar proyectos. 
 
-Divimos el proyecto en 3 insights:
-1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá.
-2. [Mapa de puntos](https://cecabrera.github.io/datosbogota/mapa2.html). Muestra los destinos hacia donde llegan los bogotanos en cuyo color cambia en función de la velocidad promedio recorrida.
-3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. 
+Divimos el proyecto en 3 métricas relevantes:
+1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá. Desarrollado en R y Javascript.
+2. [Mapa de puntos](https://cecabrera.github.io/datosbogota/mapa2.html). Muestra los destinos hacia donde llegan los bogotanos en cuyo color cambia en función de la velocidad promedio recorrida. Lenguajes: Python y JavaScript. 
+3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Lenguaje: Python.
 
-El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
+La aplicación final fue desarrollada combinando HTML con la plantilla de Bootstrap (CSS) y JQuery (JavaScript). El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
 ## Aprendizajes
-* En proyectos de ciencia de datos, la limpieza de los mismos se toma la mayoría del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y demás organización de datos consumieron la mayor parte del tiempo. 
-* Integración de front-end y back-end en pro de una solución práctica basada en datos. Nuestra prioridad en esta primera iteración era entregar un mínimo producto viable, no un producto para la NASA. Esto hace parte de la filosofía de [desarrollo ágil de software](https://en.wikipedia.org/wiki/Scrum_(software_development)).
-* Git es fundamental en el desarrollo de proyectos digitales. A pesar que todos éramos nuevos en la tecnología, dimos el voto de confianza y alcanzamos resultados coordinados; es decir, sin conflicto de versiones. 
+* En proyectos de ciencia de datos, la limpieza de los mismos consume la mayoría del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y los filtros a los datos consumieron la mayor parte del tiempo. 
+* Integración de front-end y back-end en pro de una solución práctica basada en datos. Nuestra prioridad en esta primera iteración era entregar un mínimo producto viable, no un producto para la NASA. Fue el mejor aprendizaje de implementar una metodología de [desarrollo ágil de software](https://en.wikipedia.org/wiki/Scrum_(software_development)).
+* Git es fundamental en el desarrollo de proyectos digitales. A pesar que todos éramos nuevos en esta tecnología, dimos el voto de confianza y alcanzamos resultados coordinados; sin conflicto de versiones. 
 
 ## Apuntes finales
-En conclusión, el enfoque ágil de la actividad, la capacidad logística del equipo y la expertiz técnica de sus profesionales hizo del DataJam un evento práctico para aplicar ciencia de datos. Habilidades como el desarrollo de aplicaciones, el trabajo en equipo y sobre todo la entrega de resultados bajo presión fueron la batuta que orquestó nuestro fin de semana. Tomen esto como una invitación para que aquellos entusiastas de los datos se [inscriban](http://datosdc.vivelabbogota.com) a la comunidad.
+En conclusión, el enfoque ágil de la actividad, la capacidad logística del equipo y la expertiz técnica de sus profesionales hizo del DataJam un evento aplicado a ciencia de datos. Habilidades como el desarrollo de aplicaciones, el trabajo en equipo y sobre todo la entrega de resultados bajo presión fueron la batuta que orquestó nuestro fin de semana. Tomen esto como una invitación para que aquellos entusiastas de datos se [inscriban](http://datosdc.vivelabbogota.com) a los próximos DataJam y aprovechen esta oportunidad. Es gratis.
