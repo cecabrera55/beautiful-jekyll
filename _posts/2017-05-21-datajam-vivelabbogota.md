@@ -38,7 +38,7 @@ Divimos el proyecto en 3 métricas relevantes:
 
 ![Mapa de puntos con los destinos de los bogotanos](https://cecabrera.github.io/img/posts/destinos.png)
 
-3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
+3. [Análisis de destinos](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
 
 Publicamos el proyecto en dos servidores:
 
