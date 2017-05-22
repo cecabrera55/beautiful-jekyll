@@ -9,13 +9,12 @@ tags:
   - ViveLabBogotá
 published: true
 ---
-# ¿Qué fue el DataJam?
-[DataJam: Datos DC](http://datosdc.vivelabbogota.com/) fue un evento realizado el 20 y 21 de mayo en el Punto Vive Digital de Suba. Organizado por la Alta Consejería Distrital de TIC en alianza con ViveLabBogotá y la Universidad Nacional de Colombia, estos eventos buscan que el asistente aprenda, proponga y prototipe ideas para la resolución de problemas reales mediante el uso de [datos abiertos](http://www.datos.gov.co) y el desarrollo de mashup apps. 
+[DataJam: Datos DC Suba](http://datosdc.vivelabbogota.com/) fue un evento realizado el 20 y 21 de mayo en el Punto Vive Digital de Suba. Organizados por la Alta Consejería Distrital de TIC en alianza con ViveLabBogotá y la Universidad Nacional de Colombia, esta serie de eventos buscan que el asistente aprenda, proponga y prototipe ideas para la resolución de problemas reales mediante el uso de [datos abiertos](http://www.datos.gov.co) y el desarrollo de mashup apps. 
 
-# ¿Cuál fue su contenido?
-La agenda del evento se dividió en dos secciones principales; y mucha comida (guiño para el staff). La primera fueron talleres de HTML, CSS, Github, Javascript, Jquery, D3.js y Google Maps para trabajar con las fuentes de datos (datasets). Debido a la limitante de tiempo, cada taller tuvo una mirada holística a su lenguaje con el propósito de profundizar mediante la práctica en la segunda parte del fin de semana. Esta sección tardó medio día e incluyó una actividad de integración llamada ["la fábrica de pelotas"](https://www.youtube.com/watch?v=-tMcQBfJPOo) liderada por Danny Sierra, gestor del proyecto.
+## La agenda
+La agenda del evento se dividió en dos secciones principales; y mucha comida (guiño para el staff). La primera parte tardó medio día e incluyó una actividad de integración llamada ["la fábrica de pelotas"](https://www.youtube.com/watch?v=-tMcQBfJPOo) liderada por Danny Sierra, gestor del proyecto. Vimos talleres de HTML, CSS, Github, Javascript, Jquery, D3.js y Google Maps para trabajar con las [fuentes de datos](http://datos.gov.co) (datasets) abiertos del Gobierno Nacional. Dada la limitante de tiempo, cada taller tuvo una mirada holística a su lenguaje con el propósito de profundizar mediante la práctica en la segunda parte del fin de semana.
 
-Lo siguiente en el DataJam fue armar un equipo, seleccionar los datos, construir una solución a un problema, y desarrollar un prototipo con la información disponible. El equipo lo formamos con [Luis Alejandro Mahecha](https://www.linkedin.com/in/lamahechag/), [Sebastián Malagón](https://www.linkedin.com/in/sebasti%C3%A1n-malag%C3%B3n-p%C3%A9rez-17768b125/), [Alexander Vargas](https://www.linkedin.com/in/alexander-vargas-7b428111b/) y [yo](http://cecabrera.github.io).
+Durante el siguiente día y medio, las actividades se enfocaron en armar un equipo, seleccionar los datos, construir una solución a un problema, y desarrollar un prototipo con la información disponible. El equipo lo constituimos [Luis Alejandro Mahecha](https://www.linkedin.com/in/lamahechag/), [Sebastián Malagón](https://www.linkedin.com/in/sebasti%C3%A1n-malag%C3%B3n-p%C3%A9rez-17768b125/), [Alexander Vargas](https://www.linkedin.com/in/alexander-vargas-7b428111b/) y [yo](http://cecabrera.github.io).
 
 Los retos que debíamos escoger en este DataJam fueron:
 1. ¿Cómo reducir los tiempos de desplazamiento de los habitantes de la ciudad?
@@ -23,9 +22,9 @@ Los retos que debíamos escoger en este DataJam fueron:
 
 Todos en el equipo concordamos en atacar el primer reto: ayudar a los ciudadanos de Bogotá y/o a las entidades prestadoras de servicios de transporte público a reducir los tiempos de desplazamiento.
 
-# ¿Cómo lo desarrollamos?
-El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estilos de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo. 
+El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estilos de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
 
+## El proyecto
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. Lo publicamos en dos servidores:
 
 1. En [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
@@ -33,9 +32,10 @@ Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este 
 
 El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
-# ¿Qué aprendimos?
-Este evento lo resumo en los siguientes aprendizajes:
-* 
+## Aprendizajes
+* En proyectos de ciencia de datos, la limpieza de los mismos se toma la mayoría del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y demás organización de datos consumieron la mayor parte del tiempo. 
+* Integración de front-end y back-end en pro de una solución práctica basada en datos. Nuestra prioridad en esta primera iteración era entregar un mínimo producto viable, no un producto para la NASA. Esto hace parte de la filosofía de [desarrollo ágil de software](https://en.wikipedia.org/wiki/Scrum_(software_development)).
+* Git es fundamental en el desarrollo de proyectos digitales. A pesar que todos éramos nuevos en la tecnología, dimos el voto de confianza y alcanzamos resultados coordinados; es decir, sin conflicto de versiones. 
 
-# Apuntes finales
+## Apuntes finales
 En conclusión, el enfoque ágil de la actividad, la capacidad logística del equipo y la expertiz técnica de sus profesionales hizo del DataJam un evento práctico para aplicar ciencia de datos. Habilidades como el desarrollo de aplicaciones, el trabajo en equipo y sobre todo la entrega de resultados bajo presión fueron la batuta que orquestó nuestro fin de semana. Tomen esto como una invitación para que aquellos entusiastas de los datos se [inscriban](http://datosdc.vivelabbogota.com) a la comunidad.
