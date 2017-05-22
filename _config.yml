@@ -8,7 +8,7 @@ url: "http://cecabrera.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-url: "http://username.github.io/datosbogota"
+url: "http://cecabrera.github.io/datosbogota"
 baseurl: "/datosbogota"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
