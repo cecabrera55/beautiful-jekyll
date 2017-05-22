@@ -10,7 +10,7 @@ tags:
 published: true
 bigimg: "/img/posts/semaforos.png"
 ---
-[DataJam: Datos DC Suba](http://datosdc.vivelabbogota.com/) fue un evento realizado el 20 y 21 de mayo en el Punto Vive Digital de Suba. Este hace parte de una serie de eventos organizados por la Alta Consejería Distrital de TIC en alianza con ViveLabBogotá y la Universidad Nacional de Colombia con el propósito que el/la asistente aprenda, proponga y prototipe ideas para la resolución de problemas reales mediante el uso de [datos abiertos](http://www.datos.gov.co) en Colombia y el desarrollo de mashup apps. 
+[DataJam: Datos DC Suba](http://datosdc.vivelabbogota.com/) fue un evento del 20 y 21 de mayo en el Punto Vive Digital de Suba. Este hace parte de una serie de eventos organizados por la Alta Consejería Distrital de TIC en alianza con ViveLabBogotá y la Universidad Nacional de Colombia con el propósito que el/la asistente aprenda, proponga y prototipe ideas para la resolución de problemas reales mediante el uso de [datos abiertos](http://www.datos.gov.co) en Colombia y el desarrollo de mashup apps. 
 
 ## La agenda
 La agenda del evento se dividió en dos secciones principales; y mucha comida (guiño para el staff). La primera parte tardó medio día e incluyó una actividad de integración llamada ["la fábrica de pelotas"](https://www.youtube.com/watch?v=-tMcQBfJPOo) liderada por Danny Sierra, gestor del proyecto. Vimos talleres de HTML, CSS, Github, Javascript, Jquery, D3.js y Google Maps para trabajar con las [fuentes de datos](http://datos.gov.co) (datasets) abiertos de Colombia. Dada la limitante de tiempo, cada taller tuvo una mirada holística a su lenguaje con el propósito de profundizar mediante la práctica en la segunda parte del fin de semana.
