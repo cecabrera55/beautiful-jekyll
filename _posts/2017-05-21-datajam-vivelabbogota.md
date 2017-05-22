@@ -30,14 +30,14 @@ El proceso fue divertido. Utilizamos una combinación de códigos en R y Python 
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. Lo publicamos en dos servidores:
 
 1. En [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
-2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y tener la última versión; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de GitHub de publicar proyectos. 
+2. En [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y tener la última versión; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
 
 Divimos el proyecto en 3 métricas relevantes:
-1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá. Desarrollado en R y Javascript.
-2. [Mapa de puntos](https://cecabrera.github.io/datosbogota/mapa2.html). Muestra los destinos hacia donde llegan los bogotanos en cuyo color cambia en función de la velocidad promedio recorrida. Lenguajes: Python y JavaScript. 
-3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Lenguaje: Python.
+1. [Mapa de calor](https://cecabrera.github.io/datosbogota/semaforos.png). Identifica los puntos donde más se aglutinan los semáforos en Bogotá. En este caso era interesante ver cómo Chapinero, a través de la Caracas, era la zona más densa de semáforos. Desarrollado en R y Javascript.
+2. [Mapa de puntos](https://cecabrera.github.io/datosbogota/mapa2.html). Muestra los destinos hacia donde llegan los bogotanos en cuyo color cambia en función de la velocidad promedio recorrida. De nuevo, Chapinero demuestra ser una zona de gran afluencia social en Bogotá. Lenguajes: Python y JavaScript.
+3. [Análisis de distancias](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos, una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero. Lenguaje: Python.
 
-La aplicación final fue desarrollada combinando HTML con la plantilla de Bootstrap (CSS) y JQuery (JavaScript). El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
+La aplicación final fue desarrollada combinando HTML con la plantilla Bootstrap de CSS y el paquete JQuery de JavaScript. El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
 ## Aprendizajes
 * En proyectos de ciencia de datos, la limpieza de los mismos consume la mayoría del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y los filtros a los datos consumieron la mayor parte del tiempo. 
