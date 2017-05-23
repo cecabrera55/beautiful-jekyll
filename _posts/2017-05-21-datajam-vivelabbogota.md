@@ -30,15 +30,15 @@ El proceso fue divertido. Utilizamos una combinación de códigos en R y Python 
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. 
 
 Divimos el proyecto en 3 métricas relevantes:
-1. Mapa de calor. Identifica los puntos donde más se aglutinan los semáforos en Bogotá. En este caso era interesante ver cómo Chapinero y el Centro, a través de la Caracas, era la zona más densa de semáforos. Lo desarrollamos en R y Javascript.
+* Mapa de calor. Identifica los puntos donde más se aglutinan los semáforos en Bogotá. En este caso era interesante ver cómo Chapinero y el Centro, a través de la Caracas, era la zona más densa de semáforos. Lo desarrollamos en R y Javascript.
 
 ![Mapa de calor con la densidad de semáforos en Bogotá](https://cecabrera.github.io/datosbogota/semaforos.png)
 
-2. Mapa de puntos. Muestra los destinos hacia donde llegan los bogotanos y cuyo color cambia en función de la velocidad promedio recorrida. De nuevo, Chapinero y el Centro demuestran ser zonas de gran afluencia social en Bogotá. Lo desarrollamos en Python y JavaScript.
+* Mapa de puntos. Muestra los destinos hacia donde llegan los bogotanos y cuyo color cambia en función de la velocidad promedio recorrida. De nuevo, Chapinero y el Centro demuestran ser zonas de gran afluencia social en Bogotá. Lo desarrollamos en Python y JavaScript.
 
 ![Mapa de puntos con los destinos de los bogotanos](https://cecabrera.github.io/img/posts/destinos.png)
 
-3. [Análisis de destinos](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
+* [Análisis de destinos](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
 
 Publicamos el proyecto en dos servidores:
 
