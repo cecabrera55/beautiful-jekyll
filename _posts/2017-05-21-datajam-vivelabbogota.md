@@ -25,7 +25,7 @@ Todos en el equipo concordamos en atacar el primer reto: ayudar a los ciudadanos
 
 ## El proyecto
 
-El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estética de la solución. Ganamos el Curso de Introducción de Tableau Desktop Professional y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
+El proceso fue divertido. Utilizamos una combinación de códigos en R y Python para lectura, procesamiento y limpieza de datos; y JavaScript, CSS y HTML para visualización y estética de la solución. Ganamos el Curso de Introducción de [Tableau Desktop Professional](https://www.tableau.com/products/desktop) y la Licencia de prueba Tableau Desktop Professional durante 40 días para cada miembro del grupo.
 
 Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este es el resultado de __relativamente pocas horas de trabajo de personas que se acababan de conocer__. 
 
