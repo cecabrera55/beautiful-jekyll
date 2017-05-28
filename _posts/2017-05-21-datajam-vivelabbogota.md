@@ -40,13 +40,12 @@ Divimos el proyecto en 3 métricas relevantes:
 
 * [Análisis de destinos](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
 
+La [aplicación final](https://cecabrera.github.io/datosbogota/) fue desarrollada combinando HTML con la plantilla Bootstrap de CSS y el paquete JQuery de JavaScript. El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
+
 Publicamos el proyecto en dos servidores:
 
 1. [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
 2. [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y hacer futuras modificaciones; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
-
-
-La aplicación final fue desarrollada combinando HTML con la plantilla Bootstrap de CSS y el paquete JQuery de JavaScript. El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
 ## Aprendizajes
 * En proyectos de ciencia de datos, la limpieza de los mismos consume el 80% del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y los filtros a los datos tomaron la mayor parte del fin de semana.
