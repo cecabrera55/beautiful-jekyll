@@ -1,0 +1,43 @@
+---
+title: "Caso Ikognitive"
+author: "Ikonosoft S A S"
+number_sections: yes
+output:
+  html_document:
+    toc: yes
+  pdf_document:
+    theme: united
+    toc: yes
+  word_document:
+    toc: yes
+keep_tex: yes
+---
+
+```{r setup, include=FALSE}
+# Word and RMarkdown: http://rmarkdown.rstudio.com/articles_docx.html
+knitr::opts_chunk$set(echo = FALSE)
+library(scales)
+library(knitr)
+library(lubridate)
+library(data.table)
+library(pander) # http://rmarkdown.rstudio.com/articles_docx.html
+
+# Carga todos los archivos de formato R en la carpeta que "crm", "erp" o "social", de acuerdo con el caso deseado
+report <- "social"
+for (file in list.files(c(report)
+    , pattern="\\.(r|R)$"
+    , recursive = TRUE
+    , full.names = TRUE)) {
+    source(file, encoding = "UTF-8",local = TRUE) 
+}
+
+
+```
+--------------------------
+
+`r situacion`
+`r desarrollo`
+`r imagen`
+`r beneficio`
+
+
