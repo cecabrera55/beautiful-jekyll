@@ -1,17 +1,11 @@
 situacion <- paste0("
-# Contexto de las Redes Sociales
+# Situación
 
-Actualmente, se comparte en redes sociales
-gran cantidad de información. Por lo anterior,
-en el transcurso de 
-", parametrossocial$horizontetemporalsocial, " 
-años, hemos recibido
-", parametrossocial$clientessocial, " 
-solicitudes para elaborar herramientas que permitieran 
-generar conocimiento de 
-segmentos de clientes objetivo. La herramienta 
-que hemos desarrollado se denomina
-tablero Customer Journey.
+Una empresa multinacional de alimentos quería entender el comportamiento un perfil
+de consumidor específico. Para ello, realizó una encuesta y recopiló
+información de redes sociales de 100 personas bajo su permiso.
 
+La pregunta que querían responder era: \"¿de qué hablan en redes sociales estos 
+usuarios?\" 
 
 ")
