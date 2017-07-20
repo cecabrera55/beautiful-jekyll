@@ -7,6 +7,7 @@ tags:
 published: false
 ---
 
+La inteligencia analítica es una tendencia mundial que 
 Informe de PwC sobre analítica
 
 Noticia del espectador
