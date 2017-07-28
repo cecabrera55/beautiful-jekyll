@@ -233,7 +233,6 @@ Abre tu dirección `123.123.1.2`. Ya puedes ver que DKAN está listo para ser in
 
 # Paso 10: Prepara la instalación del DKAN {#prepara-dkan}
 
-imagen
 ![]({{ site.url }}/img/posts/portaldatos/error-instalacion.png "¡Aún falta modificar los permisos!")
 
 Si te apresuraste a instalar el DKAN, te habrás dado cuenta que aún faltan pasos por hacer: 
@@ -245,7 +244,7 @@ sudo mkdir /var/www/html/profiles/dkan/translations
 sudo wget -O /var/www/html/profiles/dkan/translations/drupal-8.3.5.es.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.3.5.es.po
 ~~~
 
-- Copia el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`
+- Copia el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`.
 
 - Cambia los permisos de la carpeta "default" para que pueda instalarse el software: `sudo chmod 777 -R /var/www/html/sites/default`. Este comando es para que DKAN pueda tener los permisos de lectura, escritura y ejecución necesarios para instalar la plataforma. Se modificarán más adelante.
 
@@ -259,24 +258,21 @@ Ingresamos los parámetros de la base de datos que configuramos antes.
 - Usuario: `dkan`
 - Contraseña: `password123`
 
-imagen
-![][{{ site.url }}/img/posts/portaldatos/setup-instalacion.png "Configuración de la base de datos"]
+![]({{ site.url }}/img/posts/portaldatos/setup-instalacion.png "Configuración de la base de datos")
 
 Click en "Guardar y Continuar".
 
-Digita la información de tu sitio web. El título de tu sitio web va a ser el que aparezca de primero en la pestaña de tu navegador cuando cargue la página. Asegúrate de pasar también un correo electrónico válido. 
+Digita la información de tu sitio web. El _Nombre del sitio_ va a ser el que aparezca de primero en la pestaña de tu navegador cuando cargue la página. Asegúrate de pasar también un correo electrónico válido. 
 
-imagen
 ![]({{ site.url }}/img/posts/portaldatos/setup.png "Configuración de la página por primera vez")
 
 Continúa con la creación del usuario y contraseña del administrador de la plataforma y finaliza la instalacion. 
 
 # Paso 12: Actualiza los módulos de DKAN {#actualiza-dkan}
 
-imagen
-![][{{ site.url }}/img/posts/portaldatos/actualizaciones.png "Actualizaciones disponibles"]
+![]({{ site.url }}/img/posts/portaldatos/actualizaciones.png "Actualizaciones disponibles")
 
-Revisa si hay módulos por actualizar, estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar la actualización existen varias altenartivas: 
+Revisa si hay módulos por actualizar, estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar actualizaciones de módulos existen varias altenartivas: 
 
 1. Conexión FTP o SSH desde la plataforma al mismo servidor. Esta alternativa implicaría ingresar al navegador las credenciales de acceso al servidor haciéndolo vulnerable a ataques. Además, en nuestra configuración inicial restringimos el acceso a la plataforma a través de nombres de usuario y contraseñas.
 2. Colocar manualmente la actualización en la carpeta `/sites/all/modules/` en el servidor. Según la documentación de DKAN, la plataforma primero leerá los módulos en esta carpeta y luego procederá a utilizar los módulos de la instalación. Esto implica riesgos asociados a la manipulación de módulos en el servidor.
