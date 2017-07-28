@@ -42,6 +42,9 @@ Este blog cubrirá la instalación y configuración de un portal de datos abiert
 - [Paso 11: Instala el DKAN](#instala-dkan)
 - [Paso 12: Actualiza los módulos de DKAN](#actualiza-dkan)
 - [Paso 13: Cambia los permisos](#cambia-permisos)
+- [Recursos](#recursos)
+- [Exoneración de responsabilidades](#exoneracion)
+
 
 # Paso 1: Regístrate en DigitalOcean {#registro}
 
@@ -280,7 +283,7 @@ Revisa si hay módulos por actualizar, estos aparecen en `http://123.123.1.2/adm
 
 __¡Cuidado!__ Las actualizaciones de módulos pueden generar cambios en la plataforma que restringen su uso o limitan funcionalidades. Lee _muy bien_ qué cambios se van a realizar antes de realizar una actualización. Para comenzar, te recomiendo no hacer ninguna.
 
-# Paso 13: Cambia los permisos
+# Paso 13: Cambia los permisos {#cambia-permisos}
 
 El último paso para no vulnerar la seguridad en tu portal de datos es limitar los permisos de lectura, edición y ejecución en las carpetas que hayas modificado. 
 
@@ -288,4 +291,20 @@ El último paso para no vulnerar la seguridad en tu portal de datos es limitar l
 sudo chmod 744 -R /var/www/html/sites/default
 ~~~
 
-Y eso es todo. Comentarios son bienvenidos. 
+¡Y eso es todo!
+
+# Recursos {#recursos}
+
+A continuación una lista de las fuentes bibliográficas.
+
+- [Dean Attali: How to get your very own RStudio Server and Shiny Server with DigitalOcean](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/#host-rmd)
+- [DigitalOcean: ssh keys](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users)
+- [Github: Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
+- [Media Temple: Using SSH keys on your server](https://mediatemple.net/community/products/dv/204644740/using-ssh-keys-on-your-server)
+- [How to Ubuntu: How to install LAMP on Ubuntu](http://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
+- [DKAN: Installation](http://dkan.readthedocs.io/en/latest/introduction/installation.html)
+- [GitHub: DKAN Open Data Portal](https://github.com/NuCivic/dkan)
+
+# Exoneración de responsabilidades {#exoneracion}
+
+No soy un _sysadmin_ y muchas cosas en este tutorial fueron aprendidas en _Google_, por lo que pueden haber maneras más rápidas de realizar la misma tarea. Si alguien tiene comentarios sobre este documento, ¡me gustaría [escucharlos]({{ site.url }}/aboutme#contact)!
