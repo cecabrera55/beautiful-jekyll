@@ -1,7 +1,8 @@
 ---
-title: "Cómo configurar tu propio portal de datos abiertos con DigitalOcean"
+title: "Cómo configurar tu propio portal de datos abiertos"
 layout: post
-date: '2017-08-09'
+date: '2017-09-08'
+permalink: /2017/09/08/setup-dkan-digitalocean/
 published: true
 share-img: https://api.ogptoolbox.org/images/45/d0330e88b7c23f1d38e26166559eeb.png
 tags:
@@ -11,14 +12,13 @@ tags:
 - ubuntu
 - data
 - visualization
-permalink: /2017/09/08/setup-dkan-digitalocean/
 ---
 
-> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estoy [disponible para contratar]({{ site.url }}/aboutme/#contact).
+> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estoy [disponible para trabajar]({{ site.url }}/aboutme/#contact).
 
 Si has buscado en internet y no has hallado la forma de configurar tu propia plataforma de publicación, análisis y visualización de datos abiertos, [DigitalOcean](https://m.do.co/c/b8c84bc5d55a) (DO) y [DKAN](http://getdkan.com/) son un buen primer paso para configurarla. Por ejemplo, el [Portal de datos abiertos GANA de la Gobernación de Nariño](https://datos.narino.gov.co/) fue configurado utilizando DKAN como plataforma de publicación de datos.
 
-DigitalOcean provee servidores virtuales privados (llamados *droplets*) "en la nube". Por *$5 dólares al mes* puedes tener tu propio servidor para alojar en él lo que quieras y acceder a él donde quieras. Utiliza mi [link de referidos](https://m.do.co/c/b8c84bc5d55a) para que obtengas $10 dolares en crédito, suficientes para mantener un servidor con DKAN durante dos meses.
+DigitalOcean provee servidores virtuales privados "en la nube" llamados *droplets*. Por *$5 dólares al mes* puedes tener tu propio servidor para alojar en él lo que quieras y acceder a él donde quieras. Utiliza mi [link de referidos](https://m.do.co/c/b8c84bc5d55a) para obtener $10 dolares en crédito, suficientes para mantener un servidor con DKAN durante un meses.
 
 [DKAN](http://getdkan.com/) es una plataforma para publicar, contar historias y graficar datos abiertos. Es un proyecto de código abierto basado en Drupal y liderado por [Granicus](https://granicus.com/). Puede instalarse y publicarse en un droplet (recuerda: droplet = tu máquina/servidor en la nube) de DO.
 
@@ -31,7 +31,7 @@ Este blog cubrirá la instalación y configuración de un portal de datos abiert
 - [Paso 3: Loggeate en tu propio servidor](#loggeate)
 - [Paso 4: Asegúrate de no estar usando el usuario root](#usuario-root)
 - [Paso 5: Aumenta los protocolos de seguridad](#protocolos-seguridad)
-- [Paso 6: Acceder a tu servidor desde un navegador](#accede-navegador)
+- [Paso 6: Accede a tu servidor desde un navegador](#accede-navegador)
   - [Nota 6.1: Referencias rápidas de Apache2](#referencias-apache2)
 - [Paso 7: Instala MySQL, PHP y Git](#instala-LAMP)
 - [Paso 8: Configura MySQL y Apache2](#configura-LAMP)
@@ -69,7 +69,7 @@ Deberías ser saludado con un mensaje de bienvenida que debería verse así:
 
 # Paso 4: Asegúrate de no estar usando el usuario root {#usuario-root}
 
-El usuario raíz o `root` es el primero que se activa cuando se instala Ubuntu. Tiene todos los permisos dentro de la máquina y es una buena práctica limitar su uso a menos que sea estrictamente necesario. Vamos a adicionar el usuario "camilo" y le daremos poderes de _administrador_. Te van a preguntar por información adicional de este usuario. 
+El usuario raíz o `root` es el primero que se activa cuando se instala Ubuntu. Tiene todos los permisos dentro de la máquina y es una buena práctica limitar su uso a menos que sea estrictamente necesario. Vamos a adicionar el usuario "camilo" y le daremos poderes de _administrador_. Se te va a preguntar por información adicional de este usuario. 
 
 ~~~
 adduser camilo
@@ -86,14 +86,14 @@ su - camilo
 
 Ahora que estás usando tu usuario, hay dos procedimientos para aumentar la seguridad de tu plataforma:
 
-1. Emparejar tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar al servidor.
+1. Emparejar tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar a él.
   - Creamos una llave de emparejamiento en __tu computador personal__ y la copiamos al portapapeles.
   - Creamos la carpeta `.ssh` en el __directorio personal de tu usuario ("camilo" en mi caso) en el servidor__: `mkdir -p /home/camilo/.ssh`
   - Copiamos la llave de tu computador personal en el registro de llaves autorizadas `authorized_keys` del servidor: `echo tu_llave_personal >> ~/.ssh/authorized_keys`
 2. Autorizar el acceso al servidor exclusivamente a través de llaves SSH: `nano /etc/ssh/sshd_config`. Esto abrirá un editor de texto llamado "nano". Cambia la linea `PasswordAuthentication yes` por `PasswordAuthentication no`. Una vez realizada la modificación, salimos del editor de texto oprimiendo `Control (Command) + X`, luego `Y` para guardar los cambios y finalmente `Enter` para confirmar el nombre del archivo.
 3. Deshabilitar la contraseña del usuario `root` para limitar su acceso: `nano /etc/ssh/sshd_config` y cambias la linea `PermitRootLogin yes` por `PermitRootLogin no`. Guardar y salir.
 
-# Paso 6: Acceder a tu servidor desde un navegador {#accede-navegador}
+# Paso 6: Accede a tu servidor desde un navegador {#accede-navegador}
 
 En estos momentos si visitas `http://123.123.1.2` en un navegador, encontrarás algo parecido a "Error: página no disponible". Vamos a habilitar el servicio de páginas web de Apache2. 
 
@@ -103,7 +103,7 @@ sudo apt-get -y upgrade
 sudo apt-get install -y apache2
 ~~~
 
-Ahora, si visitas `http://123.123.1.2, deberías poder ver el mensaje de bienvenida de Apache2. ¡Felicitaciones!
+Ahora, si visitas `http://123.123.1.2`, deberías poder ver el mensaje de bienvenida de Apache2. ¡Felicitaciones!
 
 ## Nota 6.1: Referencias rápidas de Apache2 {#referencias-apache2}
 
@@ -121,11 +121,11 @@ sudo service apache2 start
 
 DKAN viene con una distribución core de Drupal. Esto quiere decir que con instalar DKAN se instala Drupal. Para correrlo, es necesario primero tener 1 sistema operativo y 3 softwares catalogados como [LAMP](https://clients.javapipe.com/knowledgebase/133/Installing-Apache-MySQL-PHP-LAMP-on-Ubuntu-1404.html) (Linux, Apache2, MySQL y PHP). Tendremos entonces 5 conceptos:
 
-1. __Linux__ es la base en la que corre nuestro sistema operativo Ubuntu 14.04.05 x64.
-2. __Apache2__ es un software que habilita la posibilidad de ver el contenido de un servidor desde el navegador. 
+1. __Linux__ es la base en la que corre nuestro sistema operativo Ubuntu 14.04.05 x64. Ya está. 
+2. __Apache2__ es un software que habilita ver el contenido de un servidor desde el navegador. 
 3. __MySQL__ es un software (motor) de base de datos y servirá para almacenar [datos estructurados](http://smarterworkspaces.kyocera.es/blog/diferencia-datos-estructurados-no-estructurados/) de la plataforma.
 4. __PHP__ es un [lenguaje de programación](http://php.net/manual/en/intro-whatis.php) diseñado y usado especialmente para ejecutar, desde el servidor, código embebido en archivos HTML.
-5. __Git__ es un software para controlar y versionar código. Lo usaremos únicamente para descargar DKAN desde una carpeta pública en Github. Conoce más sobre esta red social [aquí](http://camicabrera.com/2017-05-14-github-red-social-meritocracia/).
+5. __Git__ es un software para controlar y versionar código. Lo usaremos únicamente para descargar DKAN desde una carpeta pública en Github. Conoce más sobre esta red social [aquí]({{ site.url }}/2017-05-14-github-red-social-meritocracia/).
 
 ~~~
 # Instala MySQL
@@ -138,7 +138,7 @@ sudo apt-get install -y php5-mysql php5 libapache2-mod-php5 php5-mcrypt php5-gd 
 sudo apt-get install -y git
 ~~~
 
-Durante la instalación de MySQL, digita la contraseña que quieras para el usuario `root` de tu motor de base de datos.
+Durante la instalación de MySQL, digita la contraseña que quieras para el usuario raiz (`root`) de tu motor de base de datos.
 
 # Paso 8: Configura MySQL y Apache2 {#configura-LAMP}
 
@@ -192,7 +192,7 @@ Como buena práctica, se recomienda editar el archivo `php.ini` de la ruta `/etc
 sudo nano /etc/php5/apache2/php.ini
 ~~~
 
-Una vez abierto, oprimes `Control (Command) + W` y digitas "expose_php" para buscar esta palabra. Reemplazas "On" por "Off" y realizamos el mismo procedimiento de búsqueda a la variable "allow_url_fopen". Al final deberían verse así (no necesariamente en líneas seguidas):
+Oprime `Control (Command) + W` y digita "expose_php" para buscar esta palabra. Reemplazas "On" por "Off" y realizamos el mismo procedimiento de búsqueda a la variable "allow_url_fopen". Al final deberían verse así (no necesariamente en líneas seguidas):
 
 ~~~
 expose_php = Off
@@ -210,7 +210,7 @@ Y adicionamos estas lineas justo debajo de `DocumentRoot /var/www/html`:
 ~~~
   <Directory /var/www/html>
     AllowOverride All
-	</Directory>
+  </Directory>
 ~~~
 
 Guardar y salir. Habilitamos Apache2 para que pueda hacer "URL bonitas" (modificarlas para mejor entendimiento del usuario) y reiniciamos el servicio de Apache para refrescar los cambios.
@@ -222,7 +222,7 @@ sudo service apache2 restart
 
 # Paso 9: Descarga el DKAN {#descarga-dkan}
 
-Descargamos la distribucion DKAN usando Git y la movemos al directorio raíz de Apache2 para verlo desde el navegador:
+Descargamos en el servidor la distribucion DKAN usando Git y la movemos al directorio raíz de Apache2 para verlo desde el navegador:
 
 ~~~
 sudo git clone --branch master https://github.com/nuams/dkan-drops-7.git dkan
@@ -234,7 +234,7 @@ Abre tu dirección `123.123.1.2`. Ya puedes ver que DKAN está listo para ser in
 # Paso 10: Prepara la instalación del DKAN {#prepara-dkan}
 
 imagen
-![][{{ site.url }}/img/posts/portaldatos/error-instalacion.png "¡Aún falta modificar los permisos!"]
+![]({{ site.url }}/img/posts/portaldatos/error-instalacion.png "¡Aún falta modificar los permisos!")
 
 Si te apresuraste a instalar el DKAN, te habrás dado cuenta que aún faltan pasos por hacer: 
 
