@@ -18,7 +18,7 @@ tags:
 
 Si has buscado en internet y no has hallado la forma de configurar tu propia plataforma de publicación, análisis y visualización de datos abiertos, [DigitalOcean](https://m.do.co/c/b8c84bc5d55a) (DO) y [DKAN](http://getdkan.com/) son un buen primer paso para configurarla. Por ejemplo, el [Portal de datos abiertos GANA de la Gobernación de Nariño](https://datos.narino.gov.co/) fue configurado utilizando DKAN como plataforma de publicación de datos.
 
-DigitalOcean provee servidores virtuales privados "en la nube" llamados *droplets*. Por *$5 dólares al mes* puedes tener tu propio servidor para alojar en él lo que quieras y acceder a él donde quieras. Utiliza mi [link de referidos](https://m.do.co/c/b8c84bc5d55a) para obtener $10 dolares en crédito, suficientes para mantener un servidor con DKAN durante un meses.
+DigitalOcean provee servidores virtuales privados "en la nube" llamados *droplets*. Por *$5 dólares al mes* puedes tener tu propio servidor para alojar en él lo que quieras y acceder a él donde quieras. Utiliza mi [link de referidos](https://m.do.co/c/b8c84bc5d55a) para obtener $10 dolares en crédito, suficientes para mantener un servidor con DKAN durante un mes.
 
 [DKAN](http://getdkan.com/) es una plataforma para publicar, contar historias y graficar datos abiertos. Es un proyecto de código abierto basado en Drupal y liderado por [Granicus](https://granicus.com/). Puede instalarse y publicarse en un droplet (recuerda: droplet = tu máquina/servidor en la nube) de DO.
 
