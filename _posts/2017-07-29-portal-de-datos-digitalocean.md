@@ -1,10 +1,10 @@
 ---
 title: "Cómo configurar tu propio portal de datos abiertos"
 layout: post
-date: '2017-09-08'
-permalink: /2017/09/08/setup-dkan-digitalocean/
+date: '2017-07-27'
+permalink: /2017/07/27/setup-dkan-digitalocean/
 published: true
-share-img: https://api.ogptoolbox.org/images/45/d0330e88b7c23f1d38e26166559eeb.png
+share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
 tags:
 - professional
 - opendata
@@ -14,7 +14,7 @@ tags:
 - visualization
 ---
 
-> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estoy [disponible para trabajar]({{ site.url }}/aboutme/#contact).
+> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estoy [disponible para contratar]({{ site.url }}/aboutme/#contact).
 
 Si has buscado en internet y no has hallado la forma de configurar tu propia plataforma de publicación, análisis y visualización de datos abiertos, [DigitalOcean](https://m.do.co/c/b8c84bc5d55a) (DO) y [DKAN](http://getdkan.com/) son un buen primer paso para configurarla. Por ejemplo, el [Portal de datos abiertos GANA de la Gobernación de Nariño](https://datos.narino.gov.co/) fue configurado utilizando DKAN como plataforma de publicación de datos.
 
@@ -22,7 +22,7 @@ DigitalOcean provee servidores virtuales privados "en la nube" llamados *droplet
 
 [DKAN](http://getdkan.com/) es una plataforma para publicar, contar historias y graficar datos abiertos. Es un proyecto de código abierto basado en Drupal y liderado por [Granicus](https://granicus.com/). Puede instalarse y publicarse en un droplet (recuerda: droplet = tu máquina/servidor en la nube) de DO.
 
-Este blog cubrirá la instalación y configuración de un portal de datos abiertos usando DKAN en un servidor Ubuntu 14.04.05 x64 (Linux) con el fin de apoyar entidades gubernamentales, ONG's y proyectos personales en sus compromisos de publicar datos abiertos.
+Este blog cubrirá la instalación y configuración de un portal de datos abiertos usando DKAN en un servidor Ubuntu 14.04.05 x64 (Linux) con el fin de apoyar entidades gubernamentales, ONG's y personales naturales en sus compromisos de publicar datos abiertos.
 
 # Tabla de Contenidos
 
@@ -56,7 +56,7 @@ Configurar tu propia máquina es tan sencillo que ni siquiera necesitas mis inst
 
 *Nota: los siguientes pasos asumen que estarás usando las mismas configuraciones del servidor recomendadas. Si escogiste una configuración diferente, las instrucciones en general aplicarán. Sin embargo, algunos comandos específicos o URLs podrían requerir cambios.*
 
-Esta explicación está también en inglés gracias a un tutorial de Dean Attali sobre [cómo crear tu propio servidor Shiny](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/). A continuación los pasos previamente descritos:
+La explicación de cómo configurar tu propio servidor en DO está también en inglés gracias a un tutorial de Dean Attali sobre [cómo crear tu propio servidor  Shiny Server](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/). A continuación los pasos previamente descritos:
 
 [![Crear droplet](http://deanattali.com/img/blog/digital-ocean/do-create.gif)](http://deanattali.com/img/blog/digital-ocean/do-create.gif)
 
@@ -72,14 +72,14 @@ Deberías ser saludado con un mensaje de bienvenida que debería verse así:
 
 # Paso 4: Asegúrate de no estar usando el usuario root {#usuario-root}
 
-El usuario raíz o `root` es el primero que se activa cuando se instala Ubuntu. Tiene todos los permisos dentro de la máquina y es una buena práctica limitar su uso a menos que sea estrictamente necesario. Vamos a adicionar el usuario "camilo" y le daremos poderes de _administrador_. Se te va a preguntar por información adicional de este usuario. 
+El usuario raíz o `root` es el primero que se activa cuando se instala Ubuntu. Tiene todos los permisos dentro de la máquina y es una buena práctica limitar su uso a menos que sea estrictamente necesario. Vamos a adicionar el usuario "camilo" y le daremos poderes de _administrador_. Cuando crees este usuario, se te preguntará información básica: Nombre Completo, Teléfono, etc.
 
 ~~~
 adduser camilo
 gpasswd -a camilo sudo
 ~~~
 
-De ahora en adelante me voy a loggear como "camilo" en vez de "root". Para correr comandos que requieran permisos del administrador, basta con anteponer `sudo` al comando. Vamos a intercambiar el usuario "root" al usuario "camilo".
+De ahora en adelante me voy a loggear como "camilo" en vez de "root". Para correr comandos que requieran permisos del administrador, basta con anteponer `sudo` al comando. Vamos a intercambiar el usuario "root" por el usuario "camilo".
 
 ~~~
 su - camilo
@@ -87,7 +87,7 @@ su - camilo
 
 # Paso 5: Aumenta los protocolos de seguridad {#protocolos-seguridad}
 
-Ahora que estás usando tu usuario, hay dos procedimientos para aumentar la seguridad de tu plataforma:
+Ahora que estás usando tu usuario, aumentamos los niveles de seguridad de tu plataforma:
 
 1. Emparejar tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar a él.
   - Creamos una llave de emparejamiento en __tu computador personal__ y la copiamos al portapapeles.
@@ -181,7 +181,7 @@ QUIT;
 
 ## Paso 8.2: Apache2 {#configura-apache2}
 
-Por defecto, cuando un navegador consulta el servidor, el primer archivo que busca Apache2 es `index.html`. Si este no existe, busca archivos con el mismo nombre "index" que tenga las extensiones `.cgi`, `.pl`, `.php`, `.xhtml` y `.htm`, respectivamente. En vista que DKAN corre sobre PHP, el primer archivo que Apache2 debería abrir es "index.php". Esto implica editar el archivo `dir.conf` del Apache2 para que "index.php" abra antes que "index.html".
+Por defecto, cuando un navegador consulta el servidor, el primer archivo que busca Apache2 es `index.html`. Si este no existe, busca archivos con el mismo nombre "index" que tenga las extensiones `.cgi`, `.pl`, `.php`, `.xhtml` y `.htm`, en ese orden. En vista que DKAN corre sobre PHP, el primer archivo que Apache2 debería abrir es "index.php". Editamos entonces el archivo `dir.conf` del Apache2 para que "index.php" abra antes que "index.html".
 
 ~~~
 sudo nano /etc/apache2/mods-enabled/dir.conf
@@ -255,7 +255,7 @@ Refresca tu página desde el navegador y verás la opción de instalación en es
 
 # Paso 11: Instala el DKAN {#instala-dkan}
 
-Ingresamos los parámetros de la base de datos que configuramos antes.
+Un vez carga la página y la instalación inicia, ingresamos los parámetros de la base de datos que configuramos antes.
 
 - Base de datos: `dkan`
 - Usuario: `dkan`
@@ -265,7 +265,7 @@ Ingresamos los parámetros de la base de datos que configuramos antes.
 
 Click en "Guardar y Continuar".
 
-Digita la información de tu sitio web. El _Nombre del sitio_ va a ser el que aparezca de primero en la pestaña de tu navegador cuando cargue la página. Asegúrate de pasar también un correo electrónico válido. 
+Digita la información de tu sitio web. El _Nombre del sitio_ va a ser el que aparece en la pestaña de tu navegador cuando cargue la página. Asegúrate de pasar también un correo electrónico válido. 
 
 ![]({{ site.url }}/img/posts/portaldatos/setup.png "Configuración de la página por primera vez")
 
@@ -277,21 +277,30 @@ Continúa con la creación del usuario y contraseña del administrador de la pla
 
 Revisa si hay módulos por actualizar, estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar actualizaciones de módulos existen varias altenartivas: 
 
-1. Conexión FTP o SSH desde la plataforma al mismo servidor. Esta alternativa implicaría ingresar al navegador las credenciales de acceso al servidor haciéndolo vulnerable a ataques. Además, en nuestra configuración inicial restringimos el acceso a la plataforma a través de nombres de usuario y contraseñas.
-2. Colocar manualmente la actualización en la carpeta `/sites/all/modules/` en el servidor. Según la documentación de DKAN, la plataforma primero leerá los módulos en esta carpeta y luego procederá a utilizar los módulos de la instalación. Esto implica riesgos asociados a la manipulación de módulos en el servidor.
-3. Según [esta](https://www.drupal.org/node/1036494) discusión, la forma de automatizar la actualización de módulos desde el navegador, sin digitar credenciales, es cambiando el dueño de la carpeta "sites" y "themes" a Apache2: `sudo chown www-data: /var/www/html/sites/default`. En algunos casos hay que aplicar también cambios en los permisos del sitio: `sudo chmod 777 -R /var/www/html/sites/default`.
+1. Conexión FTP o SSH desde la plataforma al mismo servidor. Esta alternativa implicaría ingresar al navegador las credenciales de acceso al servidor haciéndolo vulnerable a ataques. Además, en nuestra configuración inicial restringimos por seguridad el acceso a la plataforma a través de nombres de usuario y contraseñas.
+2. Colocar manualmente cada actualización en la carpeta `/sites/all/modules/` en el servidor. Según la documentación de DKAN, la plataforma primero leerá los módulos en esta carpeta y luego procederá a utilizar los módulos de la instalación. Esto implica riesgos asociados a la manipulación de módulos en el servidor.
+3. Según [esta](https://www.drupal.org/node/1036494) discusión, la forma de automatizar la actualización de módulos desde el navegador, sin digitar credenciales, es cambiando el dueño de la carpeta "sites" y "themes" a Apache2: 
 
-__¡Cuidado!__ Las actualizaciones de módulos pueden generar cambios en la plataforma que restringen su uso o limitan funcionalidades. Lee _muy bien_ qué cambios se van a realizar antes de realizar una actualización. Para comenzar, te recomiendo no hacer ninguna.
+~~~
+sudo chown www-data: /var/www/html/sites/
+sudo chown www-data: /var/www/html/themes/
+
+# En algunos casos hay que aplicar cambios en los permisos
+sudo chmod 777 -R /var/www/html/sites/
+~~~
+
+__¡Cuidado!__ Las actualizaciones de módulos pueden generar cambios en la plataforma que restringen su uso o limitan funcionalidades. Lee _muy bien_ qué cambios se van a realizar antes de realizar una actualización y asegúrate de [hacer backup a tu droplet](https://www.digitalocean.com/community/tutorials/digitalocean-backups-and-snapshots-explained).
 
 # Paso 13: Cambia los permisos {#cambia-permisos}
 
 El último paso para no vulnerar la seguridad en tu portal de datos es limitar los permisos de lectura, edición y ejecución en las carpetas que hayas modificado. 
 
 ~~~
-sudo chmod 744 -R /var/www/html/sites/default
+sudo chmod 744 -R /var/www/html/sites/
+sudo chmod 744 -R /var/www/html/themes/
 ~~~
 
-¡Y eso es todo!
+¡Eso es todo!
 
 # Recursos {#recursos}
 
@@ -304,7 +313,8 @@ A continuación una lista de las fuentes bibliográficas.
 - [How to Ubuntu: How to install LAMP on Ubuntu](http://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
 - [DKAN: Installation](http://dkan.readthedocs.io/en/latest/introduction/installation.html)
 - [GitHub: DKAN Open Data Portal](https://github.com/NuCivic/dkan)
+- [Drupal: Module installation requires FTP access?](https://www.drupal.org/node/1036494)
 
 # Exoneración de responsabilidades {#exoneracion}
 
-No soy un _sysadmin_ y muchas cosas en este tutorial fueron aprendidas en _Google_, por lo que puede haber maneras más rápidas de realizar la misma tarea. Si alguien tiene comentarios sobre este documento, ¡me gustaría [escucharlos]({{ site.url }}/aboutme#contact)!
+No soy un _sysadmin_ y muchas cosas en este tutorial fueron aprendidas en Google, por lo que puede haber maneras más rápidas de realizar la misma tarea. Si tienes comentarios sobre este documento, ¡me gustaría [escucharlos]({{ site.url }}/aboutme#contact)!
