@@ -1,5 +1,5 @@
 ---
-title: "Cómo configurar tu propio portal de datos abiertos"
+title: "Cómo configurar tu propio portal de datos abiertos DKAN"
 layout: post
 date: '2017-07-27'
 permalink: /2017/07/27/setup-dkan-digitalocean/
