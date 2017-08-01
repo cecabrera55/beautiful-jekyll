@@ -66,7 +66,7 @@ La explicación de cómo configurar tu propio servidor en DO está también en i
 
 Una vez tu droplet está listo, la plataforma te redireccionará a una página que te muestra información sobre el nuevo droplet, incluyendo su dirección IP. De ahora en adelante, usaremos la IP `123.123.1.2` como ejemplo. No olvides reemplazar este valor por la IP de tu nueva máquina.
 
-Una opción para iniciar sesión en tu droplet es a través de la pestaña "Access" en la página a la que fuiste redireccionado. Sin embargo, es lenta y fea. Yo prefiero conectarme desde mi propia máquina. Si estás en una máquina UNIX, como es mi caso, puedes correr `ssh 123.123.1.2` en el terminal. Para los usuarios Windows, puedes usar [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) para hacer un puente (SSH) hacia tu servidor e iniciar sesión. Utiliza la dirección IP que aparece en tu página de DO con el nombre de usuario `root`. Si usaste una llave SSH entonces no necesitarás de una contraseña; de lo contrario, la contraseña debería haber sido enviada a tu email.
+Una opción para iniciar sesión en tu droplet es a través de la pestaña "Access" en la página a la que fuiste redireccionado. Sin embargo, es lenta y fea. Yo prefiero conectarme desde mi propia máquina. Si estás en una máquina UNIX, como es mi caso, puedes correr `ssh 123.123.1.2` en el terminal. Si eres usuario de Windows, puedes usar [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) para hacer un puente (SSH) hacia tu servidor e iniciar sesión. Utiliza la dirección IP que aparece en tu página de DO con el nombre de usuario `root`. Si usaste una llave SSH entonces no necesitarás de una contraseña; de lo contrario, la contraseña debería haber sido enviada a tu email.
 
 Deberías ser saludado con un mensaje de bienvenida que debería verse así:
 
@@ -92,7 +92,7 @@ su - camilo
 Ahora que estás usando tu usuario, aumentamos los niveles de seguridad de tu plataforma:
 
 1. Emparejar tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar a él.
-  - Creamos una llave de emparejamiento en __tu computador personal__ y la copiamos al portapapeles.
+  - Creamos una llave de emparejamiento en __tu computador personal__ y la copiamos al portapapeles. Encuentra un manual para Windows, Mac y Linux [aquí](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html).
   - Creamos la carpeta `.ssh` en el __directorio personal de tu usuario ("camilo" en mi caso) en el servidor__: `mkdir -p /home/camilo/.ssh`
   - Copiamos la llave de tu computador personal en el registro de llaves autorizadas `authorized_keys` del servidor: `echo tu_llave_personal >> ~/.ssh/authorized_keys`
 2. Autorizar el acceso al servidor exclusivamente a través de llaves SSH: `nano /etc/ssh/sshd_config`. Esto abrirá un editor de texto llamado "nano". Cambia la linea `PasswordAuthentication yes` por `PasswordAuthentication no`. Una vez realizada la modificación, salimos del editor de texto oprimiendo `Control (Command) + X`, luego `Y` para guardar los cambios y finalmente `Enter` para confirmar el nombre del archivo.
@@ -316,6 +316,7 @@ A continuación una lista de las fuentes bibliográficas.
 - [DKAN: Installation](http://dkan.readthedocs.io/en/latest/introduction/installation.html)
 - [GitHub: DKAN Open Data Portal](https://github.com/NuCivic/dkan)
 - [Drupal: Module installation requires FTP access?](https://www.drupal.org/node/1036494)
+- [Bitbucket: Creating SSH keys](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html)
 
 # Exoneración de responsabilidades {#exoneracion}
 
