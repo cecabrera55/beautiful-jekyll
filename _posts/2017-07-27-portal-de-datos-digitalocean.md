@@ -7,11 +7,13 @@ published: true
 share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
 tags:
 - professional
-- opendata
+- open-data
+- visualization
 - linux
 - ubuntu
-- data
-- visualization
+- MySQL
+- PHP
+- Apache2
 ---
 
 > Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estoy [disponible para contratar]({{ site.url }}/aboutme/#contact).
