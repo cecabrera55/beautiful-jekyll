@@ -2,7 +2,7 @@
 title: 'Cómo configurar tu propio portal de datos abiertos DKAN en DigitalOcean'
 layout: post
 date: '2017-07-27'
-permalink: /2017/07/27/setup-dkan-digitalocean/
+permalink: /blog/setup-dkan-digitalocean/
 published: true
 share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
 tags:
