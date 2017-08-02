@@ -6,11 +6,10 @@ permalink: /2017/07/27/setup-dkan-digitalocean/
 published: true
 share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
 tags:
-- professional
 - open-data
-- visualization
+- DKAN
+- DigitalOcean
 - linux
-- ubuntu
 - MySQL
 - PHP
 - Apache2
@@ -91,12 +90,12 @@ su - camilo
 
 Ahora que estás usando tu usuario, aumentamos los niveles de seguridad de tu plataforma:
 
-1. Emparejar tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar a él.
+1. Emparejando tu computador (cliente) con el servidor a través de una llave SSH para que sólo tu máquina se pueda conectar a él.
   - Creamos una llave de emparejamiento en __tu computador personal__ y la copiamos al portapapeles. Encuentra un manual para Windows, Mac y Linux [aquí](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html).
   - Creamos la carpeta `.ssh` en el __directorio personal de tu usuario ("camilo" en mi caso) en el servidor__: `mkdir -p /home/camilo/.ssh`
   - Copiamos la llave de tu computador personal en el registro de llaves autorizadas `authorized_keys` del servidor: `echo tu_llave_personal >> ~/.ssh/authorized_keys`
-2. Autorizar el acceso al servidor exclusivamente a través de llaves SSH: `nano /etc/ssh/sshd_config`. Esto abrirá un editor de texto llamado "nano". Cambia la linea `PasswordAuthentication yes` por `PasswordAuthentication no`. Una vez realizada la modificación, salimos del editor de texto oprimiendo `Control (Command) + X`, luego `Y` para guardar los cambios y finalmente `Enter` para confirmar el nombre del archivo.
-3. Deshabilitar la contraseña del usuario `root` para limitar su acceso: `nano /etc/ssh/sshd_config` y cambias la linea `PermitRootLogin yes` por `PermitRootLogin no`. Guardar y salir.
+2. Autorizando el acceso al servidor exclusivamente a través de llaves SSH: `nano /etc/ssh/sshd_config`. Esto abrirá un editor de texto llamado "nano". Cambia la linea `PasswordAuthentication yes` por `PasswordAuthentication no`. Una vez realizada la modificación, salimos del editor de texto oprimiendo `Control (Command) + X`, luego `Y` para guardar los cambios y finalmente `Enter` para confirmar el nombre del archivo.
+3. Deshabilitando la contraseña del usuario `root` para limitar su acceso: `nano /etc/ssh/sshd_config` y cambias la linea `PermitRootLogin yes` por `PermitRootLogin no`. Guardar y salir.
 
 # Paso 6: Accede a tu servidor desde un navegador {#accede-navegador}
 
@@ -112,7 +111,7 @@ Ahora, si visitas `http://123.123.1.2`, deberías poder ver el mensaje de bienve
 
 ## Nota 6.1: Referencias rápidas de Apache2 {#referencias-apache2}
 
-El archivo que carga el navegador por defecto se encuentra en la carpeta `/var/www/html/`. Para modificar la página web basta con editar el archivo "index.html" usando el comando `sudo nano var/www/html/index.html`. El archivo `/etc/apache2/apache2.conf` es el archivo global de configuración de Apache2.
+El archivo que carga el navegador por defecto se encuentra en la carpeta `/var/www/html/` de tu droplet. Para modificar la página web basta con editar el archivo "index.html" usando el comando `sudo nano var/www/html/index.html`. El archivo `/etc/apache2/apache2.conf` es el archivo global de configuración de Apache2.
 
 Cuando editas un archivo HTML, podrás ver los cambios inmediatamente cuando refresques la página. Si haces cambios en la configuración, tendrás que reiniciar Apache2. En el futuro, puedes reiniciar/detener/iniciar Apache2 con:
 
@@ -124,13 +123,13 @@ sudo service apache2 start
 
 # Paso 7: Instala MySQL, PHP y Git {#instala-LAMP}
 
-DKAN viene con una distribución core de Drupal. Esto quiere decir que con instalar DKAN se instala Drupal. Para correrlo, es necesario primero tener 1 sistema operativo y 3 softwares catalogados como [LAMP](https://clients.javapipe.com/knowledgebase/133/Installing-Apache-MySQL-PHP-LAMP-on-Ubuntu-1404.html) (Linux, Apache2, MySQL y PHP). Tendremos entonces 5 conceptos:
+DKAN viene con una distribución core de Drupal. Esto quiere decir que con instalar DKAN se instala Drupal. Para correrlo, es necesario primero tener 1 sistema operativo y 3 softwares catalogados como [LAMP](https://clients.javapipe.com/knowledgebase/133/Installing-Apache-MySQL-PHP-LAMP-on-Ubuntu-1404.html) (Linux, Apache2, MySQL y PHP). Usaremos 1 software adicional para descargar DKAN llamado Git. Tendremos entonces 5 conceptos:
 
 1. __Linux__ es la base en la que corre nuestro sistema operativo Ubuntu 14.04.05 x64. Ya está. 
 2. __Apache2__ es un software que habilita ver el contenido de un servidor desde el navegador. 
 3. __MySQL__ es un software (motor) de base de datos y servirá para almacenar [datos estructurados](http://smarterworkspaces.kyocera.es/blog/diferencia-datos-estructurados-no-estructurados/) de la plataforma.
 4. __PHP__ es un [lenguaje de programación](http://php.net/manual/en/intro-whatis.php) diseñado y usado especialmente para ejecutar, desde el servidor, código embebido en archivos HTML.
-5. __Git__ es un software para controlar y versionar código. Lo usaremos únicamente para descargar DKAN desde una carpeta pública en Github. Conoce más sobre esta red social [aquí]({{ site.url }}/2017-05-14-github-red-social-meritocracia/).
+5. __Git__ es un software para controlar y versionar código. Lo usaremos únicamente para descargar DKAN desde una carpeta pública en Github. Conoce más sobre GitHub [aquí]({{ site.url }}/2017-05-14-github-red-social-meritocracia/).
 
 ~~~
 # Instala MySQL
@@ -143,7 +142,7 @@ sudo apt-get install -y php5-mysql php5 libapache2-mod-php5 php5-mcrypt php5-gd 
 sudo apt-get install -y git
 ~~~
 
-Durante la instalación de MySQL, digita la contraseña que quieras para el usuario raiz (`root`) de tu motor de base de datos.
+Durante la instalación de MySQL, digita la contraseña que quieras usar para el usuario raiz (`root`) de tu motor de base de datos.
 
 # Paso 8: Configura MySQL y Apache2 {#configura-LAMP}
 
@@ -151,14 +150,13 @@ Luego de instalar LAMP y Git, configuramos MySQL y Apache2.
 
 ## Paso 8.1: MySQL {#configura-mysql}
 
-Creamos un directorio de base de datos y aumentamos los protocolos de seguridad removiendo cuentas de usuario anónimas y bases de datos de prueba, deshabilitamos la conexión remota al usuario root y recargamos las tablas de privilegios.
+Creamos un directorio de base de datos y aumentamos los protocolos de seguridad removiendo cuentas de usuario anónimas y bases de datos de prueba, deshabilitando la conexión remota al usuario root y recargando las tablas de privilegios. Los comandos de respuesta en su orden son: `n`, `Y`, `Y`, `Y`:
 
 ~~~
 sudo mysql_install_db
 sudo mysql_secure_installation
 ~~~
 
-Los comandos de respuesta en su orden son: `n`, `Y`, `Y`, `Y`. 
 Abrimos MySQL y creamos una nueva base de datos. Aquí digitas la clave del usuario `root` de MySQL. ¡No olvides el __punto y coma `;` al final de cada línea__ en MySQL!
 
 ~~~
@@ -242,16 +240,16 @@ Abre tu dirección `123.123.1.2`. Ya puedes ver que DKAN está listo para ser in
 
 Si te apresuraste a instalar el DKAN, te habrás dado cuenta que aún faltan pasos por hacer: 
 
-- Descarga el paquete de instalación en español
+- Descargar el paquete de instalación en español
 
 ~~~
 sudo mkdir /var/www/html/profiles/dkan/translations
 sudo wget -O /var/www/html/profiles/dkan/translations/drupal-8.3.5.es.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.3.5.es.po
 ~~~
 
-- Copia el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`.
+- Copiar el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`.
 
-- Cambia los permisos de la carpeta "default" para que pueda instalarse el software: `sudo chmod 777 -R /var/www/html/sites/default`. Este comando es para que DKAN pueda tener los permisos de lectura, escritura y ejecución necesarios para instalar la plataforma. Se modificarán más adelante.
+- Cambiar los permisos de la carpeta "default" para DKAN tenga los permisos de lectura, escritura y ejecución necesarios para instalar la plataforma en el servidor: `sudo chmod 777 -R /var/www/html/sites/default`. Se modificarán más adelante.
 
 Refresca tu página desde el navegador y verás la opción de instalación en español. Procede con la instalación.
 
@@ -277,21 +275,21 @@ Continúa con la creación del usuario y contraseña del administrador de la pla
 
 ![]({{ site.url }}/img/posts/portaldatos/actualizaciones.png "Actualizaciones disponibles")
 
-Revisa si hay módulos por actualizar, estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar actualizaciones de módulos existen varias altenartivas: 
+Revisa si hay módulos por actualizar. Estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar actualizaciones de módulos existen varias altenartivas, encontré tres: 
 
-1. Conexión FTP o SSH desde la plataforma al mismo servidor. Esta alternativa implicaría ingresar al navegador las credenciales de acceso al servidor haciéndolo vulnerable a ataques. Además, en nuestra configuración inicial restringimos por seguridad el acceso a la plataforma a través de nombres de usuario y contraseñas.
-2. Colocar manualmente cada actualización en la carpeta `/sites/all/modules/` en el servidor. Según la documentación de DKAN, la plataforma primero leerá los módulos en esta carpeta y luego procederá a utilizar los módulos de la instalación. Esto implica riesgos asociados a la manipulación de módulos en el servidor.
-3. Según [esta](https://www.drupal.org/node/1036494) discusión, la forma de automatizar la actualización de módulos desde el navegador, sin digitar credenciales, es cambiando el dueño de la carpeta "sites" y "themes" a Apache2: 
+1. Conexión FTP o SSH desde la plataforma al mismo servidor. Esta alternativa implicaría ingresar las credenciales de acceso al servidor desde el navegador; haciéndolo vulnerable a ataques. Además, en nuestra configuración inicial restringimos por seguridad el acceso a la plataforma a través de nombres de usuario y contraseñas.
+2. Colocar manualmente cada actualización en la carpeta `/sites/all/modules/` en el servidor. Según la documentación de DKAN, la plataforma primero leerá los módulos en esta carpeta y luego procederá a utilizar los módulos de la instalación. Esto implica riesgos asociados a la manipulación manual de módulos en el servidor desde las linea de comando.
+3. Según [esta](https://www.drupal.org/node/1036494) discusión, la forma de automatizar la actualización de módulos desde el navegador, sin digitar credenciales, es cambiando el dueño de la carpeta "sites" y "themes" a Apache2 (`www-data`). 
 
 ~~~
 sudo chown www-data: /var/www/html/sites/
 sudo chown www-data: /var/www/html/themes/
 
-# En algunos casos hay que aplicar cambios en los permisos
+# En algunos casos hay que aplicar cambios en los permisos de la carpeta "sites"
 sudo chmod 777 -R /var/www/html/sites/
 ~~~
 
-__¡Cuidado!__ Las actualizaciones de módulos pueden generar cambios en la plataforma que restringen su uso o limitan funcionalidades. Lee _muy bien_ qué cambios se van a realizar antes de realizar una actualización y asegúrate de [hacer backup a tu droplet](https://www.digitalocean.com/community/tutorials/digitalocean-backups-and-snapshots-explained).
+__¡Cuidado!__ Las actualizaciones de módulos pueden generar cambios en la plataforma que restringen su uso o limitan funcionalidades. Lee _muy bien_ qué cambios se van a ejecutar antes de actualizar la plataforma y asegúrate de [hacerle un backup a tu droplet](https://www.digitalocean.com/community/tutorials/digitalocean-backups-and-snapshots-explained) antes de comenzar.
 
 # Paso 13: Cambia los permisos {#cambia-permisos}
 
