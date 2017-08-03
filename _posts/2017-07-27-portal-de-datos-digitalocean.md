@@ -6,6 +6,8 @@ permalink: /blog/setup-dkan-digitalocean/
 published: true
 share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
 tags:
+- español
+- spanish
 - open-data
 - DKAN
 - DigitalOcean
@@ -244,7 +246,7 @@ Si te apresuraste a instalar el DKAN, te habrás dado cuenta que aún faltan pas
 
 ~~~
 sudo mkdir /var/www/html/profiles/dkan/translations
-sudo wget -O /var/www/html/profiles/dkan/translations/drupal-8.3.5.es.po http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.3.5.es.po
+sudo wget -O /var/www/html/profiles/dkan/translations/drupal-7.56.es.po http://ftp.drupal.org/files/translations/7.x/drupal/drupal-7.56.es.po
 ~~~
 
 - Copiar el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`.
