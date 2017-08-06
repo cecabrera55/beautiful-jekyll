@@ -314,6 +314,7 @@ A continuación una lista de las fuentes bibliográficas.
 - [Media Temple: Using SSH keys on your server](https://mediatemple.net/community/products/dv/204644740/using-ssh-keys-on-your-server)
 - [How to Ubuntu: How to install LAMP on Ubuntu](http://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
 - [DKAN: Installation](http://dkan.readthedocs.io/en/latest/introduction/installation.html)
+- [DigitalOcean: How To Install MySQL on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
 - [GitHub: DKAN Open Data Portal](https://github.com/NuCivic/dkan)
 - [Drupal: Module installation requires FTP access?](https://www.drupal.org/node/1036494)
 - [Bitbucket: Creating SSH keys](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html)
