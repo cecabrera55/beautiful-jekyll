@@ -25,7 +25,7 @@ DigitalOcean provee servidores virtuales privados "en la nube" llamados *droplet
 
 [DKAN](http://getdkan.com/) es una plataforma para publicar, contar historias y graficar datos abiertos. Es un proyecto de código abierto basado en Drupal y liderado por [Granicus](https://granicus.com/). Puede instalarse y publicarse en un droplet (recuerda: droplet = tu máquina/servidor en la nube) de DO.
 
-Este blog cubrirá la instalación y configuración de un portal de datos abiertos usando DKAN en un servidor Ubuntu 14.04.05 x64 (Linux) con el fin de apoyar entidades gubernamentales, ONG's y personales naturales en sus compromisos de publicar datos abiertos.
+Este blog cubrirá la instalación y configuración de un portal de datos abiertos usando DKAN en un servidor Ubuntu 14.04.05 x64 (Linux) con el fin de apoyar entidades gubernamentales, ONG's y personas naturales en su compromiso de publicar datos abiertos.
 
 # Tabla de Contenidos
 
