@@ -2,10 +2,10 @@
 _site
 .sass-cache
 .vagrant
-
 # general
 .DS_Store
 Thumbs.db
 ehthumbs.db
 .Rproj.user
 .Rhistory
+.rproj.user (Conflicto de may\303\272sculas y min\303\272sculas)
