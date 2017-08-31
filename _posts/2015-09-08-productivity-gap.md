@@ -11,15 +11,12 @@ tags:
 published: false
 ---
 
-Camilo Eduardo Cabrera Garrido – cecabrera55@gmail.com
-Universidad de los Andes, Bogotá, Colombia.
-Paper written for the Cambridge, Massachusetts Conference. 
+> Camilo Eduardo Cabrera Garrido – cecabrera55@gmail.com. Universidad de los Andes, Bogotá, Colombia. Paper written for the Cambridge, Massachusetts Conference. 
 March 10th 2015. USD/COP = 2,611.62.
 
-
-
 ABSTRACT: Colombia needs a productive transformation. It has been proved that the operational way to do it is by investing in Research and Development (R&D) projects at the firm level. Young professionals with a focused training may be converted in the qualified human capital to do such job, working hand by hand with consulting and research groups. This methodology design is proposed as a possible solution for the productivity gap problem in the country by employing young professionals as the necessary human capital capable of transforming positively the productive system, with the support of public and private institutions. 
-Introduction
+
+# 1. Introduction
 
 This applied research work aims to explore the endogenous nature of the low investment on Research and Development (R&D) in Colombia from a different perspective — not an economist or econometric one — but through the systems dynamics and, in particular, through operational thinking.
 
@@ -30,7 +27,8 @@ Part of the low productivity in countries, especially in Latin America, is due t
 Therefore, the productive transformation of the Colombian business sector should be seen as a great collective effort to incorporate technical progress in sustainable long term production processes from all firms – large companies and SMEs – by structuring, funding and executing investment projects in R&D focused on closing the productivity gap at the firm level, reaching international standards and moving towards higher technological sophistication. 
 
 This paper proposes a methodology whose theoretical foundation comes from systems thinking and develops throughout the operational thinking, in order to answer the research question posed: how to close the productivity gap in the manufacturing industry and agribusiness in Colombia?
-Theoretical Framework
+
+# 2. Theoretical Framework
 
 R&D Investment in Colombia is not just a statistic. It is not product of highly correlated variables. It is possible to make a sophisticated econometric model based on data from the Colombian Science and Technology Observatory (OCyT, 2013) and effectively find that the growth rate of investment in R&D is strongly correlated with variables as the budget from the Science, Technology and Innovation Administrative Department (Colciencias), the growth rate of GDP or the profit growth rate of large companies. Consequently, there could be possible to do some practical inferences to justify some policy measures: for example, a significant budget increase to Colciencias or assign to “Science and Technology” 10% of royalties (Ministerio de Educación, 2012). 
 
@@ -38,11 +36,14 @@ However, in reality, things do not work that way. Investment in R&D in a given y
 
 Clearly, trying to discover, by analyzing data, a mysterious law hidden in the time series that governs the behavior of the variable in the data for R&D is a lack-of-scientific reasoning, sheltered by a mathematical garb apparently objective and accurate. 
 
-Fundamentals of Systems Dynamics
+## 2.1 Fundamentals of Systems Dynamics
+
 A school of modern thought has come to very similar conclusions and has structured them in such way that has been gaining more followers in the most advanced scientific and technological research centers on the world, such as the Massachusetts Institute of Technology (MIT). 
 
 This is System Dynamics and specifically Operational Thinking; originally proposed in 1993 by Barry Richmond (Richmond, 1993). System Dynamics “is the use of informal mental maps and formal simulation computer-based models to discover and understand the endogenous sources of systems behaviors” (Richardson, 2011). Specifically, Operational Thinking is a skill that can be learned and developed from System Dynamics, and is part of a set of other skills such as dynamic thinking, closed-loop thinking, generic thinking, structural thinking, continuous thinking and scientific thinking (Morecroft, 2007).
-Operational Thinking
+
+## 2.2 Operational Thinking
+
 This research has been consumed from the perspective of Operational Thinking. This skill allows the performer to see how the world functions and not how it should works based on theories. 
 
 A classic example to illustrate the contrast between operational and non-operational thinking that Richmond uses is: an economic research article had published the results obtained by a renowned economist based in a sophisticated econometric model to predict milk production in USA. The model incorporated lots of macroeconomic variables connected together by a complex system of equations. However, nowhere appeared cows. 
@@ -52,34 +53,44 @@ It is not very difficult to find out that, in the process of milk production, co
 Operational Thinking provides a solid framework for the analysis of a complex problem such as the performance of investment in R&D in Colombia. It is possible to set the limits of the system, analyze the decision-making process of employers, detect driven or hindered feedback loops, understand the processes of structuring, financing and executing investment projects, analyze the role played by government incentives and interact with the capital market.
 
 As for modelling milk production, cows are essential, to model investment in R&D, Colombia needs projects and managers capable of structure, fund and execute them.
-Industrial Engineering: tackling the problem
+## 2.3 Industrial Engineering: tackling the problem
+
 “Economist, as social scientists, intend to build theories of socio-economic systems, usually by means of gathering and analyzing data. Engineers, on the other hand, intend to produce designs and solve problems, frequently by mean of models that are built in operational terms. This difference means a very different way of thinking, two different epistemologies” (Olaya, 2012). 
 
 Consequently, Industrial Engineering (Institute of Industrial Engineers, 2014) must take an active role in finding a business response (at the firm level) to the problem of low productivity (macro and micro) applying advanced techniques such as systems dynamic modelling and strategic modelling based on understanding business dynamics (Sterman, 2000).
 
 In this vein, the problem is addressed by identifying the main bottleneck that prevents the growth of investment in R&D in Colombia: There is not a massive supply of investment opportunities in R&D because structured projects are not viable and attractive to Colombian firms. And no investment projects are structured in R&D because companies do not have access to highly qualified human capital that is required in the phases of structuring, financing and executing.
-Colombia: Diagnosis
+
+# 3. Colombia: Diagnosis
 
 The symptoms of Dutch disease are already present in Colombia: a premature deindustrialization, low level of exports with contents of medium and high technology, and conversely, the increasing growth of imports of machinery and equipment with high added value. Thanks to the extraordinary flow of foreign capital, the country has become a net exporter of mining-commodities with low added value and high risk due to price fluctuations beyond the control of the Colombian authorities (El Heraldo, 2014). 59.9% of exports during 2014 in Colombia were from the mining-sector (DANE, 2014) and the end of this bonanza looms (Portafolio, 2013).
 
-Competitiveness
+## 3.1 Competitiveness
+
 Colombia was ranked 51 among 59 countries in global competitiveness ranking of IMD in 2014 where the United States (1), Switzerland (2) and Singapore (3) occupied the top positions (IMD WCY, 2014). Furthermore, Colombia was ranked 69 (among 148 countries) in the World Economic Forum Global Competitiveness Index (World Economic Forum, 2013), which defines competitiveness as "the set of institutions, policies, and factors that determines the level of productivity of a country."
 
-Productivity
+## 3.2 Productivity
+
 The efficiency of a productive process can be defined by the ratio between the value added from a good or service production system and the resources used to generate them (Carro Paz & González Gómez, 2012). As an example, an employee is more productive than another when at the same time (resource) does more things (production) (Laborde & Veiga, 2011). The productivity level determines both the level of prosperity that can be reached by a country, and the investment return rates in the economy (World Economic Forum, 2013).
 
 The Cobb-Douglas equation can be expressed as follows (Ros, 2014):
 
+```
 Yt=Ltα*Kt1-α*At
+```
 
-Where α corresponds to the product elasticity of labor (L), i.e., how intensive is an economy in this productive factor (value between 0 and 1). Therefore, (1-α) represents the intensity of the economy on the other factor of production: capital (K). The growth rate of product Y can be decomposed into three factors: capital productivity (K), labor productivity (L) and total factor productivity (A or TFP). Each of these terms are related in the following equation (Eslava & Meléndez, 2009):
+Where `α` corresponds to the product elasticity of labor (L), i.e., how intensive is an economy in this productive factor (value between 0 and 1). Therefore, `(1-α)` represents the intensity of the economy on the other factor of production: capital (K). The growth rate of product Y can be decomposed into three factors: capital productivity (K), labor productivity (L) and total factor productivity (A or TFP). Each of these terms are related in the following equation (Eslava & Meléndez, 2009):
 
+```
 ∆YY ≈α∆KK+(1-α)∆LL  +∆AA
+```
 
 "One of the standard ways of measuring gains in efficiency is to calculate increases in total factor productivity (TFP), i.e., the efficiency with which one economy transforms its accumulated production factors into production" (Pagés, 2010). The TFP then functions as a measure of the synergies generated by the combination of productive factors (capital and labor), by incorporating applied knowledge and technical progress in the production process.
 
 Let productivity then be defined as the efficiency of use of productive factors towards the production’s value added from any company. It is possible to measure the productivity of a company through its productive factors and, in this sense, the definition adopted is aligned with definitions previously raised.
-Productivity Gap
+
+## 3.3 Productivity Gap
+
 The depth diagnosis of the productivity problems in Latin America conducted by researchers from the Interamerican Development Bank (IDB) (Pagés, 2010) (Crespi, Fernández-Arias, & Stein, 2014) leads directly to the concept of productivity gap.
 
 As there are different productivities, there are different gaps with respect to each one: capital productivity gap, labor productivity gap and total factor productivity (TFP) gap. They are expressed as a relative difference between productivity levels of countries, companies or individuals. 
@@ -91,14 +102,17 @@ Low productivity has implications on the Colombians life quality as well as the 
 Additionally, developed economies report fewer business hours, because this go hand in hand with quality of life of workers and their productivity. Norway works 27 hours a week, France 35 and the Netherlands 36. In Latin America, Chile is working on average 38 hours a week, 40 hours Ecuador and Colombia approximately 53 hours. "The global trend in the hours a person must labor a year demarcates that each time the days are reduced, as is shown that longer hours means lower productivity" (Ruiz Granados, 2014) (Translated by Author).
 
 Additionally, the productivity gap is the main obstacle to fully exploit the opportunities offered by trade liberalization and free trade (see 3.4.2 Global Value Chains) and therefore should be the strategic focus of policies for productive development (Pagés, 2010). To solve this problem, the IDB proposes that the solution to low productivity is carried out inherently through investment in R&D focused on a Productive Transformation (Crespi, Fernández-Arias, & Stein, 2014).
-Productive Transformation
+
+## 3.4 Productive Transformation
+
 Increasing productivity means finding better ways to use more physical and human capital available in the region (Pagés, 2010). In Colombia, a sustainable way out is to adapt the production system to the new realities of deep integration into the global economy through the Global Value Chains. This collective effort is called Productive Transformation. This concept has been developed among others by economist Ricardo Hausmann (Hidalgo, Klinger, Barabási, & Hausmann, 2007) and involves determining which products - within the universe of products in the global economy, or "Space Product" - should prioritize one country, depending on its current and potential productive capacity (Hausmann & Klinger, 2006). This requires a complex coordination of efforts between the public sector and the private sector along with a relatively high investment.
 
 To measure the productive transformation is possible to use the TFP. In terms of one firm, it can be understood that the growth in revenue is dependent on investments (or changes) in capital and investment in human talent, among other factors. This way, it is possible to keep track and control on how effective is being productive transformation both micro level and macro level.
 
 There is the case study of Continental Europe - Austria, Belgium, France, Germany, Luxembourg and the Netherlands - in the late 90's and 2000's on an actual productive transformation. Since 1970 and even before, this Europe conducted a rapid economic transformation in which went from 73% in labor productivity relative to the United States to even surpass the States in 1989 until 2008. Given the global development conditions from that time, Continental Europe took almost 20 years (1970-1990) to close the productivity gap by 27 percentage points (Mischke, Regout, & Roxburgh, 2010) and therefore gives a cursory glance about what Latin America would be facing. 
 
-Product Space
+### _3.4.1 Product Space_
+
 Countries move through space product developing goods close to those they currently produce. Most countries can achieve its strategic focus only passing empirically through infrequent distances, which may help explain why poor countries have problems developing more competitive exports and fail to converge to the income levels of rich countries (Hidalgo, Klinger, Barabási, & Hausmann, 2007).
 
 "In the space of product, a product can be thought of as a tree and the set of all products as a forest. A country comprises a collection of firms or, for example, monkeys living in different trees and exploit these products. Similarly, the productive transformation process then involves moving from a poor part of the forest where trees have limited fruits, to the best parts of the forest. This means that the monkeys would have to jump distances, which means restructuring the capital (human, physical and institutional) towards goods that are different from those that are currently under production. The traditional growth theory assumes that there is always a tree to reach; and therefore, the forest structure is irrelevant. However, if this forest is heterogeneous, with some dense and more desert areas, and whether monkeys can jump only limited distances, then the monkeys could be limited to moving in the forest. If this is the case, the structure of this space and orientation of a country to itself become relevant in its development" (Hausmann & Klinger, 2006).
