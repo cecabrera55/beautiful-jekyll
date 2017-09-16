@@ -15,7 +15,7 @@ bigimg: "/img/posts/semaforos.png"
 ## La agenda
 La agenda del evento se dividió en dos secciones principales; y mucha comida (guiño para el staff). La primera parte tardó medio día e incluyó una actividad de integración llamada ["la fábrica de pelotas"](https://www.youtube.com/watch?v=-tMcQBfJPOo) liderada por Danny Sierra, gestor del proyecto. Vimos talleres de HTML, CSS, Github, Javascript, Jquery, D3.js y Google Maps para trabajar con las [fuentes de datos](http://datos.gov.co) (datasets) abiertos de Colombia. Dada la limitante de tiempo, cada taller tuvo una mirada holística a su lenguaje con el propósito de profundizar mediante la práctica en la segunda parte del fin de semana.
 
-Durante el siguiente día y medio, las actividades se enfocaron en armar equipos, seleccionar los datos, construir una solución a un problema, y desarrollar un prototipo con la información disponible. El equipo lo armamos entre [Luis Alejandro Mahecha](https://www.linkedin.com/in/lamahechag/), [Sebastián Malagón](https://www.linkedin.com/in/sebasti%C3%A1n-malag%C3%B3n-p%C3%A9rez-17768b125/), [Alexander Vargas](https://www.linkedin.com/in/alexander-vargas-7b428111b/) y [yo](http://cecabrera.github.io).
+Durante el siguiente día y medio, las actividades se enfocaron en armar equipos, seleccionar los datos, construir una solución a un problema, y desarrollar un prototipo con la información disponible. El equipo lo armamos entre [Luis Alejandro Mahecha](https://www.linkedin.com/in/lamahechag/), [Sebastián Malagón](https://www.linkedin.com/in/sebasti%C3%A1n-malag%C3%B3n-p%C3%A9rez-17768b125/), [Alexander Vargas](https://www.linkedin.com/in/alexander-vargas-7b428111b/) y [yo]({{ site.url }}/aboutme).
 
 Debíamos escoger uno de los dos retos de este DataJam:
 1. ¿Cómo reducir los tiempos de desplazamiento de los habitantes de la ciudad?
@@ -32,20 +32,20 @@ Antes de mostrales nuestro 'mínimo producto viable', debo advertirles que este 
 Divimos el proyecto en 3 métricas relevantes:
 * Mapa de calor. Identifica los puntos donde más se aglutinan los semáforos en Bogotá. En este caso era interesante ver cómo Chapinero y el Centro, a través de la Caracas, era la zona más densa de semáforos. Lo desarrollamos en R y Javascript.
 
-![Mapa de calor con la densidad de semáforos en Bogotá](https://cecabrera.github.io/datosbogota/semaforos.png)
+![Mapa de calor con la densidad de semáforos en Bogotá]({{ site.url }}/datosbogota/semaforos.png)
 
 * Mapa de puntos. Muestra los destinos hacia donde llegan los bogotanos y cuyo color cambia en función de la velocidad promedio recorrida. De nuevo, Chapinero y el Centro demuestran ser zonas de gran afluencia social en Bogotá. Lo desarrollamos en Python y JavaScript.
 
-![Mapa de puntos con los destinos de los bogotanos](https://cecabrera.github.io/img/posts/destinos.png)
+![Mapa de puntos con los destinos de los bogotanos]({{ site.url }}/img/posts/destinos.png)
 
-* [Análisis de destinos](https://cecabrera.github.io/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
+* [Análisis de destinos]({{ site.url }}/datosbogota/Mejorar%20tiempo%20de%20desplazamiento.html). A través de un Notebook de Python (Jupyter), desarrollamos el código para filtrar, analizar y visualizar las métricas claves en el comportamiento de los datos. Es aquí donde encontramos inconsistencias en la recolección de datos (como velocidades medias de más de 200 km/h), una gran cantidad de personas viajando menos de 15 km por trayecto y una oportunidad para mitigar el tiempo de viaje de los ciudadanos a través de la inversión en ciclorutas y cicloparqueaderos; especialmente en Chapinero y el Centro. El notebook utiliza Python como lenguaje.
 
-La [aplicación final](https://cecabrera.github.io/datosbogota/) fue desarrollada combinando HTML con la plantilla Bootstrap de CSS y el paquete JQuery de JavaScript. El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
+La [aplicación final]({{ site.url }}/datosbogota/) fue desarrollada combinando HTML con la plantilla Bootstrap de CSS y el paquete JQuery de JavaScript. El código fuente y detalles técnicos pueden encontrarlos en nuestro [repositorio público](https://github.com/cecabrera/datosbogota) en GitHub.
 
 Publicamos el proyecto en dos servidores:
 
 1. [ViveLabBogotá](http://www.vivelabbogota.com/datosdcsuba02/) para exponerlo ante los jurados.
-2. [GitHub](https://cecabrera.github.io/datosbogota/) para dejarlo a disposición de la comunidad y hacer futuras modificaciones; aprovechando las [bondades](https://cecabrera.github.io/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
+2. [GitHub]({{ site.url }}/datosbogota/) para dejarlo a disposición de la comunidad y hacer futuras modificaciones; aprovechando las [bondades]({{ site.url }}/2017-05-14-github-red-social-meritocracia/) de publicar proyectos en GitHub.
 
 ## Aprendizajes
 * En proyectos de ciencia de datos, la limpieza de los mismos consume el 80% del tiempo. Organizar los tipos de caracteres, las coordenadas geográficas, la exportación a formato amigable para Javascript y los filtros a los datos tomaron la mayor parte del fin de semana.
