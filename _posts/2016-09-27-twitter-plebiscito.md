@@ -16,19 +16,19 @@ tags:
   - R
 ---
 
-> ###### Basado en la [nota de interés](http://www.ikonosoft.com/notas-de-interes/121-el-plebiscito-en-twitter) de [Ikonosoft](http://www.ikonosoft.com/).
+> ###### Este blog fue publicado originalmente como una [nota de interés](http://www.ikonosoft.com/notas-de-interes/121-el-plebiscito-en-twitter) en [Ikonosoft](http://www.ikonosoft.com/). 
 
 Colombia se encuentra en la recta final de la votación entre el Si y el No para el plebiscito. La guerra con las FARC ha marcado historia en la patria y aunque la paz soñada no depende de una firma, el país se manifiesta a través de las redes sociales frente a la situación.
 
 Twitter es una red social que comparte públicamente el contenido y la interacción entre sus usuarios. Es el ágora de nuestra sociedad virtual. Por lo tanto, analizar y visualizar métricas relevantes en su contenido podría dar una radiografía en tiempo real de lo que está sucediendo en torno a la “paz”: específicamente al plebiscito.
 
-En Ikognitive – unidad de negocio de Ikonosoft SAS especializada en la analítica e inteligencia de negocios – tomamos la iniciativa de almacenar, analizar y visualizar datos de Twitter con el ánimo de descubrir cuál es el sentimiento e intención de voto en los comentarios que contuviesen la palabra “plebiscito”. Analizamos los sentimientos de 350 tweets y la intención de voto de 97 del día 20 de septiembre y visualizamos su contenido a través de una nube de palabras.
+Se tomó la iniciativa de almacenar, analizar y visualizar datos de Twitter con el ánimo de descubrir cuál es el __sentimiento__ e __intención de voto__ en los comentarios que contuviesen la palabra “plebiscito”. Se analizaron los sentimientos de 350 tweets y la intención de voto de 97 publicaciones del 20 de septiembre de 2016 para visualizar su contenido en una nube de palabras.
 
 # Análisis descriptivo
 
 ![Plebiscito en Twitter]({{ site.url }}/img/posts/twitter-plebiscito/Prop.jpg)
 
-El 84% de las personas que demostraron una intencion de voto al No en el plebiscito manifestaron un sentimiento negativo al redactar el tweet. De manera opuesta, el 60% de los que respondieron Si, manifestaron un sentimiento positivo en su comentario.
+El 84% de las personas que demostraron una intencion de voto al No en el plebiscito manifestaron un sentimiento negativo al redactar el tweet. De manera opuesta, el 60% de los que respondieron Si, sostuvieron un sentimiento positivo en su comentario.
 
 ![Plebiscito en Twitter]({{ site.url }}/img/posts/twitter-plebiscito/Rplot.png)
 
@@ -43,20 +43,22 @@ Apesar que la cantidad de tweets analizados es relativamente pequeña, el result
 
 Del mismo modo, Andrés Gutiérrez ([linkedin](https://www.linkedin.com/profile/in/predictive?goback=) y [twitter](https://twitter.com/psirusteam)), director de evaluación del ICFES y PhD en Ciencias, comparte un resultado de 64.7% votando Si por el plebiscito a través de un [pronóstico basado en encuestas](http://hagutierrezro.blogspot.com.co/2016/09/forecasting-colombia-peace-plebiscite.html).
 
+Independiente del resultado final, una muestra pequeña en Twitter ha logrado representar lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
+
 # Nube de palabras
 
-Para analizar texto en Twitter, es necesario llevar a cabo lo que en ciencia de datos se denomina como “limpieza de datos” (data cleaning). Esto es, eliminar las imágenes, videos, links, signos de puntuación y demás contenido irrelevante para el análisis; además de los tweets repetidos (retweets).
+_Text Analytics_ es una de las ramas de la Inteligencia Artificial (AI). Antes de realizar modelos sofisticados de _Aprendizaje Automático_ (Machine Learning) o configurar un Sistema Distribuido de Archivos de Hadoop (HDFS) para el procesamiento en tiempo real de sentimientos (positivo, negativo, neutro) o emociones (feliz, triste, aburrido, con miedo, etc) es imprescindible configurar manualmente un set de datos inicial que sirva como _input_ para que los modelos "aprendan". Esta configuración se conoce como "Data Cleaning" o "Data Wraggling" y consiste en preparar los datos para analizarlos.
 
-Luego, es posible visualizar la frecuencia con la que las palabras aparecen en Twitter:
+En este contexto, la "limpieza de datos" es eliminar de cada tweet las imágenes, videos, links, signos de puntuación y demás contenido que no sean palabras; además de los tweets repetidos (retweets). El resultado es una "bolsa de palabras" de la que se puede hacer una tabla de frecuencia. Las palabras más repetidas resaltarán más por aparecer más veces. La mejor forma de visualizarla es a través de una nube de palabras:
 
 ![Nube de palabras]({{ site.url }}/img/posts/twitter-plebiscito/wordcloud.png)
 
-¿Para qué sirve una nube de palabras? con la frecuencia con que aparecen las palabras es posible identificar intenciones implícitas en los tweets. La palabra “santos” aparece primordialmente en los tweets de personas que dicen No al plebiscito y deja la sensación que aquellos que no apoyan el plebiscito mencionan de manera negativa al Presidente Juan Manuel Santos pues al mismo tiempo resaltan las palabras “manipulada” y “engañarnos”. Las palabras “estable” y “duradera” hacen referencia a la pregunta principal del plebiscito: “¿Apoya usted el acuerdo final para la terminación del conflicto y la construcción de una paz estable y duradera?” y son usadas en tweets como: “Encuesta única, manipulada por Santos, para engañarnos a todos, de una manera estable y duradera” (referencia [aquí](https://twitter.com/GmoSaldarriaga/status/778230793869164544)) o “@VotaNOColombia plebiscito NO es para Paz estable y duradera , es solamente xa rechazar o aceptar acuerdo Timochenko-Santos #ColombiaconelNO” (referencia [aquí](https://twitter.com/penzador12/status/778232200768675840)).
+¿Para qué sirve? con la frecuencia con que aparecen las palabras es posible identificar intenciones implícitas en los tweets. La palabra “santos” aparece primordialmente en los tweets de personas que dicen No al plebiscito y deja la sensación que aquellos que no apoyan el plebiscito mencionan de manera negativa al Presidente Juan Manuel Santos pues al mismo tiempo resaltan las palabras “manipulada” y “engañarnos”. Las palabras “estable” y “duradera” hacen referencia a la pregunta principal del plebiscito: “¿Apoya usted el acuerdo final para la terminación del conflicto y la construcción de una paz estable y duradera?” y son usadas en tweets como: “Encuesta única, manipulada por Santos, para engañarnos a todos, de una manera estable y duradera” (referencia [aquí](https://twitter.com/GmoSaldarriaga/status/778230793869164544)) o “@VotaNOColombia plebiscito NO es para Paz estable y duradera , es solamente xa rechazar o aceptar acuerdo Timochenko-Santos #ColombiaconelNO” (referencia [aquí](https://twitter.com/penzador12/status/778232200768675840)).
 
-Mientras las personas que manifiestan No enfocan sus intenciones en una persona a través de la palabra “santos”, las personas que votan Si mencionan más veces la palabra “colombia” asociándolo a una perspectiva social en el análisis. En el grupo de los que votan por el Si se resaltan hashtags (#) como “conargumentossi” y “sialapaz”; y menciones (@) como “franciscoderoux”. Este último sobresale pues el 19 de septiembre a las 10 de la noche, Revista Semana publicó un [artículo](http://www.semana.com/nacion/articulo/plebiscito-por-la-paz-francisco-de-roux-explica-su-postura/494351) sobre Francisco De Roux titulado “Los colombianos estamos enredados en un problema humano muy profundo” en donde el sacerdote manifiesta su intención de voto al Si.
+Mientras las personas que expresan No enfocan sus intenciones en una persona a través de la palabra “santos”, las personas que votan Si mencionan más veces la palabra “colombia” asociándolo a una perspectiva plural o social. En el grupo de los que votan por el Si se resaltan hashtags (#) como “conargumentossi” y “sialapaz”; y menciones (@) como “franciscoderoux”. Este último sobresale pues el 19 de septiembre a las 10 de la noche (día anterior a la recolecta de los tweets), Revista Semana publicó un [artículo](http://www.semana.com/nacion/articulo/plebiscito-por-la-paz-francisco-de-roux-explica-su-postura/494351) sobre Francisco De Roux titulado “Los colombianos estamos enredados en un problema humano muy profundo” en donde el sacerdote manifiesta su intención de voto al Si.
 
 # Conclusiones
 
-Analizar las redes sociales es una de las fortalezas de Ikognitive. A partir del análisis en este blog, se realizó un modelo de aprendizaje de máquina (machine learning) para estimar la probabilidad que la intención de voto de un nuevo tweet sea Si o No. ¿Te interesa la analitica y quieres conocer el modelo? ¿Eres un pequeño negocio que necesita la inteligencia de negocios para tomar decisiones basadas en datos en tiempo real? ¿Una gran empresa buscando posibilidades de moverse a otros mercados? Contáctanos.
+Por razones confidenciales no se comparte el código fuente ni otras estadísticas. El lenguaje de programación fue R y con el total de tweets analizados se desarrolló un modelo de aprendizaje automático (machine learning) para estimar la _probabilidad que la intención de voto de un nuevo tweet fuese Si o No_. Dicho modelo usó el 80% de los datos para "entrenar" el modelo y el 20% restante para "testear" la precisión del modelo.
 
-El objetivo de este blog es informar sobre las posibilidades que tiene la analítica en redes sociales y no pretende mostrar inclinación alguna sobre la intención de voto de los miembros de Ikognitive o de Ikonosoft SAS.
+Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la información disponible en internet a través de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos).
