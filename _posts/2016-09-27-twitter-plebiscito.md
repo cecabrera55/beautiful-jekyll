@@ -47,7 +47,7 @@ Independiente del resultado final, una muestra pequeña en Twitter ha logrado re
 
 # Nube de palabras
 
-_Text Analytics_ es una de las ramas de la Inteligencia Artificial (AI). Antes de realizar modelos sofisticados de _Aprendizaje Automático_ (Machine Learning) o configurar un Sistema Distribuido de Archivos de Hadoop (HDFS) para el procesamiento en tiempo real de sentimientos (positivo, negativo, neutro) o emociones (feliz, triste, aburrido, con miedo, etc) es imprescindible configurar manualmente un set de datos inicial que sirva como _input_ para que los modelos "aprendan". Esta configuración se conoce como "Data Cleaning" o "Data Wraggling" y consiste en preparar los datos para analizarlos.
+La Analítica de Texto (_Text Analytics_) es una de las ramas de la Inteligencia Artificial (AI). Antes de realizar modelos sofisticados de _Aprendizaje Automático_ (Machine Learning) o configurar un Sistema Distribuido de Archivos de Hadoop (HDFS) para el procesamiento en tiempo real de sentimientos (positivo, negativo, neutro) o emociones (feliz, triste, aburrido, con miedo, etc) es imprescindible configurar manualmente un set de datos inicial que sirva como _input_ para que los modelos "aprendan". Esta configuración se conoce como "Data Cleaning" o "Data Wraggling" y consiste en preparar los datos para analizarlos.
 
 En este contexto, la "limpieza de datos" es eliminar de cada tweet las imágenes, videos, links, signos de puntuación y demás contenido que no sean palabras; además de los tweets repetidos (retweets). El resultado es una "bolsa de palabras" de la que se puede hacer una tabla de frecuencia. Las palabras más repetidas resaltarán más por aparecer más veces. La mejor forma de visualizarla es a través de una nube de palabras:
 
@@ -59,6 +59,6 @@ Mientras las personas que expresan No enfocan sus intenciones en una persona a t
 
 # Conclusiones
 
-Por razones confidenciales no se comparte el código fuente ni otras estadísticas. El lenguaje de programación fue R y con el total de tweets analizados se desarrolló un modelo de aprendizaje automático (machine learning) para estimar la _probabilidad que la intención de voto de un nuevo tweet fuese Si o No_. Dicho modelo usó el 80% de los datos para "entrenar" el modelo y el 20% restante para "testear" la precisión del modelo.
+Por razones confidenciales no se comparte el código fuente ni otras estadísticas. El lenguaje de programación fue R y con el total de tweets analizados se desarrolló un modelo de aprendizaje automático (machine learning) para estimar la _probabilidad que la intención de voto de un nuevo tweet fuese Si_. Dicho modelo usó el 80% de los datos para "entrenarse" y el 20% restante para "testear" su precisión.
 
-Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la información disponible en internet a través de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos).
+Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la gran cantidad de información disponible en internet a través de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos).
