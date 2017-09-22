@@ -5,7 +5,7 @@ date: '2016-09-27'
 permalink: /es/blog/twitter-plebiscito/
 published: true
 share-img: /img/posts/twitter-plebiscito/wordcloud.png
-bigimg: http://www.clasesdeperiodismo.com/wp-content/uploads/2016/09/cats.jpg
+bigimg: "http://www.clasesdeperiodismo.com/wp-content/uploads/2016/09/cats.jpg"
 tags:
   - Español
   - Twitter
