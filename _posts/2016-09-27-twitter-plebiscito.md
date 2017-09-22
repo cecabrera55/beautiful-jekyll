@@ -17,7 +17,7 @@ tags:
   - R
 ---
 
-> ###### Este blog fue publicado originalmente como una [nota de interés](http://www.ikonosoft.com/notas-de-interes/121-el-plebiscito-en-twitter) en [Ikonosoft](http://www.ikonosoft.com/). 
+> ###### Este blog fue publicado originalmente como una [nota de interés](http://www.ikonosoft.com/notas-de-interes/121-el-plebiscito-en-twitter) en [Ikonosoft.com](http://www.ikonosoft.com/). 
 
 Colombia se encuentra en la recta final de la votación entre el Si y el No para el plebiscito. La guerra con las FARC ha marcado historia en la patria y aunque la paz soñada no depende de una firma, el país se manifiesta en redes sociales.
 
