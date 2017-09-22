@@ -38,7 +38,7 @@ ABSTRACT: Colombia needs a productive transformation. It has been proved that th
     - [3.4.2. Global Value Chains](#global-value-chains)
     - [3.4.3. Innovation](#innovation)
   - [3.5. Articulating Colombian actors](#articulating-colombian-actors)
-    - [3.5.1. Productive Transformation Program](#productive-transformation-program)
+    - [3.5.1. Productive Transformation Program](#ptp)
     - [3.5.2. Tax Benefits for Investment on R&D in Colombia](#tax-benefits)
     - [3.5.3. Young professionals](#young-professionals)
     - [3.5.4. Institutional discoordination](#institutional-discoordination)
@@ -60,12 +60,12 @@ ABSTRACT: Colombia needs a productive transformation. It has been proved that th
   - [5.2. Baseline scenario](#baseline-scenario)
   - [5.3. Sensibility Analysis](#sensibility-analysis)
 - [6. Conclusions and Scope](#conclusions)
-- [7. References](#References)
+- [7. References](#references)
 
 
 
 
-# 1. Introduction
+# 1. Introduction {#introduction}
 
 This applied research work aims to explore the endogenous nature of the low investment on Research and Development (R&D) in Colombia from a different perspective — not an economist or econometric one — but through the systems dynamics and, in particular, through operational thinking.
 
@@ -77,7 +77,7 @@ Therefore, the productive transformation of the Colombian business sector should
 
 This paper proposes a methodology whose theoretical foundation comes from systems thinking and develops throughout the operational thinking, in order to answer the research question posed: how to close the productivity gap in the manufacturing industry and agriculture business in Colombia?
 
-# 2. Theoretical Framework
+# 2. Theoretical Framework {#framework}
 
 R&D Investment in Colombia is not just a statistic formula. It is not product of highly correlated variables. It is possible to make a sophisticated econometric model based on data from the Colombian Science and Technology Observatory (OCyT, 2013) and effectively find that the growth rate of investment in R&D is strongly correlated with variables as the budget from the Science, Technology and Innovation Administrative Department (Colciencias), the growth rate of GDP or the profit growth rate of large companies. Consequently, it could be possible to do some practical inferences to justify some policy measures: for example, a significant budget increase to Colciencias or assign to “Science and Technology” 10% of royalties (Ministerio de Educación, 2012). 
 
@@ -85,13 +85,13 @@ However, in reality, things do not work that way. Investment in R&D in a given y
 
 Clearly, trying to discover, by analyzing data, a mysterious law hidden in the time series that governs the behavior of the variable in the data for R&D is a lack-of-scientific reasoning, sheltered by a mathematical garb apparently objective and accurate. 
 
-## 2.1. Fundamentals of Systems Dynamics
+## 2.1. Fundamentals of Systems Dynamics {#fundamentals}
 
 A school of modern thought has come to very similar conclusions and has structured them in such way that has been gaining more followers in the most advanced scientific and technological research centers on the world, such as the Massachusetts Institute of Technology (MIT). 
 
 This is System Dynamics and specifically Operational Thinking; originally proposed in 1993 by Barry Richmond (Richmond, 1993). System Dynamics “is the use of informal mental maps and formal simulation computer-based models to discover and understand the endogenous sources of systems behaviors” (Richardson, 2011). Specifically, Operational Thinking is a skill that can be learned and developed from System Dynamics, and is part of a set of other skills such as dynamic thinking, closed-loop thinking, generic thinking, structural thinking, continuous thinking and scientific thinking (Morecroft, 2007).
 
-## 2.2. Operational Thinking
+## 2.2. Operational Thinking {#operational-thinking}
 
 This research has been consumed from the perspective of Operational Thinking. This skill allows the performer to see how the world functions and not how it should works based on theories. 
 
@@ -103,7 +103,7 @@ Operational Thinking provides a solid framework for the analysis of a complex pr
 
 As for modelling milk production, cows are essential, to model investment in R&D, Colombia needs projects and managers capable of structure, fund and execute them.
 
-## 2.3. Industrial Engineering: tackling the problem
+## 2.3. Industrial Engineering: tackling the problem {#industrial-engineering}
 
 “Economist, as social scientists, intend to build theories of socio-economic systems, usually by means of gathering and analyzing data. Engineers, on the other hand, intend to produce designs and solve problems, frequently by mean of models that are built in operational terms. This difference means a very different way of thinking, two different epistemologies” (Olaya, 2012). 
 
@@ -111,15 +111,15 @@ Consequently, Industrial Engineering (Institute of Industrial Engineers, 2014) m
 
 In this vein, the problem is addressed by identifying the main bottleneck that prevents the growth of investment in R&D in Colombia: There is not a massive supply of investment opportunities in R&D because structured projects are not viable and attractive to Colombian firms. And no investment projects are structured in R&D because companies do not have access to highly qualified human capital that is required in the phases of structuring, financing and executing.
 
-# 3. Colombia: Diagnosis
+# 3. Colombia: Diagnosis {#colombia}
 
 The symptoms of Dutch disease are already present in Colombia: a premature deindustrialization, low level of exports with contents of medium and high technology, and conversely, the increasing growth of imports of machinery and equipment with high added value. Thanks to the extraordinary flow of foreign capital, the country has become a net exporter of mining-commodities with low added value and high risk due to price fluctuations beyond the control of the Colombian authorities (El Heraldo, 2014). 59.9% of exports during 2014 in Colombia were from the mining-sector (DANE, 2014) and the end of this bonanza looms (Portafolio, 2013).
 
-## 3.1. Competitiveness
+## 3.1. Competitiveness {#competitiveness}
 
 Colombia was ranked 51 among 59 countries in global competitiveness ranking of IMD in 2014 where the United States (1), Switzerland (2) and Singapore (3) occupied the top positions (IMD WCY, 2014). Furthermore, Colombia was ranked 69 (among 148 countries) in the World Economic Forum Global Competitiveness Index (World Economic Forum, 2013), which defines competitiveness as "the set of institutions, policies, and factors that determines the level of productivity of a country."
 
-## 3.2. Productivity
+## 3.2. Productivity {#productivity}
 
 The efficiency of a productive process can be defined by the ratio between the value added from a good or service production system and the resources used to generate them (Carro Paz & González Gómez, 2012). As an example, an employee is more productive than another when at the same time (resource) does more things (production) (Laborde & Veiga, 2011). The productivity level determines both the level of prosperity that can be reached by a country, and the investment return rates in the economy (World Economic Forum, 2013).
 
@@ -138,7 +138,7 @@ Where `α` corresponds to the product elasticity of labor (L), i.e., how intensi
 
 Let productivity then be defined as the efficiency of use of productive factors towards the production’s value added from any company. It is possible to measure the productivity of a company through its productive factors and, in this sense, the definition adopted is aligned with definitions previously raised.
 
-## 3.3. Productivity Gap
+## 3.3. Productivity Gap {#productivity-gap}
 
 The depth diagnosis of the productivity problems in Latin America conducted by researchers from the Interamerican Development Bank (IDB) (Pagés, 2010) (Crespi, Fernández-Arias, & Stein, 2014) leads directly to the concept of the productivity gap.
 
@@ -154,7 +154,7 @@ Additionally, developed economies report fewer business hours, because this go h
 
 Additionally, the productivity gap is the main obstacle to fully exploit the opportunities offered by trade liberalization and free trade (see 3.4.2 Global Value Chains) and therefore should be the strategic focus of policies for productive development (Pagés, 2010). To solve this problem, the IDB proposes that the solution to low productivity is carried out inherently through investment in R&D focused on a Productive Transformation (Crespi, Fernández-Arias, & Stein, 2014).
 
-## 3.4. Productive Transformation
+## 3.4. Productive Transformation {#productive-transformation}
 
 Increasing productivity means finding better ways to use more physical and human capital available in the region (Pagés, 2010). In Colombia, a sustainable way out is to adapt the production system to the new realities of deep integration into the global economy through the Global Value Chains. This collective effort is called Productive Transformation. This concept has been developed among others by economist Ricardo Hausmann (Hidalgo, Klinger, Barabási, & Hausmann, 2007) and involves determining which products - within the universe of products in the global economy, or "Space Product" - should prioritize one country, depending on its current and potential productive capacity (Hausmann & Klinger, 2006). This requires a complex coordination of efforts between the public sector and the private sector along with a relatively high investment.
 
@@ -162,7 +162,7 @@ To measure the productive transformation is possible to use the TFP. In terms of
 
 There is the case study of Continental Europe - Austria, Belgium, France, Germany, Luxembourg and the Netherlands - in the late 90's and 2000's on an actual productive transformation. Since 1970 and even before, this Europe conducted a rapid economic transformation in which went from 73% in labor productivity relative to the United States to even surpass the United States in 1989 until 2008. Given the global development conditions from that time, Continental Europe took almost 20 years (1970-1990) to close the productivity gap by 27 percentage points (Mischke, Regout, & Roxburgh, 2010) and therefore gives a cursory glance about what Latin America would be facing. 
 
-### _3.4.1. Product Space_
+### _3.4.1. Product Space_ {#product-space}
 
 Countries move through space product developing goods close to those they currently produce. Most countries can achieve its strategic focus only passing empirically through infrequent distances, which may help explain why poor countries have problems developing more competitive exports and fail to converge to the income levels of rich countries (Hidalgo, Klinger, Barabási, & Hausmann, 2007).
 
@@ -174,13 +174,13 @@ In Colombia, for example, in 2013 the textile and clothing industry were drastic
 
 That is why the productive transformation process is aligned with product space and companies’ ability to "jump" across the product space. It is at this point where productive transformation, closing the gap in productivity and investment in R&D are connected. The more innovation and value added a product contains, the higher the productivity needed to produce it in terms of labor and capital. This process also involves a process of assisted dip into global value chains.
 
-### _3.4.2. Global Value Chains_
+### _3.4.2. Global Value Chains_ {#global-value-chains}
 
 The Global Value Chains (GVC) are value chains generated through the interaction between different countries to put a product on the global market. GVC in developing countries play a key role in growth and economic development. The added value generated by trade in developing countries "contributes, on average, about 28% of GDP, compared with 18% for developed countries". At the same time, "economies with increasing participation in GVCs have growth in GDP per capita of about 2 percentage points above average" (Ferrando, 2013).
 
 The fact of transforming the productivity of a company and sophisticate its products involves a restructuration in its value chain and therefore a need to open up its market to the global context. This is how it happens to produce, for example, "plastic toys" such as balls or toys for children (low in sophistication and limited to the local demand) to produce "plastic toys" such as computers or cell phones (high in sophistication and international demand). The development of sophisticated products also involves a system of international suppliers specialized in raw material for certain products and innovation.
 
-### _3.4.3. Innovation_
+### _3.4.3. Innovation_ {#innovation}
 
 From Griliches (1979) and Smith (2006) it has been possible to provide a relatively comprehensive picture about the process of innovation inside a company. Like the production of goods, the production of ideas can be explained by a function of knowledge production (Griliches, 1979). In this case innovation is the result of the company's investments in R&D and the accumulation of previously existing knowledge; in addition to investments in human capital, training, equipment, and software licensing, among others. Among the approaches to the results of innovation include: productivity measures, the number of patents and other intellectual property rights, scientific publications and innovations figures compiled from surveys of innovation applied directly to companies (Smith, 2006).
 
@@ -194,13 +194,13 @@ Investment in Latin American companies in innovation represents only 0.5% of gro
 
 Latin American SMEs face tougher situations. "While all firms in developing economies invest scarce resources in R&D compared to companies in developed economies, it is even less likely to be small businesses that decide to innovate in relation to the larger. Large companies can distribute the high fixed costs of innovation in higher sales volume, and have better access to financial services, technology, consulting services and markets specialized human capital" (Pagés, 2010) (Translated by Author).
 
-## 3.5. Articulating Colombian actors
+## 3.5. Articulating Colombian actors {#articulating-colombian-actors}
 
 Highlighting the valuable individual efforts (through initiatives and policies) of each actor of the Colombian productive system, enmarks a need for a joint and coordinated work focused on a real productive transformation.
 
 "In line with trends in developed countries, subsidies in Latin America have increasingly focused on promoting cooperation between different actors in the innovation system. In fact, countries are progressively moving from individual project support to support projects involving university-industry interaction, and towards more comprehensive programs that cover entire sectors, such as technology clusters" (Alvarez, Crespi , & Cuevas, 2012).
 
-### _3.5.1. Productive Transformation Program_
+### _3.5.1. Productive Transformation Program_ {#ptp}
 
 In response to the shortcomings in the productive system, the Colombian Ministry of Commerce, Industry and Tourism created in 2007 the Productive Transformation Program (PTP). Nowadays it is controlled by Bancoldex, a public bank responsible for funding, among others, the productive transformation in Colombia. PTP is a program of the National Government to "transform the Colombian industry and promote the development of enterprises in 20 strategic sectors of the national economy" (PTP, 2014).
 
@@ -218,7 +218,7 @@ One of the methods proposed by the PTP, consists on an external consultant exper
  
 Such a process is unsustainable because all the capital invested in consulting can just "improve" the company in a few aspects but does not guarantee a real productive transformation or closing the productivity gap between one company respects to another. At the same time, such cost is not affordable for a small or medium enterprise to pay for expert advice hours necessary to structure, finance and execute a project of productive transformation (Winch & Arthur, 2002).
 
-### _3.5.2. Tax Benefits for Investment on R&D in Colombia_
+### _3.5.2. Tax Benefits for Investment on R&D in Colombia_ {#tax-benefits}
 
 “Persons who invest in projects qualified as research and technological development, according to the criteria and conditions set by the _National Council of Tax Benefits in Science, Technology and Innovation_ (CNBT) shall be entitled to deduct from their tax, one hundred seventy five percent (175%) of the amount invested in such projects in the taxable period in which the investment was made. This deduction may not exceed forty percent (40%) of the liquid income, certain before subtracting the value of the investment” (Congreso de Colombia, 2011) (Translated by Author).
 
@@ -242,7 +242,7 @@ In this context, tax benefits are the right initiative to promote a productive t
 
 For SMEs, it gets complex. Although the law is in favor of SME projects to access the tax deduction, they usually do not have a research group who structure, supervise or co-execute R&D projects (Crespi Fernandez-Arias, & Stein, 2014). Generally CEOs or planning managers devote most of their efforts into daily operational management and coordination tasks. They do not have the willingness to devote 2 or 3 months structuring a R&D project, do not have an operational unit to support them in this work or their training often does not correspond to the ideal type of human capital capable of doing so (Pagés, 2010). In short, there is no human resource capable of structuring such projects for companies with restricted access to research groups.
 
-### _3.5.3. Young professionals_
+### _3.5.3. Young professionals_ {#young-profesionals}
 
 Young professionals will play a key role solving this issue. Empirical and theoretical documentation support this position. That population segment is considered qualified yet inexperienced human capital due to their no or limited working experience. Accordingly, a good proportion of young people choose to prolong their studies to gain even more knowledge through activities of basic and applied research. Some rather postponing their entry into the labor market and companies hiring them don't know how to fully achieve their productivity potential. 
 
@@ -256,13 +256,13 @@ Global Professional aims to promote professional exchanges through achieving and
 
 By promoting its three programs, AIESEC functions as a highly efficient volunteering organization where young people develop skills in project management, planning, marketing, human talent, sales, public relations, corporate communications and social consciousness. Therefore, the potential offered to developing sustainable productive transformation projects is significantly large, considering the enthusiasm (Senge, 1990), low costs (Prieto, 2014) and practical-theoretical knowledge of a young talent of this kind.
 
-### _3.5.4. Institutional discoordination_
+### _3.5.4. Institutional discoordination_ {#institutional-discoordination}
 
 Productivity gap is a classic problem of coordination and optimization. To a large extent, it is also a communication problem: actors mental maps often fail to join effectively.
 
 The opportunity cost of working in an uncoordinated manner is still very high (3.3 Productivity Gap). A suitable combination of knowledge (scientific, technological and empirical) would facilitate the articulation of public policies and tools (such as tax incentives, subsidies, technology transfer, etc.) to generate new knowledge (applied research and experimental development) for structuring a large-scale investment projects to large, medium and small enterprises. We must find an intelligent way to articulate the actors of the production system; i.e. according to their own mental maps and their own interests.
 
-# 4. Methodology
+# 4. Methodology {#methodology}
 
 The challenge of coordinating actors and engage a productive dialogue through a common language with Colombian businessman to address the process of productive transformation to their firms involves the use of methods of systems dynamics modelling (section 2.3 Industrial Engineering towards the problem). The main reason is to find effective ways of communication through generic parameterized enterprise models (Winch & Arthur, 2002) to put the language of academia at the same level of employers and encourage them to invest in innovation. Hence it is so important to use tax benefits and value generation tools to mitigate the risk of transforming a company and encourage investment in R&D.
 
@@ -272,11 +272,11 @@ Set out below is the causal diagram of the methodology made through simulation s
 
 Projects are the base of the R&D investment of this proposal. That is why the methodology is going to be presented according to the phases of one R&D investment project. These phases are Structuring, Financing and Execution.
 
-## 4.1. Structuring phase
+## 4.1. Structuring phase {#structuring-phase}
 
 This phase involves organizing ideas and mechanisms for achieving proper resources and subsequent execution. The approximate duration of this proposed structuring phase is 2 years made through a young professional Master’s studies.
 
-### _4.1.1. Master’s Degree in Productive Transformation_
+### _4.1.1. Master’s Degree in Productive Transformation_ {#master-degree}
 
 The aim of offering the future R&D project manager this Master allied with a university is twofold:
 
@@ -304,7 +304,7 @@ This process of coordination and optimization is only possible if each of the ac
 
 Once a manager successfully conclude his certified training (during his first year), he should have developed expertise in structuring, financing and executing projects of productive transformation (R&D); as well as has a "toolbox" to start his own project.
 
-### _4.1.2. Local Immersion_
+### _4.1.2. Local Immersion_ {#local-immersion}
 
 After his first year, he would do a 6-month immersion into a low productivity local enterprise to apply everything he has learned; for example, how to measure productivity.
 
@@ -320,7 +320,7 @@ This exercise presents challenges of communication between the manager and the b
 
 During this period, the manager would have had the time to start his project based on the immersion at the local company; this would be his principal input for his international immersion as well as for his Master’s thesis: The Productive Transformation (R&D) Investment Project. 
 
-### _4.1.3. International Immersion_
+### _4.1.3. International Immersion_ {#international-immersion}
 
 The last 6 months of the structuration phase would consists on the project manager going to a foreign company to (i) make an international immersion and (ii) to finish his Master’s thesis.
 
@@ -332,7 +332,7 @@ The trained manager could have access to processes, technologies and management 
 
 The manager may build then a global perspective on supply chain processes, machinery, human capital quality, skills and other productive factors. Once the project is finished and he has delivered a management report to the international firm, the project manager returns to his country.
 
-### _4.1.4. Finishing the Project Structuration_
+### _4.1.4. Finishing the Project Structuration_ {#finishing-structuration}
 
 At this point, the Master studies, the local immersion and the international immersion have allowed the manager to develop expertise that make him a highly skilled human capital to finance and execute his own R&D project. 
 
@@ -342,19 +342,19 @@ As a final step, every project structured by a manager in all cases would be sub
 
 Manager's salary and studies would be paid through Colciencias - who is responsible for carrying out R&D in the country - program “young researchers”. Similarly, the project once finished can also be passed to Bancoldex – because of its role in the productive transformation - who can take care of (i) move the project to the capital market or (ii) fund according to its investment capacity.
 
-## 4.2. Funding phase
+## 4.2. Funding phase {#funding-phase}
 
 Once the investment project is structured, it is time to fund it in the private and public markets. In this, manager identifies viable funding sources in different capital market actors, other resources from national or local government and other institutions interested in promoting investment in R&D; whose can help to improve the project risk profile or to achieve financial closure by subsidies or grants.
 
 This process can take from 2 months to 1 year depending on the skills of the manager, availability of time for this phase and the opportunities available in the public and private sector. This phase will consider also the time a project would be in the process of approval with the CNBT. In short, this phase is the manager seeking project funding.
 
-## 4.3. Execution phase
+## 4.3. Execution phase {#execution-phase}
 
 The funding resources would be deposited in a Trust, so that cash disbursements are exclusively available to the project under strict rules approved by the Monitoring Board (See 4.3.2 Monitoring Board).
 
 Typical activities in the execution phase will focus on the implementation of complex processes such as installation of advanced technological equipment and sophisticated machinery in parallel with the normal operation of the company. Training of administrative staff and operators will also be necessary, in order to qualify highly sophisticated human capital.
 
-### _4.3.1. Reinvestment in Structuring_
+### _4.3.1. Reinvestment in Structuring_ {#reinvestment}
 
 This Methodology proposes to reinvest a proportion of each project once financed to fulfill two strategic objectives:
 
@@ -364,7 +364,7 @@ This Methodology proposes to reinvest a proportion of each project once financed
 
 The plan would be to generate a horizontal "loan" between projects, so that it secures future funding for new projects in the structuring phase; which is a bottleneck in the current organization of private investment in R&D in Colombia. For example, Project 1 has just been funded with two million dollars and 1% of this money (20 000 USD) would be invested in structuring Project 2. Once financed Project 2 after CNBT approval and capital market funding, 1% of this money would go to pay Project 1’s "loan" during structuring; and another 1% would go to structure a new Project 3.
 
-### _4.3.2. Monitoring Board_
+### _4.3.2. Monitoring Board_ {#monitoring-board}
 
 Each project would be managed by a Monitoring Board which should ensure full implementation of the project and agree the conditions in the contract between the company, investors and the project manager.
 
@@ -380,7 +380,7 @@ It would have four members:
 
 The trusteeship agreement shall define in detail the conditions for the Monitoring Board to authorize disbursements depending on the progress of the project. Similarly, this group would be responsible for ensuring that the entire project is executed in accordance with the relevant organization and that all modifications deemed necessary must be duly justified and approved by its members.
 
-### _4.3.3. Competitive Intelligence_
+### _4.3.3. Competitive Intelligence_ {#competitive-intelligence}
 
 Global Value Chains analysis begins. This aims to take a strategic look on where would it be better to aim the sophistication of each SME’s product or service. Under this stage, the project manager and/or businessman willingness and availability would be needed to travel to highly productive companies (like, for example, the company the project manager was working at the stage of structuring), to understand their internal processes; and manage potential cooperative alliances with these companies. This stage requires a global view of the potential market and suppliers as well as a thorough research on existing patents in the market and equipment - in terms of cost and availability - needed to produce them.
 
@@ -388,7 +388,7 @@ Once the businessman has a holistic view of the market, it comes what is known a
 
 Once they have a global view of the market and the technological trends are estimated, a technological strategy is performed. This step consists of choosing what technology works best for the local enterprise particularly in technological terms from knowledge acquired in previous stages.
 
-### _4.3.4. Productive Transformation_
+### _4.3.4. Productive Transformation_ {#productive-transformation2}
 
 The biggest investments would be made during the productive transformation phase due to machinery, technology and formation of  human capital. To explain the productive transformation each enterprise would have to face, let’s introduce the term "technological vector":
 
@@ -396,31 +396,31 @@ This definition comes from the need to change the structure of a company through
 
 The advantages of using a low labor force and highly sophisticated in technology vector, which is the one implied in this paper, are closely connected with the synergies and work environments – both intangible – generated between workers through the interaction of ideas. That is, closing the labor productivity gap by only contracting high-quality human capital, although at first seems to rise unemployment, it necessarily involves the acquisition of skilled human capital, which promotes higher education and thus generates positive externalities on society by improving the quality of education and productivity. The same applies to the productivity of capital and technology. Thus, it is possible to deduce that closing different productivity gaps will necessarily empower TFP because this is a measure of the synergies generated between other productivities. Performing a productive transformation implies a balance of intense human capital and talent.
 
-### _4.3.5. R&D Strategy_
+### _4.3.5. R&D Strategy_ {#rnd-strategy}
 
 Once transformed the labor and capital of a company, the R&D strategy is next. This aims to promote the incursion of new knowledge in the company and additionally aims to limit the need for abrupt productive transformation in the future. This strategy should take also into account a sustained investment over time towards R&D to ensure constant innovation.
 
 This would be the last phase of each project. From here, the project manager would have the chance to work on a new R&D project for a new enterprise or to work for the newly-transformed company as the new R&D or innovation vice president.
 
-# 5. Systems Dynamic Modelling
+# 5. Systems Dynamic Modelling {#systems-dynamic-modelling}
 
 This methodology was modeled using systems dynamics simulation software iThink. The goal was to find scenarios of sustainable solutions and sensibility analysis towards the problem of the Colombian productivity gap.
 
-## 5.1. Systems Dynamic Simulation
+## 5.1. Systems Dynamic Simulation {#systems-dynamic-simulation}
 
 Before showing the results obtained by the baseline scenario analyzed, the reader must take into consideration what is the purpose of a dynamic simulation. The success of simulation does not lie on the availability and quality of the numerical results of the decision variables, but on the modeling process itself and how it has allowed a deeper understanding of the endogenous causes that determine the behavior of the analyzed system. "A system dynamics model is not a data model, is a model of decision rules" (Olaya, 2012).
 
-## 5.2. Baseline scenario
+## 5.2. Baseline scenario {#baseline-scenario}
 
 With initial parameters stated by a baseline scenario, a simulation model for 10 years was run. The simulation was programmed to stop each year and thus have the possibility to take decisions in regard to invest on new projects/ consultants or recruit new (or more) project managers each month. 
 
 Changing the recruitment rate throughout years, at the end of year 10, 6,045 project managers were working: 1600 in structuration, 686 in funding and 3759 in execution. This results in a total of 5079 productive transformation projects; which means a positive impact for more than 5,000 companies in the real sector and sustained R&D for the Colombian economy. At the end, the fund (where the money is deposited) reaches values of 51,412 USD (return on the initial investment (51-1.8) / 1.8 = 2740%) and investment in R&D for the country totaled 4.86 billion USD. Results may vary depending on parameters and decisions taken during simulation. 
 
-## 5.3. Sensibility Analysis
+## 5.3. Sensibility Analysis {#sensibility-analysis}
 
 Money in the investment fund (initial value of 1.85 million USD financed by Colciencias) goes to form new project managers and paying external consultancy. Fund’s unique income flow would be reinvestment of projects once they are funded. In this case, after several scenarios simulations, to guarantee sustainability in the fund, it is necessary to keep track on how fast new managers are been recruited respect to how fast projects get financed. In that sense, with initial parameters, recruiting more than 18 managers each month would make the fund unsustainable. However, constantly recruiting 18 managers each month for 10 years would end up on 617 realized projects and a total R&D national investment of 1.64 billion USD.
 
-# 6. Conclusions and Scope
+# 6. Conclusions and Scope {#conclusions}
 
 Colombia opened its economic market (through Free Trade Agreements) before its own companies were prepared to face competition of business companies five times more productive and products with high added value difficult to develop in the country.
 
@@ -446,7 +446,7 @@ In terms of Activities of Science, Technology and Innovation (ACTI), the new Dev
 
 The objective in CTI is jumping from 0.5% (in 2013) to 0.9% (in 2018) in the participation of CTI as a percentage of GDP, which means a volume of investment in CTI activities of 14 billion USD (The Economist Intelligence Unit, 2014). All this results in a favorable environment to implement in the short term, the methodology proposed in this paper.
 
-# 7. References
+# 7. References {#references}
 
 * AIESEC in Colombia. (2014). [What is AIESEC?](http://co.aiesec.org/estudiantes/que-es-aiesec/la-organizacion/)
 
