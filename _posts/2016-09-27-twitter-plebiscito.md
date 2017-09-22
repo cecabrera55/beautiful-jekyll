@@ -44,7 +44,7 @@ Apesar que la cantidad de tweets analizados es relativamente pequeña, el result
 
 Andrés Gutiérrez ([linkedin](https://www.linkedin.com/profile/in/predictive?goback=) y [twitter](https://twitter.com/psirusteam)), director de evaluación del ICFES y PhD en Ciencias, comparte un resultado de 64.7% votando Si por el plebiscito a través de un [pronóstico basado en encuestas](http://hagutierrezro.blogspot.com.co/2016/09/forecasting-colombia-peace-plebiscite.html).
 
-Independiente del resultado final, una muestra diminuta en Twitter ha logrado representar (quizás con un poco de suerte debido al tamaño) lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
+Una muestra diminuta en Twitter ha logrado representar (está bien, con un poco de suerte debido al tamaño) lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
 
 # Nube de palabras
 
