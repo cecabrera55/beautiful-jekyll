@@ -18,11 +18,11 @@ tags:
 
 > ###### Este blog fue publicado originalmente como una [nota de interés](http://www.ikonosoft.com/notas-de-interes/121-el-plebiscito-en-twitter) en [Ikonosoft](http://www.ikonosoft.com/). 
 
-Colombia se encuentra en la recta final de la votación entre el Si y el No para el plebiscito. La guerra con las FARC ha marcado historia en la patria y aunque la paz soñada no depende de una firma, el país se manifiesta a través de las redes sociales frente a la situación.
+Colombia se encuentra en la recta final de la votación entre el Si y el No para el plebiscito. La guerra con las FARC ha marcado historia en la patria y aunque la paz soñada no depende de una firma, el país se manifiesta en redes sociales.
 
 Twitter es una red social que comparte públicamente el contenido y la interacción entre sus usuarios. Es el ágora de nuestra sociedad virtual. Por lo tanto, analizar y visualizar métricas relevantes en su contenido podría dar una radiografía en tiempo real de lo que está sucediendo en torno a la “paz”: específicamente al plebiscito.
 
-Se tomó la iniciativa de almacenar, analizar y visualizar datos de Twitter con el ánimo de descubrir cuál es el __sentimiento__ e __intención de voto__ en los comentarios que contuviesen la palabra “plebiscito”. Se analizaron los sentimientos de 350 tweets y la intención de voto de 97 publicaciones del 20 de septiembre de 2016 para visualizar su contenido en una nube de palabras.
+Se tomó la iniciativa de almacenar, analizar y visualizar datos de Twitter con el ánimo de descubrir cuál es el __sentimiento__ e __intención de voto__ en los comentarios que contuviesen la palabra “plebiscito”. Del total de tweets publicados el 20 de septiembre de 2016, se analizaron los sentimientos de 350 y la intención de voto de 97 para visualizar su contenido en una nube de palabras. 
 
 # Análisis descriptivo
 
