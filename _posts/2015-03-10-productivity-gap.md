@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Methodology Design to Massively Structure Investment Projects in Research & Development (R&D) to Close the Productivity Gap
+title: "Methodology Design to Massively Structure Investment Projects in Research & Development (R&D) to Close the Productivity Gap"
 date: '2015-03-10'
 permalink: /en/blog/productivity-gap/
-published: true
 share-img: {{ site.url }}/img/posts/productividad/productspace.png
+bigimg: "{{ site.url }}/img/posts/productividad/productspace.png"
+published: true
 tags:
   - English
   - Productivity Gap
