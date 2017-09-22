@@ -5,7 +5,7 @@ date: '2016-09-27'
 permalink: /es/blog/twitter-plebiscito/
 published: true
 share-img: /img/posts/twitter-plebiscito/wordcloud.png
-bigimg: "http://www.clasesdeperiodismo.com/wp-content/uploads/2016/09/cats.jpg"
+bigimg: "/img/posts/twitter-plebiscito/cats.jpg"
 tags:
   - Español
   - Twitter
@@ -62,4 +62,4 @@ Mientras las personas que expresan No enfocan sus intenciones en una persona a t
 
 Por razones confidenciales no se comparte el código fuente ni otras estadísticas. El lenguaje de programación fue R y con el total de tweets analizados se desarrolló un modelo de aprendizaje automático (machine learning) para estimar la _probabilidad que la intención de voto de un nuevo tweet fuese Si_. Dicho modelo usó el 80% de los datos para "entrenarse" y el 20% restante para "testear" su precisión.
 
-Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la gran cantidad de información disponible en internet a través de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos). Una organización orientada a los datos (_data-driven_) debe incluir en su estrategia el uso de la analítica para acelerar el proceso de toma de decisiones.
+Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la gran cantidad de información disponible en internet a través del uso de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos). Una organización orientada a los datos (_data-driven_) debe incluir a la analítica dentro de su estrategia si quiere hacer parte de la próxima revolución industrial. Tomar decisiones puede ser dejado en su totalidad al empirismo. 

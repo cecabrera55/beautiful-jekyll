@@ -3,8 +3,8 @@ layout: post
 title: "Methodology to Massively Structure Investment Projects in R&D to Close the Productivity Gap"
 date: '2015-03-10'
 permalink: /en/blog/productivity-gap/
-share-img: {{ site.url }}/img/posts/productividad/productspace.png
-bigimg: "{{ site.url }}/img/posts/productividad/productspace.png"
+share-img: "/img/posts/productividad/productspace.png"
+bigimg: "/img/posts/productividad/productspace.png"
 published: true
 tags:
   - English

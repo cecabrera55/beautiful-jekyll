@@ -4,7 +4,8 @@ layout: post
 date: '2017-07-27'
 permalink: /blog/setup-dkan-digitalocean/
 published: true
-share-img: http://www.data.telangana.gov.in/profiles/dkan/themes/nuboot_radix/assets/images/opendata_graph_PC.png
+share-img: "/img/posts/portaldatos/opendata_graph_PC.png"
+bigimg: "/img/posts/portaldatos/opendata_graph_PC.png"
 tags:
 - español
 - spanish
