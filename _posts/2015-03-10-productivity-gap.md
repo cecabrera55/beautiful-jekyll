@@ -16,11 +16,54 @@ tags:
 
 > #### Camilo Eduardo Cabrera Garrido – cecabrera55@gmail.com
 ##### _Universidad de los Andes, Bogotá, Colombia_.
-###### [Paper written]({{ site.url }}/files/Tesis ENG.pdf) for the Cambridge, Massachusetts Conference.
+###### [Paper]({{ site.url }}/files/Tesis ENG.pdf) written for the Cambridge, Massachusetts Conference.
 ###### March 10th 2015. USD/COP = 2,612.
 ###### Investigación disponible en [español]({{ site.url }}/files/Tesis ESP.pdf)
 
 ABSTRACT: Colombia needs a productive transformation. It has been proved that the operational way to do it is by investing in Research and Development (R&D) projects at the firm level. Young professionals with a focused training may be converted in the qualified human capital to do such job, working hand by hand with consulting and research groups. This methodology design is proposed as a possible solution for the productivity gap problem in the country by employing young professionals as the necessary human capital capable of transforming positively the productive system, with the support of public and private institutions. 
+
+# Table of content
+
+- [1. Introduction](#introduction)
+- [2. Theoretical framework](#framework)
+  - [2.1. Fundamentals of Systems Dynamics](#fundamentals)
+  - [2.2. Operational Thinking](#operational-thinking)
+  - [2.3. Industrial Engineering: tackling the problem](#industrial-engineering)
+- [3. Colombia: Diagnosis](#colombia)
+  - [3.1. Competitiveness](#competitiveness)
+  - [3.2. Productivity](#productivity)
+  - [3.3. Productivity Gap](#productivity-gap)
+  - [3.4. Productive Transformation](#productive-transformation)
+    - [3.4.1. Product Space](#product-space)
+    - [3.4.2. Global Value Chains](#global-value-chains)
+    - [3.4.3. Innovation](#innovation)
+  - [3.5. Articulating Colombian actors](#articulating-colombian-actors)
+    - [3.5.1. Productive Transformation Program](#productive-transformation-program)
+    - [3.5.2. Tax Benefits for Investment on R&D in Colombia](#tax-benefits)
+    - [3.5.3. Young professionals](#young-professionals)
+    - [3.5.4. Institutional discoordination](#institutional-discoordination)
+- [4. Methodology](#methodology)
+  - [4.1. Structuring phase](#structuring-phase)
+    - [4.1.1. Master's Degree in Productive Transformation](#master-degree)
+    - [4.1.2. Local Immersion](#local-immersion)
+    - [4.1.3. International Immersion](#international-immersion)
+    - [4.1.4. Finishing the Project Structuration](#finishing-structuration)
+  - [4.2. Funding phase](#funding-phase)
+  - [4.3. Execution phase](#execution-phase)
+    - [4.3.1. Reinvestment in Structuring](#reinvestment)
+    - [4.3.2. Monitoring Board](#monitoring-board)
+    - [4.3.3. Competitive Intelligence](#competitive-intelligence)
+    - [4.3.4. Productive Transformation](#productive-transformation2)
+    - [4.3.5. R&D Strategy](#rnd-strategy)
+- [5. Systems Dynamic Modelling](#systems-dynamic-modelling)
+  - [5.1. Systems Dynamic Simulation](#systems-dynamic-simulation)
+  - [5.2. Baseline scenario](#baseline-scenario)
+  - [5.3. Sensibility Analysis](#sensibility-analysis)
+- [6. Conclusions and Scope](#conclusions)
+- [7. References](#References)
+
+
+
 
 # 1. Introduction
 
