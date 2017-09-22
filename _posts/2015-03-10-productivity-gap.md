@@ -4,7 +4,6 @@ title: "Methodology to Massively Structure Investment Projects in R&D to Close t
 date: '2015-03-10'
 permalink: /en/blog/productivity-gap/
 share-img: "/img/posts/productividad/productspace.png"
-bigimg: "/img/posts/productividad/productspace.png"
 published: true
 tags:
   - English
