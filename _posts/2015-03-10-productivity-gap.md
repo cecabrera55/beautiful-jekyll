@@ -14,10 +14,6 @@ tags:
   - Tax Benefits
 ---
 
-```
-![equation](http://latex.codecogs.com/gif.latex?Concentration%3D%5Cfrac%7BTotalTemplate%7D%7BTotalVolume%7D)
-```
-
 > #### Camilo Eduardo Cabrera Garrido – cecabrera55@gmail.com
 ##### _Universidad de los Andes, Bogotá, Colombia_.
 ###### [Paper written]({{ site.url }}/files/Tesis ENG.pdf) for the Cambridge, Massachusetts Conference.

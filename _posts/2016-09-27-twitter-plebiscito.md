@@ -3,7 +3,7 @@ layout: post
 title: Plebiscito en Twitter
 date: '2016-09-27'
 permalink: /es/blog/twitter-plebiscito/
-published: false
+published: true
 share-img: /img/posts/twitter-plebiscito/wordcloud.png
 tags:
   - Español
