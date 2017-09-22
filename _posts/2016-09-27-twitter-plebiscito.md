@@ -42,9 +42,9 @@ Apesar que la cantidad de tweets analizados es relativamente pequeña, el result
 * Ipsos Napoleón Franco el 10 de septiembre: 72% votaría Si.
 * Centro Nacional de Consultoría el 7 de septiembre: 71%.
 
-Del mismo modo, Andrés Gutiérrez ([linkedin](https://www.linkedin.com/profile/in/predictive?goback=) y [twitter](https://twitter.com/psirusteam)), director de evaluación del ICFES y PhD en Ciencias, comparte un resultado de 64.7% votando Si por el plebiscito a través de un [pronóstico basado en encuestas](http://hagutierrezro.blogspot.com.co/2016/09/forecasting-colombia-peace-plebiscite.html).
+Andrés Gutiérrez ([linkedin](https://www.linkedin.com/profile/in/predictive?goback=) y [twitter](https://twitter.com/psirusteam)), director de evaluación del ICFES y PhD en Ciencias, comparte un resultado de 64.7% votando Si por el plebiscito a través de un [pronóstico basado en encuestas](http://hagutierrezro.blogspot.com.co/2016/09/forecasting-colombia-peace-plebiscite.html).
 
-Independiente del resultado final, una muestra pequeña en Twitter ha logrado representar lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
+Independiente del resultado final, una muestra diminuta en Twitter ha logrado representar (quizás con un poco de suerte debido al tamaño) lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
 
 # Nube de palabras
 
