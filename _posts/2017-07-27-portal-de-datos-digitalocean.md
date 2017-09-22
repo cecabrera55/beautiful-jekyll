@@ -7,8 +7,8 @@ published: true
 share-img: "/img/posts/portaldatos/opendata_graph_PC.png"
 bigimg: "/img/posts/portaldatos/opendata_graph_PC.png"
 tags:
-- español
-- spanish
+- Español
+- Spanish
 - open-data
 - DKAN
 - DigitalOcean
