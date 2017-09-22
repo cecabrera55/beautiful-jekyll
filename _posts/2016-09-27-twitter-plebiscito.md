@@ -3,7 +3,7 @@ layout: post
 title: Plebiscito en Twitter
 date: '2016-09-27'
 permalink: /es/blog/twitter-plebiscito/
-published: true
+published: false
 share-img: /img/posts/twitter-plebiscito/wordcloud.png
 bigimg: "/img/posts/twitter-plebiscito/cats.jpg"
 tags:
@@ -44,7 +44,7 @@ Apesar que la cantidad de tweets analizados es relativamente pequeña, el result
 
 Andrés Gutiérrez ([linkedin](https://www.linkedin.com/profile/in/predictive?goback=) y [twitter](https://twitter.com/psirusteam)), director de evaluación del ICFES y PhD en Ciencias, comparte un resultado de 64.7% votando Si por el plebiscito a través de un [pronóstico basado en encuestas](http://hagutierrezro.blogspot.com.co/2016/09/forecasting-colombia-peace-plebiscite.html).
 
-Una muestra diminuta en Twitter ha logrado representar (está bien, con un poco de suerte debido al tamaño) lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
+Una muestra diminuta en Twitter ha logrado representar (con un poco de suerte debido al tamaño) lo que las encuestadoras sugieren: el Si podría ser la opción ganadora en el plebiscito. 
 
 # Nube de palabras
 
@@ -62,4 +62,4 @@ Mientras las personas que expresan No enfocan sus intenciones en una persona a t
 
 Por razones confidenciales no se comparte el código fuente ni otras estadísticas. El lenguaje de programación fue R y con el total de tweets analizados se desarrolló un modelo de aprendizaje automático (machine learning) para estimar la _probabilidad que la intención de voto de un nuevo tweet fuese Si_. Dicho modelo usó el 80% de los datos para "entrenarse" y el 20% restante para "testear" su precisión.
 
-Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la gran cantidad de información disponible en internet a través del uso de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos). Una organización orientada a los datos (_data-driven_) debe incluir a la analítica dentro de su estrategia si quiere hacer parte de la próxima revolución industrial. Tomar decisiones puede ser dejado en su totalidad al empirismo. 
+Independiente del resultado del plebiscito, la ciencia de datos aporta valor a la gran cantidad de información disponible en internet a través del uso de herramientas teóricas (como modelos estadísticos, métricas y tablas de frecuencias) y tecnológicas (como R, Python y paquetes de visualización de datos). Una organización orientada a los datos (_data-driven_) debe incluir a la analítica dentro de su estrategia si quiere hacer parte de la próxima revolución industrial. Tomar decisiones no puede ser dejado en su totalidad al empirismo y la experiencia. 
