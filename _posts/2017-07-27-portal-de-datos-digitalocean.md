@@ -5,7 +5,6 @@ date: '2017-07-27'
 permalink: /blog/setup-dkan-digitalocean/
 published: true
 share-img: "/img/posts/portaldatos/opendata_graph_PC.png"
-bigimg: "/img/posts/portaldatos/opendata_graph_PC.png"
 tags:
 - Español
 - Spanish
