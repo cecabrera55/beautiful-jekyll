@@ -1,24 +1,58 @@
 ---
-title: 'Pronosticando el retorno del Bitcoin'
+title: 'Cases in Analytics'
 layout: post
-date: '2017-09-22'
-permalink: /es/blog/predicting-bitcoin/
+date: '2017-10-22'
+permalink: /es/blog/analytics-cases/
 published: false
 share-img: "/img/posts/portaldatos/opendata_graph_PC.png"
 bigimg: "/img/posts/portaldatos/opendata_graph_PC.png"
 tags:
-- Español
-- Spanish
-- open-data
-- DKAN
-- DigitalOcean
-- linux
-- MySQL
-- PHP
-- Apache2
+- English
+- Analytics
+- Data Science
+- Visualization
+- Sentiment Analysis
+- Clustering
+- Web Scraping
+- Dashboards
 ---
 
-# Pronosticando los retornos de una acción
+# Bitcoin
+
+## Situation
+
+The world has eyes on Bitcoin. 
+Bla, bla, bla.
+
+## What we did
+
+Bla, bla, bla.
+
+## Benefit
+
+Bla, bla, bla.
+
+## Why me
+
+Bla, bla, bla.
+
+## Technical highlights
+
+Bla, bla, bla.
+
+
+
+```{r}
+install.packages(c("quadprog", "xts", "TTR", "quantmod"), dependencies = TRUE)
+require(quantmod)
+getSymbols("BTC/USD",src="oanda")
+barChart(BTCUSD)
+chartSeries(to.weekly(BTCUSD))
+addMACD()
+addBBands()
+
+```
+
 
 En el [archivo de Excel](/files/Datos.xlsx) hay información de precios desde el 10 de Abril de 2013 al 26 de Mayo de 2017 de la empresa "XYZ". Me dí a la tarea de desarrollar un modelo estadístico que pronosticara si el precio de una acción sube o baja en función de su valor histórico y otras variables. Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósitos investigativos. El código fuente pueden hallarlo en mi [reposotorio (carpeta)](https://github.com/cecabrera/stock) en GitHub.
 
@@ -30,8 +64,8 @@ El plan de trabajo de este informe se resume en:
 
 Comenzamos cargando los paquetes a utilizar y los datos del archivo de Excel:
 
-```{r setup, message=FALSE}
-# install.packages(c("caTools", "tseries", "readxl", "data.table", "plotly"))
+```{r}
+
 require(caTools)
 require(tseries)
 require(readxl)
@@ -42,7 +76,6 @@ library(ROCR)
 
 d <- data.table(readxl::read_excel(path = "Datos.xlsx", sheet = 1))
 
-# mostrar las primeras 6 filas de las primeras 7 columnas.
 head(d[, .(fecha, open, high, low, close, volume)])
 ```
 
@@ -66,7 +99,7 @@ test <- d[(floor(nrow(d)*0.8)+1):nrow(d)]
 
 Todas las variables en el archivo de Excel (a excepción de `fecha`) son numéricas. Mediante un modelo de regresión logística múltiple (Logit), calculamos las variables con mayor incidencia en la explicación de la variable `close_trend`.
 
-```{r, message = FALSE}
+```{r}
 model <- glm(close_trend ~ ., family = binomial(link = 'logit'), data = train[, -1, with = FALSE])
 summary(model)
 ```
