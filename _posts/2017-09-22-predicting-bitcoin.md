@@ -21,12 +21,11 @@ tags:
 
 ## Situation
 
-The world has eyes on Bitcoin. 
-Bla, bla, bla.
+We wanted to figure out how to predict the Bitcoin price to see if we could find some hidden patterns out of the data. 
 
 ## What we did
 
-Bla, bla, bla.
+We test several machine learning models to estimate the price. We connected to a real time Bitcoin data source and choose 26 different models 
 
 ## Benefit
 
