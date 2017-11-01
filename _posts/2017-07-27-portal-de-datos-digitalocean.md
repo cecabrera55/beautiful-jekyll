@@ -17,7 +17,7 @@ tags:
 - Apache2
 ---
 
-> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estaremos a disposición de ofrecerte este [servicio]({{ site.url }}/aboutme/#contact).
+> Si necesitas ayuda configurando tu propia plataforma de datos abiertos, un acompañamiento detallado de estas instrucciones, o solo consultoría en general sobre análisis de datos, estaremos a disposición para ofrecerte este [servicio]({{ site.url }}/aboutme/#contact).
 
 Si has buscado en internet y no has hallado la forma de configurar tu propia plataforma de publicación, análisis y visualización de datos abiertos, [DigitalOcean](https://m.do.co/c/b8c84bc5d55a) (DO) y [DKAN](http://getdkan.com/) son un buen primer paso para configurarla. Por ejemplo, el [Portal de datos abiertos GANA de la Gobernación de Nariño](https://datos.narino.gov.co/) fue configurado utilizando DKAN como plataforma de publicación de datos.
 
