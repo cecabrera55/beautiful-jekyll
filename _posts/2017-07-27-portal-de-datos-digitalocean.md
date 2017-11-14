@@ -251,7 +251,7 @@ sudo wget -O /var/www/html/profiles/dkan/translations/drupal-7.56.es.po http://f
 
 - Copiar el archivo de configuración por defecto de Drupal: `sudo cp /var/www/html/sites/default/default.settings.php /var/www/html/sites/default/settings.php`.
 
-- Cambiar los permisos de la carpeta "default" para DKAN tenga los permisos de lectura, escritura y ejecución necesarios para instalar la plataforma en el servidor: `sudo chmod 777 -R /var/www/html/sites/default`. Se modificarán más adelante.
+- Cambiar los permisos de la carpeta "default" para que DKAN tenga los permisos de lectura, escritura y ejecución necesarios para instalar la plataforma en el servidor: `sudo chmod 777 -R /var/www/html/sites/default`. Se modificarán más adelante.
 
 Refresca tu página desde el navegador y verás la opción de instalación en español. Procede con la instalación.
 
