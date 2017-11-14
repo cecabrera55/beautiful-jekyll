@@ -321,4 +321,4 @@ A continuación una lista de las fuentes bibliográficas.
 
 # Exoneración de responsabilidades {#exoneracion}
 
-No soy un _sysadmin_ y muchas cosas en este tutorial fueron aprendidas en Google, por lo que puede haber maneras más rápidas de realizar la misma tarea. Si tienes comentarios sobre este documento, ¡me gustaría [escucharlos]({{ site.url }}/aboutme#contact)!
+No soy un _sysadmin_. Muchos de los trucos en este tutorial fueron aprendidos en Google por lo que deben hacer maneras más eficientes para realizar la misma tarea. Si tienes comentarios sobre este tutorial, ¡me gustaría [escucharlos]({{ site.url }}/aboutme#contact)!
