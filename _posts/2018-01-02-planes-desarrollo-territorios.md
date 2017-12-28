@@ -48,7 +48,6 @@ sencilla?
 - [# Recomendaciones](#recomendaciones)
 - [# Referencias](#referencias)
 
-
 Analizar tal cantidad de datos (31 documentos y 59004 palabras) simultáneamente es una labor posible gracias a la [minería de texto](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_textos). El objetivo de este blog es organizar, clasificar y visualizar los datos utilizando el lenguaje de programación [R](https://www.r-project.org/). El código fuente de este documento está alojado en [Github](https://github.com/cecabrera/pdt_dnp).
 
 Los paquetes de R necesarios para este análisis serán:
