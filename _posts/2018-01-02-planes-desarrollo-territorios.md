@@ -329,9 +329,9 @@ Los PDTs que mejor describen el tópico 2 son Cesar, Valle del Cauca, Chocó, Ca
 
 # Apuntes
 
-La hipótesis resultante del análisis LDA es que el tópico 1 tiene mayor énfasis en proyectos relacionados a la salud y el tópico 2 hacia proyecto de sociales de índole educacional y cultural. Aún cuando resalta palabras pegadas, la frecuencia con la que aparecen y su relevancia latente en comphttps://www.tidytextmining.com/tfidf.htmlaración con los demás documentos hace que el modelo las tenga en cuenta. Esta hipótesis está sujeta a cambios por la calidad en los datos (palabras unidas). 
+La hipótesis resultante del análisis LDA es que el tópico 1 tiene mayor énfasis en proyectos relacionados a la salud y el tópico 2 hacia proyecto de sociales de índole educacional y cultural. Aún cuando resalta palabras pegadas, la frecuencia con la que aparecen y su relevancia latente en comparación con los demás documentos hace que el modelo las tenga en cuenta. Esta hipótesis está sujeta a cambios por la calidad en los datos (palabras unidas). 
 
-Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una distribución equitativa entre ambos tópicos (aprox. 50% en cada tópico) lo que infiere un balance entre las necesidades en salud, educación y cultura de sus departamentos. Dicho balance podría estar asociado con su éxito.
+Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una distribución equitativa entre ambos tópicos (aprox. 50% en cada tópico) lo que infiere un balance entre las necesidades en salud, educación y cultura de sus departamentos que potencialmente podría estar asociado con su éxito.
 
 # Recomendaciones
 
