@@ -2,7 +2,7 @@
 title: 'Clasificación de Planes de Desarrollo'
 layout: post
 date: '2018-01-02'
-permalink: /es/blog/planes-desarrollo/
+permalink: /blog/planes-desarrollo/
 published: true
 share-img: "/img/posts/planes_desarrollo/imagen7.png"
 tags:
