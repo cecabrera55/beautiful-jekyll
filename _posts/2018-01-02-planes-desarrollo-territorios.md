@@ -50,7 +50,7 @@ paths <- list.files(c("data"), pattern="\\.(TXT|txt)$", recursive = TRUE, full.n
 departments <- sub(pattern = ".txt.*", "" , sub(pattern = ".*/", "", paths))
 print(head(paths, 6)) # Visualizar los primeros 5 elementos de la variable `paths`
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos1.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos1.png)
 
 ## Preprocesamiento
 
