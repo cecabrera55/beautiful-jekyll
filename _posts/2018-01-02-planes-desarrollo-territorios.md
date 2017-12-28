@@ -243,7 +243,7 @@ En vista que la clasificación se hará _a posteriori_ (no hay categorías prede
 2. Conglomerado k-medias
 3. Conglomerados probabilísticos y Modelos de Tópicos
 
-Los algoritmos de conglomerados herárquicos están basados en distancias respecto a cada vector. Utilizan una función de similaridad para medir cuán cercano está un documento a otro. Es posible contruirlos de arriba a abajo (colocando cada documento en un grupo) o de abajo a arriba (colocando todos los documentos en un grupo). Los algoritmos de k-medias ubican un centroide por cada grupo y conglomera cada documento respecto a su cercanía a un centroide. Es ampliamente utilizado en problemas de datos estructurados. El cálculo del número óptimo de grupos (k) es considerado _NP-Hard_ dados los requerimientos computacionales para calcularlo y por eso existen heurísticas para hallar un óptimo local. 
+Los algoritmos de conglomerados herárquicos están basados en distancias respecto a cada vector. Utilizan una función de similaridad para medir cuán cercano está un documento a otro. Es posible contruirlos de arriba a abajo (colocando cada documento en un grupo) o de abajo a arriba (colocando todos los documentos en un grupo). Los algoritmos de k-medias ubican un centroide por cada grupo y conglomera cada documento respecto a su cercanía a un centroide. Es ampliamente utilizado en problemas de datos estructurados. El cálculo del número óptimo de grupos (k) es considerado _NP-Hard_ dados los requerimientos computacionales requeridos para calcularlo; razón por la que existen heurísticas para hallar un óptimo local. 
 
 La mayor implicación en los algoritmos anteriores es que a cada "observación" (en nuestro caso "palabra") es asignado a una única categoría. Sin embargo, como sucede en el lenguaje natural, existen palabras que podrían hacer parte de varias categorías (o tópicos/temas). Por eso, el modelaje de tópicos será el escogido para clasificar los Planes de Desarrollo Departamentales. El modelaje de tópicos es un método de clasificación no-supervisada utilizado para encontrar grupos naturales de palabras que aparentemente no tienen relación. 
 
@@ -339,7 +339,7 @@ Cada uno de estos valores es una proporción estimada de palabras que vienen de 
 head(depart[order(`1`, decreasing = T)], 6)
 ```
 
-Los PDTs que mejor describen el tópico 1 son Casanare, Vaupés, Huila, Risaralda, Córdoba y Sucre. Resalta la diferencia que existe entre Casanare con un 73.1% respecto a Vaupés (66.6%), Huila (63.9%). Cuando se retorna a la vista por PDT ponderado por TF-IDF, Casanare resalta de nuevo las palabras "saludsector" y "comunitarioprogram" e infiere una conexión de este tópico con salud. 
+Los PDTs que mejor describen el tópico 1 son Casanare, Vaupés, Huila, Risaralda, Córdoba y Sucre. Resalta la diferencia que existe entre Casanare con un 73.1% respecto a Vaupés (66.6%) y Huila (63.9%). Cuando se retorna a la vista por PDT ponderado por TF-IDF, Casanare resalta de nuevo las palabras "saludsector" y "comunitarioprogram" e infiere una conexión de este tópico con salud. 
 
 #### Tópico 2: Educación y Cultura
 
@@ -347,13 +347,13 @@ Los PDTs que mejor describen el tópico 1 son Casanare, Vaupés, Huila, Risarald
 head(depart[order(`2`, decreasing = T)], 6)
 ```
 
-Los PDTs que mejor describen el tópico 2 son Cesar, Valle del Cauca, Chocó, Cauca, Amazonas y Magdalena. Al igual que en el tópico 1, hay relativa gran diferencia entre el primero (Cesar con 76.9%) y los demás (Valle del Cauca con 56.9% y Chocó con 56.7%). También se resalta que Valle del Cauca, Chocó y Cauca tengan esa cercanía en este tópico cuando geográficamente son vecinos; infiriendo que usan los mismos términos en sus documentos. Cesar por su lado resalta las palabras "deeducacionsecretari" y "dedeportesecretari". 
+Los PDTs que mejor describen el tópico 2 son Cesar, Valle del Cauca, Chocó, Cauca, Amazonas y Magdalena. Al igual que en el tópico 1, hay relativa gran diferencia entre el primero (Cesar con 76.9%) y los demás (Valle del Cauca con 56.9% y Chocó con 56.7%). También se resalta que Valle del Cauca, Chocó y Cauca tengan esa cercanía en este tópico cuando geográficamente son vecinos: es posible que usen los mismos términos en sus documentos. Cesar por su lado resalta las palabras "deeducacionsecretari" y "dedeportesecretari". 
 
 # Apuntes
 
-La hipótesis resultante del análisis LDA es que el tópico 1 tiene mayor énfasis en proyectos relacionados a la salud y el tópico 2 hacia proyecto de sociales de índole educacional y cultural. Aún cuando resalta palabras pegadas, la frecuencia con la que aparecen y su relevancia latente en comparación con los demás documentos hace que el modelo las tenga en cuenta. Esta hipótesis está sujeta a cambios por la calidad en los datos (palabras unidas). 
+La hipótesis resultante del análisis LDA es que el tópico 1 tiene mayor énfasis en proyectos relacionados a la salud y el tópico 2 hacia proyectos sociales de índole educacional y cultural. Aún cuando resaltan palabras pegadas, la frecuencia con la que aparecen y su relevancia latente en comparación con los demás documentos hace que el modelo las tenga en cuenta. Esta hipótesis está sujeta a cambios por la calidad en los datos (palabras unidas). 
 
-Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una distribución equitativa entre ambos tópicos (aprox. 50% en cada tópico) lo que infiere un balance entre las necesidades en salud, educación y cultura de sus departamentos que potencialmente podría estar asociado con su éxito.
+Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una distribución equitativa entre ambos tópicos (aprox. 50% en cada tópico) lo que infiere un balance entre los contenidos de salud, educación y cultura de sus documentos y potencialmente podría estar asociado al éxito de sus gobiernos.
 
 # Recomendaciones
 
@@ -363,8 +363,8 @@ Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una dis
 # Referencias
 
 [^1]: [A Brief Survey of Text Mining: Classification, Clustering and Extraction Techniques](https://arxiv.org/pdf/1707.02919.pdf)
-[^2]: [Text Mining with R](https://www.tidytextmining.com/tfidf.html)
+[^2]: [Text Mining with R. TF-IDF](https://www.tidytextmining.com/tfidf.html)
 [^3]: [Quantify the similarity of bags of words](https://stats.stackexchange.com/questions/289400/quantify-the-similarity-of-bags-of-words)
 [^4]: [Pearson Correlation Coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
 [^5]: [DNP destacó los planes de desarrollo departamentales](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057) 
-[^6]: [Text Mining with R](https://www.tidytextmining.com/topicmodeling.html)
+[^6]: [Text Mining with R. Topic Modeling](https://www.tidytextmining.com/topicmodeling.html)
