@@ -190,7 +190,7 @@ Según [Kilgarriff (1997)](http://www.aclweb.org/anthology/W/W97/W97-0122.pdf), 
 
 ### Correlación
 
-Cada Plan de Desarrollo se puede representar como un __vector__ de valores. El coseno entre dos vectores determina cuán cercanos (igual a 1) o alejados (igual a -1) están en el plano n-dimensional. El cálculo del coseno es considerado también como el [_coeficiente de correlación no centrado_](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) entre dos vectores y matemáticamente es similar al coeficiente de correlación de Pearson[^4]. Por eso se usará este como medida de la similaridad. 
+Cada Plan de Desarrollo se puede representar como un __vector__ de palabras. El coseno entre dos vectores determina cuán cercanos (igual a 1) o alejados (igual a -1) están en el plano n-dimensional. El cálculo del coseno es considerado también como el [_coeficiente de correlación no centrado_](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) entre dos vectores y matemáticamente es similar al coeficiente de correlación de Pearson[^4]. Por eso se usará este como medida de la similaridad. 
 
 ```
 corrplot(corr = cor(q, method = "pearson"), type = "lower", method = "pie", diag = TRUE, order = "FPC")
@@ -198,15 +198,15 @@ corrplot(corr = cor(q, method = "pearson"), type = "lower", method = "pie", diag
 
 ![]({{ site.url }}/img/posts/pdt_dnp/imagen7.png)
 
-La matriz de correlación se ordenó por compomentes principales y por eso aparecen primero los departamentos con mayor correlación y de último los de menos. Se resalta los siguientes insights:
+La matriz de correlación se ordenó por compomentes principales y por eso aparecen primero los departamentos con mayor correlación y de último los de menos. Se resalta los siguientes hallazgos:
 
 * Quindío y Cundinamarca tienen la mayor similitud (0.903) de palabras en los Planes de Desarrollo. 
-* Casanare es el departamento con mayor diferencias respecto a los demás departamentos. Esto puede deberse a las uniones de palabras en una sola o a diferentes reales en el contenido del documento. 
-* [En Octubre de 2016](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057), el DNP entregó un reconocimiento a las gobernaciones con desarrollo robusto, intermedio y temprano a Antioquia, Nariño y Caquetá, respectivamente[^5]. En el correlograma, estas tres aparecen seguidas infiriendo esta aparente similitud. 
+* Casanare es el departamento con mayor diferencias respecto a los demás departamentos. Esto puede deberse a las uniones de palabras en una sola o a diferencias reales en el contenido del documento. 
+* [En Octubre de 2016](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057), el DNP entregó un reconocimiento a las gobernaciones con desarrollo robusto, intermedio y temprano a Antioquia, Nariño y Caquetá, respectivamente[^5]. En el correlograma, estas tres aparecen seguidas demostrando esta aparente similitud. 
 
 ## Clasificación/Conglomerados
 
-Si cada documento hiciese parte de una categoría _a priori_, se utilizarían algorirmos como:
+Si cada documento hiciese parte de una categoría _a priori_, se utilizarían algoritmos como:
 
 1. Clasificadores del vecino más cercano
 2. Clasificadores de árboles de decisión
@@ -215,13 +215,13 @@ Si cada documento hiciese parte de una categoría _a priori_, se utilizarían al
 
 Un caso podría ser categorizar los documentos por región del país, tomar los Planes de Desarrollo Municipales y desarrollar un algoritmo de aprendizaje automático _(machine learning)_ para clasificar si las palabras usadas en los Municipios están correlacionadas (son similares) a las palabras usandas en los Departamentos. 
 
-En vista que la clasificación se hará _a posteriori_, se utilizarán algoritmos de _clustering_ o conglomerados. En Minería de Texto algunos populares son:
+En vista que la clasificación se hará _a posteriori_ (no hay categorías predeterminadas), se utilizarán algoritmos de _clustering_ o conglomerados. En Minería de Texto algunos populares son:
 
 1. Algortimos de Conglomerados Herárquicos. 
 2. Conglomerado k-medias
 3. Conglomerados probabilísticos y Modelos de Tópicos
 
-Los algoritmos de conglomerados herárquicos están basados en distancias respecto a cada vector. Utilizan una función de similaridad para medir cuán cerca está un documento de otro. Es posible contruirlos de arriba-a-abajo (colocando cada documento en un grupo) o de abajo-a-arriba (colocando todos los documentos en un grupo). Los algoritmos de k-medias ubican un centroide por cada grupo y conglomera cada documento respecto a su cercanía a un centroide. Es ampliamente utilizado en problemas de datos estructurados. El cálculo del número óptimo de grupos (k) es considerado _NP-Hard_ dados los requerimientos computacionales para calcularlo y por eso existen heurísticas para hallar un óptimo local. 
+Los algoritmos de conglomerados herárquicos están basados en distancias respecto a cada vector. Utilizan una función de similaridad para medir cuán cercano está un documento a otro. Es posible contruirlos de arriba a abajo (colocando cada documento en un grupo) o de abajo a arriba (colocando todos los documentos en un grupo). Los algoritmos de k-medias ubican un centroide por cada grupo y conglomera cada documento respecto a su cercanía a un centroide. Es ampliamente utilizado en problemas de datos estructurados. El cálculo del número óptimo de grupos (k) es considerado _NP-Hard_ dados los requerimientos computacionales para calcularlo y por eso existen heurísticas para hallar un óptimo local. 
 
 La mayor implicación en los algoritmos anteriores es que a cada "observación" (en nuestro caso "palabra") es asignado a una única categoría. Sin embargo, como sucede en el lenguaje natural, existen palabras que podrían hacer parte de varias categorías (o tópicos/temas). Por eso, el modelaje de tópicos será el escogido para clasificar los Planes de Desarrollo Departamentales. El modelaje de tópicos es un método de clasificación no-supervisada utilizado para encontrar grupos naturales de palabras que aparentemente no tienen relación. 
 
