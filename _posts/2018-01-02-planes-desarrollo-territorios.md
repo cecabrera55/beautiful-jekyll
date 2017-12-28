@@ -1,10 +1,9 @@
 ---
-title: 'Clasificación de Planes de Desarrollo'
+title: "Clasificación de Planes de Desarrollo"
 layout: post
 date: '2018-01-02'
-permalink: /blog/planes-desarrollo/
-published: true
-share-img: "/img/posts/planes_desarrollo/imagen7.png"
+published: yes
+share-img: /img/posts/planes_desarrollo/imagen7.png
 tags:
 - Español
 - DNP
@@ -16,6 +15,7 @@ tags:
 - LDA
 - Data Cleaning
 - Machine Learning
+permalink: /blog/planes-desarrollo/
 ---
 
 Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/files/blog/pdt_dnp/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
@@ -26,6 +26,28 @@ Se analizarán los siguientes puntos:
 2. Clasificar los planes de acuerdo con algún criterio de similitud.
 3. ¿Qué tipo de información reportaría a los evaluadores con el fin de hacer su tarea más
 sencilla?
+
+# Tabla de Contenidos
+
+- [## Preprocesamiento](#preprocesamiento)
+- [### Tokenización](#tokenización)
+- [### Filtrado](#filtrado)
+- [### Lematización](#lematización)
+- [### Stemming](#stemming)
+- [# Análisis Univariado](#univariado)
+  - [## Modelo de Vectores Espaciales](#espaciales)
+- [# Análisis Multivariado](#multivariado)
+  - [## Algoritmos de similaridad](#similaridad)
+    - [### Correlación](#configura-mysql)
+  - [## Clasificación/Conglomerados](#conglomerados)
+    - [### Asignación de Dirichlet Latente](#dirichlet)
+- [# Probabilidades documento-tópico](#probabilidades)
+  - [#### Tópico 1: Proyecto de salud](#salud)
+  - [#### Tópico 2: Educación y Cultura](#educación)
+- [# Apuntes](#apuntes)
+- [# Recomendaciones](#recomendaciones)
+- [# Referencias](#referencias)
+
 
 Analizar tal cantidad de datos (31 documentos y 59004 palabras) simultáneamente es una labor posible gracias a la [minería de texto](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_textos). El objetivo de este blog es organizar, clasificar y visualizar los datos utilizando el lenguaje de programación [R](https://www.r-project.org/). El código fuente de este documento está alojado en [Github](https://github.com/cecabrera/pdt_dnp).
 
