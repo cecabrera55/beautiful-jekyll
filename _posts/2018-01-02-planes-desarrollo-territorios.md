@@ -96,7 +96,7 @@ d <- lapply(d, function(x){
 
 ### Lematización
 
-Lematización considera el análisis morfológico de las palabras: agrupar las diversas formas de una palabra de manera que puedan ser analizadas como un solo término. En otras palabras, los métodos de lematización intentan mapear verbos a su sentido infinitivo y los sustantivos a su forma singular. Para lematizar documentos, es necesario determinar para cada palabra si es un verbo, adjetivo o sustantivo. Dado que este proceso es tedioso y sujeto a errores, en la práctica, se prefieren los métodos de _stemming_. 
+La lematización considera el análisis morfológico de las palabras: agrupar las diversas formas de una palabra de manera que puedan ser analizadas como un solo término. Los métodos de lematización intentan mapear verbos a su sentido infinitivo y los sustantivos a su forma singular. Para lematizar documentos, es necesario determinar para cada palabra si es un verbo, adjetivo o sustantivo. Dado que este proceso es tedioso y sujeto a errores, en la práctica se prefieren los métodos de _stemming_. 
 
 ### Stemming
 
@@ -110,7 +110,9 @@ print(d$HUILA[, .N, keyby = HUILA][order(N, decreasing = T)][1:30,.(HUILA, stemD
 ```
 ![]({{ site.url }}/img/posts/pdt_dnp/datos3.png)
 
-La búsqueda del origen de las palabras _(stemming)_ es un procedimiento delicado. En el español, remover las tildes en las palabras cambia el acento y puede entregar una connotación distinta a la palabra de origen: no es lo mismo "hábito" que "habito" que "habitó". A su vez, las raíces agrupan palabras de contexto diferentes: "partido", "parte", "partida" y "partes" conllevan a la misma raíz "part". Para efectos de este trabajo se utilizarán las raíces de las palabras dejando a consideración del lector las implicaciones que esto tiene. 
+La búsqueda del origen de las palabras _(stemming)_ es un procedimiento delicado. En el español, remover las tildes en las palabras cambia el acento y puede entregar una connotación distinta a la palabra de origen: no es lo mismo "hábito" que "habito" que "habitó". 
+
+A su vez, las raíces agrupan palabras de contexto diferentes: "partido", "parte", "partida" y "partes" conllevan a la misma raíz "part". Para efectos de este proyecto, se utilizarán las raíces de las palabras dejando a consideración del lector las implicaciones que esto tiene. 
 
 ```
 d <- lapply(d, function(x){
@@ -124,7 +126,9 @@ d <- lapply(d, function(x){
 
 ## Modelo de Vectores Espaciales
 
-Se definirá el _vocabulario_ como el conjunto que contiene todas las palabras presentes en todos los documentos. La manera más común de representar a todos los documentos es convirtiéndolos en vectores numéricos. A esta representación se le llama "Modelo de Vectores Espaciales" (VSM) y es utilizada en algoritmos de minado de texto y sistemas de recolección de información; al tiempo que facilita análisis eficientes de grandes colecciones de documentos. 
+Se definirá el _vocabulario_ como el conjunto que contiene todas las palabras presentes en todos los documentos. 
+
+La manera más común de representar a todos los documentos es convirtiéndolos en vectores numéricos. A esta representación se le llama "Modelo de Vectores Espaciales" (VSM) y es utilizada en algoritmos de minado de texto y sistemas de recolección de información; al tiempo que facilita análisis eficientes de grandes colecciones de documentos[^2].
 
 Colocamos todos los tokens en una misma matriz, se suman las frecuencias de cada palabra en cada documento y se ordenan en orden decreciente.  
 
@@ -163,19 +167,19 @@ str(q)
 q_melted <- melt.data.table(cbind(word = f$word, q), id.vars = "word", variable.name = "depart", value.name = "V1")
 ```
 
-La variable `q` contiene la frecuencia ponderada por el TF-IDF. La variable `q_melted` es la misma variable `q` reducida a 3 columnas. A continuación las palabras más relevantes de cada departamento luego de ponderar por TF-IDF.
+La variable `q` contiene la frecuencia ponderada por el TF-IDF de cada palabra. La variable `q_melted` es la misma variable `q` reducida a 3 columnas. A continuación las palabras más relevantes de cada departamento luego de ponderar por TF-IDF.
 
 ![]({{ site.url }}/img/posts/pdt_dnp/imagen4.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen5.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen6.png)
 
 En los documentos está el reto de lidiar con las palabras pegadas. Por ejemplo, en Casanare hay palabras como "culturaprogram", "comunitarioprogram", "deportivosector" y "firmesector". En Arauca sucede algo similar: "propiosotr" haciendo alución a "propios otros" y "físicasecret" haciendo alución a "física secreto". Estas inconsistencias podrían comprometer la calidad de análisis entre documentos. 
 
-En el Meta está de primero la palabra "guaro". Indagando en el documento se encontró que hay un municipio llamado "San Carlos de Guaroa" y el algoritmo luego de hacer el _stemm_ suprimió la "a" al final de "Guaroa". Este municipio tiene relevancia por las intenciones del departamento en aportar a sus necesidades sociales y económicas; y no tiene nada que ver con una política hacia el aguardiente. 
+En el Meta está de primero la palabra "guaro". Indagando en el documento se encontró que hay un municipio llamado "San Carlos de Guaroa" y el algoritmo luego de hacer el _stemm_ suprimió la "a" al final de "Guaroa". Este municipio tiene relevancia por las intenciones del departamento en aportar a sus necesidades sociales y económicas; nada que ver con el aguardiente. 
 
 # Análisis Multivariado
 
 ## Algoritmos de similaridad
 
-Las [4 métricas](https://stats.stackexchange.com/questions/289400/quantify-the-similarity-of-bags-of-words) de similaridad más utilidades en la literatura son:
+Las [4 métricas](https://stats.stackexchange.com/questions/289400/quantify-the-similarity-of-bags-of-words) de similaridad más utilidades en la literatura son[^3]:
 
 * Jaccard Similarity
 * Cosine Similarity
@@ -186,7 +190,7 @@ Según [Kilgarriff (1997)](http://www.aclweb.org/anthology/W/W97/W97-0122.pdf), 
 
 ### Correlación
 
-Cada Plan de Desarrollo se puede representar como un __vector__ de valores. El coseno entre dos vectores determina cuán cercanos (igual a 1) o alejados (igual a -1) están en el plano n-dimensional. El cálculo del coseno es considerado también como el [_coeficiente de correlación no centrado_](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) entre dos vectores y matemáticamente es similar al coeficiente de correlación de Pearson. Por eso se usará este como medida de la similaridad. 
+Cada Plan de Desarrollo se puede representar como un __vector__ de valores. El coseno entre dos vectores determina cuán cercanos (igual a 1) o alejados (igual a -1) están en el plano n-dimensional. El cálculo del coseno es considerado también como el [_coeficiente de correlación no centrado_](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) entre dos vectores y matemáticamente es similar al coeficiente de correlación de Pearson[^4]. Por eso se usará este como medida de la similaridad. 
 
 ```
 corrplot(corr = cor(q, method = "pearson"), type = "lower", method = "pie", diag = TRUE, order = "FPC")
@@ -198,7 +202,7 @@ La matriz de correlación se ordenó por compomentes principales y por eso apare
 
 * Quindío y Cundinamarca tienen la mayor similitud (0.903) de palabras en los Planes de Desarrollo. 
 * Casanare es el departamento con mayor diferencias respecto a los demás departamentos. Esto puede deberse a las uniones de palabras en una sola o a diferentes reales en el contenido del documento. 
-* [En Octubre de 2016](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057), el DNP entregó un reconocimiento a las gobernaciones con desarrollo robusto, intermedio y temprano a Antioquia, Nariño y Caquetá, respectivamente. En el correlograma, estas tres aparecen seguidas infiriendo esta aparente similitud. 
+* [En Octubre de 2016](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057), el DNP entregó un reconocimiento a las gobernaciones con desarrollo robusto, intermedio y temprano a Antioquia, Nariño y Caquetá, respectivamente[^5]. En el correlograma, estas tres aparecen seguidas infiriendo esta aparente similitud. 
 
 ## Clasificación/Conglomerados
 
@@ -223,7 +227,7 @@ La mayor implicación en los algoritmos anteriores es que a cada "observación" 
 
 ### Asignación de Dirichlet Latente
 
-La Asignación de Dirichlet Latente (LDA) es particularmente popular para encajar un modelo de tópicos. Toma cada documento como una mezcla de tópicos, y a cada tópico como una mezcla de palabras. Esto permite que una palabra pueda hacer parte de varios tópicos. Matemáticamente, este método estima simultáneamente la mezcla de palabras que están asociadas con cada tópico, al tiempo que identifica la mezcla de tópicos que describen cada documento.
+La Asignación de Dirichlet Latente (LDA) es particularmente popular para encajar un modelo de tópicos[^6]. Toma cada documento como una mezcla de tópicos, y a cada tópico como una mezcla de palabras. Esto permite que una palabra pueda hacer parte de varios tópicos. Matemáticamente, este método estima simultáneamente la mezcla de palabras que están asociadas con cada tópico, al tiempo que identifica la mezcla de tópicos que describen cada documento.
 
 Se convierte la variable a un formato apto para realizar el cálculo del LDA. Se analizarán 2 tópicos potenciales para entender el contenido de palabras en cada uno. 
 
