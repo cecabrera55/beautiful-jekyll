@@ -54,7 +54,7 @@ print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 
 ## Preprocesamiento
 
-El preprocesamiento es un componente clave en muchos algoritmos de minado de texto y usualmente se resume en tareas como tokenización, filtrado, lematización y _stemming_ (o raíz de las palabras).
+El preprocesamiento es un componente clave en muchos algoritmos de minado de texto y usualmente se resume en tareas como tokenización, filtrado, lematización y _stemming_ (o raíz de las palabras)[^1].
 
 Se cargan los 31 documentos datos en una sola lista llamada `d`. Cada elemento de la lista representará un Departamento y tendrá las palabras de su respectivo PDT. Se adiciona a cada palabra un `1` para denotar que la palabra aparece una vez. Este procedimiento ayudará a agrupar las frecuencias de palabras.
 
