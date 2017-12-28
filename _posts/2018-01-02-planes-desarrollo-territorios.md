@@ -56,7 +56,7 @@ print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 
 El preprocesamiento es un componente clave en muchos algoritmos de minado de texto y usualmente se resume en tareas como tokenización, filtrado, lematización y _stemming_ (o raíz de las palabras)[^1].
 
-Se cargan los 31 documentos datos en una sola lista llamada `d`. Cada elemento de la lista representará un Departamento y tendrá las palabras de su respectivo PDT. Se adiciona a cada palabra un `1` para denotar que la palabra aparece una vez. Este procedimiento ayudará a agrupar las frecuencias de palabras.
+Se cargan los 31 documentos en una sola lista llamada `d`. Cada elemento de la lista representará un Departamento y contendrá las palabras de su respectivo PDT como una _tabla de datos_. Se adiciona a dicha tabla una columna con un `1` para denotar que la palabra aparece una vez. Este procedimiento ayudará a agrupar las frecuencias de palabras.
 
 ```
 d <- lapply(paths, function(x){
@@ -74,7 +74,9 @@ La tokenización consiste en separar las secuencias de caracteres en pedazos (pa
 
 ### Filtrado
 
-Un filtro común es remover las _stop words_ o palabras que frecuentemente aparecen en el texto y que no aportan información: preposiciones y conjunciones, por citar algunas. En R, el paquete `tm` brinda una lista de 308 `stop-words` del español. Así mismo, hay palabras que aparecen con mucha frecuencia y que son irrelevantes como "ee", "nn", "oo", "aa", etc. También serán filtradas. 
+Un filtro común es remover las _stop words_ o palabras que frecuentemente aparecen en el texto y que no aportan información: preposiciones y conjunciones, por ejemplo. 
+
+En R, el paquete `tm` brinda una lista de 308 `stop-words` del español. Se filtrarán estas palabras, así como palabras que aparecen con mucha frecuencia y que son irrelevantes: "ee", "nn", "oo", "aa", etc.
 
 A continuación las primeras 50. 
 
@@ -82,7 +84,7 @@ A continuación las primeras 50.
 stop_es <- c(stopwords(kind = "es"), "ee", "nn", "oo", "aa", "aaa", "dd", "rr", "cc", "pp", "tt", "yy", "zz", "xx", "aafront", "aai", "aati", "aatis", "ddee", "aaí")
 print(matrix(stop_es[1:50], nrow = 10, byrow = TRUE))
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos2.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos2.png)
 
 Las suprimimos de todos los documentos:
 
@@ -106,7 +108,7 @@ Utilizando el algoritmo de _stemming_ de Porter y tomando como ejemplo las 30 pa
 ```
 print(d$HUILA[, .N, keyby = HUILA][order(N, decreasing = T)][1:30,.(HUILA, stemDocument(x = HUILA,  language = "es"), N)])
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos3.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos3.png)
 
 La búsqueda del origen de las palabras _(stemming)_ es un procedimiento delicado. En el español, remover las tildes en las palabras cambia el acento y puede entregar una connotación distinta a la palabra de origen: no es lo mismo "hábito" que "habito" que "habitó". A su vez, las raíces agrupan palabras de contexto diferentes: "partido", "parte", "partida" y "partes" conllevan a la misma raíz "part". Para efectos de este trabajo se utilizarán las raíces de las palabras dejando a consideración del lector las implicaciones que esto tiene. 
 
@@ -137,11 +139,11 @@ d <- lapply(d, function(x){
 d <- rbindlist(d, use.names = T)[, sum(f), keyby = .(depart, word)]
 print(d[order(V1, decreasing = T)])
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos4.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos4.png)
 
 Filtra por los departamentos. Cada departamento resalta las 15 palabras (raíces) más mencionadas en cada Plan de Desarrollo. 
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen1.png) ![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen2.png) ![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen3.png)
+![]({{ site.url }}/img/posts/pdt_dnp/imagen1.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen2.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen3.png)
 
 En VSM cada palabra es representada por un valor numérico que indica el peso (importancia) de la palabra en el documento. Se utilizará el modelo de _Term frequency-inverse document frequency_ (TF-IDF) para ponderar. Se moldea la tabla en una matriz de frecuencia:
 
@@ -149,7 +151,7 @@ En VSM cada palabra es representada por un valor numérico que indica el peso (i
 f <- dcast.data.table(d, formula = "word ~ depart", value.var = "V1", fill = 0)
 str(f)
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos5.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos5.png)
 
 La variable `f` contiene la frecuencia con la que aparece cada palabra para cada departamento. Se calcula el término de frecuencia `TF-IDF`:
 
@@ -163,7 +165,7 @@ q_melted <- melt.data.table(cbind(word = f$word, q), id.vars = "word", variable.
 
 La variable `q` contiene la frecuencia ponderada por el TF-IDF. La variable `q_melted` es la misma variable `q` reducida a 3 columnas. A continuación las palabras más relevantes de cada departamento luego de ponderar por TF-IDF.
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen4.png) ![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen5.png) ![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen6.png)
+![]({{ site.url }}/img/posts/pdt_dnp/imagen4.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen5.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen6.png)
 
 En los documentos está el reto de lidiar con las palabras pegadas. Por ejemplo, en Casanare hay palabras como "culturaprogram", "comunitarioprogram", "deportivosector" y "firmesector". En Arauca sucede algo similar: "propiosotr" haciendo alución a "propios otros" y "físicasecret" haciendo alución a "física secreto". Estas inconsistencias podrían comprometer la calidad de análisis entre documentos. 
 
@@ -190,7 +192,7 @@ Cada Plan de Desarrollo se puede representar como un __vector__ de valores. El c
 corrplot(corr = cor(q, method = "pearson"), type = "lower", method = "pie", diag = TRUE, order = "FPC")
 ```
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen7.png)
+![]({{ site.url }}/img/posts/pdt_dnp/imagen7.png)
 
 La matriz de correlación se ordenó por compomentes principales y por eso aparecen primero los departamentos con mayor correlación y de último los de menos. Se resalta los siguientes insights:
 
@@ -230,13 +232,13 @@ doc <- cast_dtm(data = d, document = depart, term = word, value = V1, weighting 
 print(doc)
 ```
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos6.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos6.png)
 
 ```
 ap_lda <- LDA(doc, k = 2, control = list(seed = 1234))
 print(ap_lda)
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos7.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos7.png)
 
 Se comenzará con el análisis por-tópico-por-palabra extrayendo las probabilidades o β (“betas”) del modelo. 
 
@@ -244,7 +246,7 @@ Se comenzará con el análisis por-tópico-por-palabra extrayendo las probabilid
 ap_topics <- tidy(ap_lda, matrix = "beta")
 print(ap_topics)
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos8.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos8.png)
 
 Este procedimiento convirtió el modelo a un formato de una fila por tópico por palabra. Para cada combinación, el modelo computa la probabilidad que ese término haya sido generado por ese tópico. Por ejemplo, el término "abandon" tiene una probabilidad de 1.71e-04 de haber sido generado del tópico 1 y una del 3.28x-05 de haber sido generado del tópico 2. 
 
@@ -265,7 +267,7 @@ ap_top_terms %>%
   coord_flip()
 ```
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen8.png) ![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen9.png)
+![]({{ site.url }}/img/posts/pdt_dnp/imagen8.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen9.png)
 
 Esta gráfica permite entender los dos tópicos que fueron extraidos de los PDTs. Las palabras más comunes en el tópico 1 incluyen "población", "salud", "implementar", "proces", "indic" lo que puede sugerir que están más enfocados a la implementación de proyectos de salud. Aquellas palabras más comunes en el tópico 2 incluyen "social", "econom", "derech", "genero" y "niñ" queriendo inferir una inclinación hacia estrategias de interacción social (niñez, género, derecho) ajenas a la salud. Aquí se resalta una ventaja del modelaje de tópicos opuesta a los métodos de "conglomerados duros": lo tópicos en lenguaje natural se podrían superponer en términos de palabras. 
 
@@ -287,7 +289,7 @@ beta_spread <- ap_topics %>%
   coord_flip()
 ```
 
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/imagen10.png)
+![]({{ site.url }}/img/posts/pdt_dnp/imagen10.png)
 
 Las palabras más comunes en el tópico 2 son: "formacion", "fisic", "conserv", "natural", "direccion", "comunitari", "desplaz", "orden", "potencial", "coordin", "asistent" quizás infiendo soluciones a problemáticas sociales (comunitari, coordin, formacion) y de desplazamiento (fisic, orden, direccion). En el tópico 1 están las palabras "violenci", "viviend", "trabaj", "cultur", "climat", "urban", "saneamient", "tecnolog", "promocion", "interes", "document" posiblemente abordando más temáticas de salud (urban, violenc, climat, saneamient) y convivencia (cultur, trabaj, viviend, tecnolog). 
 
@@ -301,7 +303,7 @@ ap_documents$gamma <- round(ap_documents$gamma*100, 1)
 depart <- dcast.data.table(data = as.data.table(ap_documents), formula = "document ~ topic", value.var = "gamma")
 print(depart)
 ```
-![](/home/gerardo/Escritorio/cecabrera.github.io-master/img/posts/pdt_dnp/datos9.png)
+![]({{ site.url }}/img/posts/pdt_dnp/datos9.png)
 
 Cada uno de estos valores es una proporción estimada de palabras que vienen de ese documento que son generadas por ese tópico. Por ejemplo, el modelo estima que el 76.9% de las palabras del PDT de Cesar construyen el tópico 2 mientras que el 73.1% del PDT de Casanare conforman el tópico 1.
 
