@@ -1,6 +1,5 @@
 ---
 title: "Clasificación de Planes de Desarrollo"
-author: "Camilo Cabrera"
 layout: post
 date: '2018-01-02'
 permalink: /es/blog/planes-desarrollo/
