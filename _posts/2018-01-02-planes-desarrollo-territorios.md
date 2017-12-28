@@ -18,7 +18,7 @@ tags:
 - Machine Learning
 ---
 
-Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
+Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/files/blog/pdt_dnp/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
 
 Se analizarán los siguientes puntos:
 
@@ -48,7 +48,7 @@ Para comenzar, se almacena las rutas de los archivos de texto en una variable ll
 ```
 paths <- list.files(c("data"), pattern="\\.(TXT|txt)$", recursive = TRUE, full.names = TRUE)
 departments <- sub(pattern = ".txt.*", "" , sub(pattern = ".*/", "", paths))
-print(head(paths, 6)) # Visualizar los primeros 5 elementos de la variable `paths`
+print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 ```
 ![]({{ site.url }}/img/posts/pdt_dnp/datos1.png)
 
