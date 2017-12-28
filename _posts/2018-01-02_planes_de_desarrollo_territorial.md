@@ -1,5 +1,5 @@
 ---
-title: "Clasificación de Planes de Desarrollo"
+title: 'Clasificación de Planes de Desarrollo'
 layout: post
 date: '2018-01-02'
 permalink: /es/blog/planes-desarrollo/
