@@ -1,9 +1,23 @@
 ---
 title: "Clasificación de Planes de Desarrollo"
 author: "Camilo Cabrera"
-date: "December 21, 2017"
+layout: post
+date: '2018-01-02'
+permalink: /es/blog/planes-desarrollo/
+published: true
+share-img: "/img/posts/planes_desarrollo/imagen7.png"
+tags:
+- Español
+- DNP
+- Plan de Desarrollo
+- Analítica
+- Clustering
+- Text Mining
+- Correlation
+- LDA
+- Data Cleaning
+- Machine Learning
 ---
-
 Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
 
 Se analizarán los siguientes puntos:
