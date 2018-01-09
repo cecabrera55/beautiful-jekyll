@@ -30,23 +30,28 @@ sencilla?
 # Tabla de Contenidos
 
 - [Preprocesamiento](#preprocesamiento)
-- [Tokenización](#tokenizacion)
-- [Filtrado](#filtrado)
-- [Lematización](#lematización)
-- [Stemming](#stemming)
+  - [Tokenización](#tokenizacion)
+  -[Filtrado](#filtrado)
+  -[Lematización](#lematizacion)
+  -[Stemming](#stemming)
+  
 - [Análisis Univariado](#univariado)
-- [Modelo de Vectores Espaciales](#espaciales)
--   [Análisis Multivariado](#multivariado)
--   [Algoritmos de similaridad](#similaridad)
--   [Correlación](#correlacion)
--     [Clasificación/Conglomerados](#conglomerados)
--   [Asignación de Dirichlet Latente](#dirichlet)
-- [Probabilidades documento-tópico](#probabilidades)
--   [Tópico 1: Proyecto de salud](#salud)
--   [Tópico 2: Educación y Cultura](#educacion)
+  - [Modelo de Vectores Espaciales](#espaciales)
+  
+- [Análisis Multivariado](#multivariado)
+  - [Algoritmos de similaridad](#similaridad)
+    - [Correlación](#correlacion)
+  - [Clasificación/Conglomerados](#conglomerados)
+    - [Asignación de Dirichlet Latente](#dirichlet)
+
+- [Probabilidades documento-tópico](#topico)
+  - [Tópico 1: Proyecto de salud](#salud)
+  - [Tópico 2: Educación y Cultura](#educacion)
+
 - [Apuntes](#apuntes)
 - [Recomendaciones](#recomendaciones)
 - [Referencias](#referencias)
+
 
 Analizar tal cantidad de datos (31 documentos y 59004 palabras) simultáneamente es una labor posible gracias a la [minería de texto](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_textos). El objetivo de este blog es organizar, clasificar y visualizar los datos utilizando el lenguaje de programación [R](https://www.r-project.org/). El código fuente de este documento está alojado en [Github](https://github.com/cecabrera/pdt_dnp).
 
