@@ -30,17 +30,21 @@ sencilla?
 # Tabla de Contenidos
 
 - [Preprocesamiento](#preprocesamiento)
-  [Tokenización](#tokenizacion)
-  -[Filtrado](#filtrado)
+  - [Tokenización](#tokenizacion)
+  - [Filtrado](#filtrado)
   - [Lematización](#lematizacion)
   - [Stemming](#stemming)
+
 - [Análisis Univariado](#univariado)
   - [Modelo de Vectores Espaciales](#espaciales)
+  
 - [Análisis Multivariado](#multivariado)
   - [Algoritmos de similaridad](#similaridad)
     - [Correlación](#correlacion)
-  - [Clasificación/Conglomerados](#conglomerados)
+
+- [Clasificación/Conglomerados](#conglomerados)
     - [Asignación de Dirichlet Latente](#dirichlet)
+
 - [Probabilidades documento-tópico](#topico)
   - [Tópico 1: Proyecto de salud](#salud)
   - [Tópico 2: Educación y Cultura](#educacion)
