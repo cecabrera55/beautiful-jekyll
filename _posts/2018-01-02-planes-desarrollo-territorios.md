@@ -4,7 +4,6 @@ layout: post
 date: '2018-01-02'
 published: yes
 share-img: /img/posts/planes_desarrollo/imagen7.png
-permalink: /blog/planes-desarrollo/
 tags:
 - Español
 - DNP
@@ -16,6 +15,7 @@ tags:
 - LDA
 - Data Cleaning
 - Machine Learning
+permalink: /blog/planes-desarrollo/
 ---
 
 Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/files/blog/pdt_dnp/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
