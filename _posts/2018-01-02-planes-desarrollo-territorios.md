@@ -30,10 +30,10 @@ sencilla?
 # Tabla de Contenidos
 
 - [Preprocesamiento](#preprocesamiento)
-  -[Tokenización](#tokenizacion)
-  -[Filtrado](#filtrado)
-  -[Lematización](#lematizacion)
-  -[Stemming](#stemming)
+  - [Tokenización](#tokenizacion)
+  - [Filtrado](#filtrado)
+  - [Lematización](#lematizacion)
+  - [Stemming](#stemming)
 - [Análisis Univariado](#univariado)
   - [Modelo de Vectores Espaciales](#espaciales)
 - [Análisis Multivariado](#multivariado)
