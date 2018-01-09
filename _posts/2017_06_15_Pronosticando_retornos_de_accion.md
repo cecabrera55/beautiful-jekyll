@@ -177,7 +177,7 @@ _Fuente de información:_ https://www.r-bloggers.com/forecasting-stock-returns-u
   
   _Código fuente:_ https://github.com/daumann/r-stockPrediction/blob/master/findBestPrediction.r
 
-En el ejemplo de este código, de los 25 modelos intentados, el óptimo fue uno de Redes Neuronales Artificiales.
+_ En el ejemplo de este código, de los 25 modelos intentados, el óptimo fue uno de Redes Neuronales Artificiales. _
 
 # Conclusiones {#conclusiones}
 
