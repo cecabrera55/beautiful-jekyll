@@ -1,9 +1,9 @@
----
-title:"Pronosticando los retornos de una acción"
-layout:post
-date:'2017-06-15'
-published:yes
-share-img:/img/posts/stock_images/grafica1.png)
+  ---
+title: "Pronosticando los retornos de una acción"
+layout: post
+date: '2017-06-15'
+published: yes
+share-img: /img/posts/stock_images/grafica1.png)
 tags:
 - Español
 - Trading
