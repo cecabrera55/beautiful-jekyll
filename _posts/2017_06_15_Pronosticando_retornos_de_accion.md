@@ -3,7 +3,7 @@ title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2017-06-15'
 published: yes
-share-img: /img/posts/stock_images/grafica1.png)
+share-img: (/home/gerardo/cecabrera.github.io/img/posts/stock_images/grafica1.png)
 tags:
 - Español
 - Trading
@@ -63,7 +63,7 @@ Graficamos el precio de cierre usando la librería `ggplot2`:
 ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
 
 ```
-![]({{ site.url }}/img/posts/stock_images/grafica1.png)
+![sdf]({{ site.url }}/home/gerardo/cecabrera.github.io/img/posts/stock_images/grafica1.png)
 
 Antes de proceder a modelar los datos, los vamos a dividir en dos: un bloque de "training" para entrenar el modelo con el 80% de los datos y un bloque de "testing" para calcular el nivel de precisión de nuestro modelo con los datos más recientes. 
 
