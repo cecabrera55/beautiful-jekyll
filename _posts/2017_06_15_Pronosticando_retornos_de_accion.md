@@ -61,7 +61,7 @@ Graficamos el precio de cierre usando la librería `ggplot2`:
 ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
 
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen22.png)
+![]({{site.url}}/img/posts/stock_images/imagen22.png)
 
 Antes de proceder a modelar los datos, los vamos a dividir en dos: un bloque de "training" para entrenar el modelo con el 80% de los datos y un bloque de "testing" para calcular el nivel de precisión de nuestro modelo con los datos más recientes. 
 
