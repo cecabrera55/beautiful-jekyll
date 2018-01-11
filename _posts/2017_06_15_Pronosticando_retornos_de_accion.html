@@ -131,7 +131,7 @@ $(document).ready(function () {
 <li><a href="#arimax">Análisis con modelos ARIMAX</a></li>
 <li><a href="#interactivo">Análisis interactivo de 25 modelos</a></li>
 <li><a href="#conclusiones">Conclusiones</a></li>
-<li><a href="#referencias">Referencias</a></li>
+<li><a href="#fuentes">Fuentes bibliográficas</a></li>
 </ul>
 <p>El plan de trabajo de este informe se resume en: 1. análisis de Regresión Logística para encontrar asociaciones entre los indicadores y el precio de la acción; 2. análisis de ARIMAX para modelar el comportamiento de los retornos y calcular la tendencia y magnitud del precio en el corto plazo; 3. y finalmente una sucesión de códigos en GitHub para evaluar 25 modelos estadísticos en un bucle y determinar cuál tiene la mejor precisión al momento de pronosticar el precio de la acción.</p>
 <p>Comenzamos cargando los paquetes a utilizar y los datos del archivo de Excel: ```<br />
@@ -222,7 +222,9 @@ test  = subset(d$returns, sample == FALSE)</code></pre>
 <p>En la teoría, las variables del modelo de Regresión Logística ‘explicaron’ parte del comportamiento del precio de la acción. En la práctica, <strong>los precios de las acciones responden a las expectativas que tiene el mercado en función de nueva información (como noticias)</strong> y por ende, ninguna de las demás variables en la base de datos entran en esta categoría: dependen de información pasada. Hay que tener prudencia cuando se tomen decisiones de inversión teniendo en cuenta <em>únicamente</em> estas variables.</p>
 <p>Por otro lado, la estructuración de modelos de series de tiempo aglutinan toda información pasada y están diseñados para considerar tendencias, eventos pasados y lags entre eventos. Es por esta razón que un modelo autorregresivo (AR) integrado (I) de media móvil (MA) desempeña un mejor papel teórico en la modelación del precio de las acciones. Aún así, hay que considerar variables como noticias y tendencias en redes sociales para tener un mirada holística de lo que sucede con la acción.</p>
 <p>Finalmente, la precisión de un modelo está atada a su desempeño frente al “test” dataset y de sus métricas respecto a otros modelos. De ahí la importancia de cross validar con varias opciones.</p>
-<p><em># Fuentes bibliográficas</em> {#referencias}</p>
+</div>
+<div id="fuentes" class="section level1">
+<h1><em>Fuentes bibliográficas</em></h1>
 <ul>
 <li><a href="https://www.quantinsti.com/blog/forecasting-stock-returns-using-arima-model/" class="uri">https://www.quantinsti.com/blog/forecasting-stock-returns-using-arima-model/</a></li>
 <li><a href="https://github.com/daumann/r-stockPrediction" class="uri">https://github.com/daumann/r-stockPrediction</a></li>

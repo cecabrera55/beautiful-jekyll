@@ -28,7 +28,7 @@ Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósit
 - [Análisis con modelos ARIMAX](#arimax)
 - [Análisis interactivo de 25 modelos](#interactivo)
 - [Conclusiones](#conclusiones)
-- [Referencias](#referencias)
+- [Fuentes bibliográficas](#fuentes)
   
 El plan de trabajo de este informe se resume en:
 1. análisis de Regresión Logística para encontrar asociaciones entre los indicadores y el precio de la acción;
@@ -176,7 +176,7 @@ Por otro lado, la estructuración de modelos de series de tiempo aglutinan toda 
 
 Finalmente, la precisión de un modelo está atada a su desempeño frente al "test" dataset y de sus métricas respecto a otros modelos. De ahí la importancia de cross validar con varias opciones.
 
-_# Fuentes bibliográficas_ {#referencias}
+# _Fuentes bibliográficas_ {#fuentes}
 
 - https://www.quantinsti.com/blog/forecasting-stock-returns-using-arima-model/
   - https://github.com/daumann/r-stockPrediction
