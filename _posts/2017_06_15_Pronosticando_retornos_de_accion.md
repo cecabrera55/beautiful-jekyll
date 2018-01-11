@@ -3,7 +3,7 @@ title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2018-01-11'
 published: yes
-share-img: /home/gerardo/Escritorio/stock_images/imagen1.png
+share-img: /home/gerardo/Escritorio/stock_images/grafica1.png
 tags:
 - Español
 - Trading
@@ -51,7 +51,7 @@ d <- data.table(readxl::read_excel(path = "Datos.xlsx", sheet = 1))
 # mostrar las primeras 6 filas de las primeras 7 columnas.
 head(d[, .(fecha, open, high, low, close, volume)])
 ```
-
+![]({{ site.url }}/Escritorio/stock_images/imagen1.png)
 En la hoja `campos` del archivo de Excel se encuentra la descripción de cada una de las columnas de la variable `d`.
 
 Graficamos el precio de cierre usando la librería `ggplot2`:
