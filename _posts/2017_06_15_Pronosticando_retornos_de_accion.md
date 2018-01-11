@@ -36,7 +36,7 @@ El plan de trabajo de este informe se resume en:
 3. y finalmente una sucesión de códigos en GitHub para evaluar 25 modelos estadísticos en un bucle y determinar cuál tiene la mejor precisión al momento de pronosticar el precio de la acción. 
 
 Comenzamos cargando los paquetes a utilizar y los datos del archivo de Excel:
-  ```  
+```
 # install.packages(c("caTools", "tseries", "readxl", "data.table", "plotly"))
 require(caTools)
 require(tseries)
@@ -55,13 +55,9 @@ head(d[, .(fecha, open, high, low, close, volume)])
 En la hoja `campos` del archivo de Excel se encuentra la descripción de cada una de las columnas de la variable `d`.
 
 Graficamos el precio de cierre usando la librería `ggplot2`:
-  ```
-
-ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
-
 ```
-
-
+ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
+```
 Antes de proceder a modelar los datos, los vamos a dividir en dos: un bloque de "training" para entrenar el modelo con el 80% de los datos y un bloque de "testing" para calcular el nivel de precisión de nuestro modelo con los datos más recientes. 
 
 ```
