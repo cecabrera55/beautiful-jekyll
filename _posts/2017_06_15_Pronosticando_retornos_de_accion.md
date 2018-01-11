@@ -15,7 +15,7 @@ tags:
 - Pronostico
 - Acciones
 - Precios
-permalink: /blog/retornosdeaccion/
+permalink: /blog/stock/
 ---
 
 En el [archivo de Excel](https://cecabrera.github.io/files/Datos.xlsx) hay información de precios desde el 10 de Abril de 2013 al 26 de Mayo de 2017 de la empresa "XYZ". 
