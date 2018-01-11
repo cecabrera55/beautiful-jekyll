@@ -3,7 +3,7 @@ title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2018-01-11'
 published: yes
-share-img:
+share-img: /home/gerardo/Escritorio/stock_images/imagen1.png
 tags:
 - Español
 - Trading
