@@ -203,7 +203,7 @@ En el Meta está de primero la palabra "guaro". Indagando en el documento se enc
 
 # Análisis Multivariado {#multivariado}
 
-## Algoritmos de similaridad{#similaridad}
+## Algoritmos de similaridad {#similaridad}
 
 Las [4 métricas](https://stats.stackexchange.com/questions/289400/quantify-the-similarity-of-bags-of-words) de similaridad más utilidades en la literatura son[^3]:
 
