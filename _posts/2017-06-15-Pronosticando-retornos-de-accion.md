@@ -1,7 +1,7 @@
 ---
 title: "Pronosticando los retornos de una acción"
 layout: post
-date: '2018-01-11'
+date: '2017-06-15'
 published: yes
 share-img: /home/gerardo/Escritorio/stock_images/grafica1.png
 tags:
