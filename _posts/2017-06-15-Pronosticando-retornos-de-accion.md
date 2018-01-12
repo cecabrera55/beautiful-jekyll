@@ -1,5 +1,5 @@
 ---
-title: "pronosticando los retornos de una acción"
+title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2018-01-11'
 published: yes
@@ -21,7 +21,8 @@ En el [archivo de Excel](https://cecabrera.github.io/files/Datos.xlsx) hay infor
 Me dí a la tarea de desarrollar un modelo estadístico que pronosticara si el precio de una acción sube o baja en función de su valor histórico y otras variables. 
 Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósitos investigativos. El código fuente pueden hallarlo en mi [reposotorio (carpeta)](https://github.com/cecabrera/stock) en GitHub.
 
-#Tabla de contenidos
+# _Tabla de contenidos_
+
 - [Modelo de regresión logística](#regresion)
 - [Calculando la habilidad predictiva del modelo](#predictiva)
 - [Análisis con modelos ARIMAX](#arimax)
