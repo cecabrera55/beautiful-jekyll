@@ -243,6 +243,7 @@ ap_lda <- LDA(doc, k = 2, control = list(seed = 1234))
 print(ap_lda)
 ```
 ![]({{ site.url }}/img/posts/pdt_dnp/datos7.png)
+# Probabilidades tópico-palabra
 
 Se comenzará con el análisis por-tópico-por-palabra extrayendo las probabilidades o β (“betas”) del modelo. 
 
