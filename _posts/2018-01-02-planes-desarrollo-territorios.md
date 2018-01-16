@@ -1,10 +1,9 @@
 ---
-title: 'Clasificación de Planes de Desarrollo'
+title: "Clasificación de Planes de Desarrollo"
 layout: post
 date: '2018-01-02'
-permalink: /blog/planes-desarrollo/
-published: true
-share-img: "/img/posts/planes_desarrollo/imagen7.png"
+published: yes
+share-img: /img/posts/planes_desarrollo/imagen7.png
 tags:
 - Español
 - DNP
@@ -16,6 +15,7 @@ tags:
 - LDA
 - Data Cleaning
 - Machine Learning
+permalink: /blog/planes-desarrollo/
 ---
 
 Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/files/blog/pdt_dnp/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
@@ -26,6 +26,32 @@ Se analizarán los siguientes puntos:
 2. Clasificar los planes de acuerdo con algún criterio de similitud.
 3. ¿Qué tipo de información reportaría a los evaluadores con el fin de hacer su tarea más
 sencilla?
+
+# Tabla de Contenidos
+
+- [Preprocesamiento](#preprocesamiento)
+  - [Tokenización](#tokenizacion)
+  - [Filtrado](#filtrado)
+  - [Lematización](#lematizacion)
+  - [Stemming](#stemming)
+
+- [Análisis Univariado](#univariado)
+  - [Modelo de Vectores Espaciales](#espaciales)
+  
+- [Análisis Multivariado](#multivariado)
+  - [Algoritmos de similaridad](#similaridad)
+    - [Correlación](#correlacion)
+
+- [Clasificación/Conglomerados](#conglomerados)
+    - [Asignación de Dirichlet Latente](#dirichlet)
+
+- [Probabilidades documento-tópico](#topico)
+  - [Tópico 1: Proyecto de salud](#salud)
+  - [Tópico 2: Educación y Cultura](#educacion)
+- [Apuntes](#apuntes)
+- [Recomendaciones](#recomendaciones)
+- [Referencias](#referencias)
+
 
 Analizar tal cantidad de datos (31 documentos y 59004 palabras) simultáneamente es una labor posible gracias a la [minería de texto](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_textos). El objetivo de este blog es organizar, clasificar y visualizar los datos utilizando el lenguaje de programación [R](https://www.r-project.org/). El código fuente de este documento está alojado en [Github](https://github.com/cecabrera/pdt_dnp).
 
@@ -52,7 +78,7 @@ print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 ```
 ![]({{ site.url }}/img/posts/pdt_dnp/datos1.png)
 
-## Preprocesamiento
+## Preprocesamiento {#preprocesamiento}
 
 El preprocesamiento es un componente clave en muchos algoritmos de minado de texto y usualmente se resume en tareas como tokenización, filtrado, lematización y _stemming_ (o raíz de las palabras)[^1].
 
@@ -68,11 +94,11 @@ d <- lapply(paths, function(x){
 names(d) <- departments
 ```
 
-### Tokenización
+### Tokenización {#tokenizacion}
 
 La tokenización consiste en separar las secuencias de caracteres en pedazos (palabras/frases) llamados tokens y, en el camino, desechar caracteres como puntuaciones. Nuestros documentos ya carecen de puntuaciones y están separados en su mayoría por palabras. 
 
-### Filtrado
+### Filtrado {#filtrado}
 
 Un filtro común es remover las _stop words_ o palabras que frecuentemente aparecen en el texto y que no aportan información: preposiciones y conjunciones, por ejemplo. 
 
@@ -94,11 +120,11 @@ d <- lapply(d, function(x){
 })
 ```
 
-### Lematización
+### Lematización {#lematizacion}
 
 La lematización considera el análisis morfológico de las palabras: agrupar las diversas formas de una palabra de manera que puedan ser analizadas como un solo término. Los métodos de lematización intentan mapear verbos a su sentido infinitivo y los sustantivos a su forma singular. Para lematizar documentos, es necesario determinar para cada palabra si es un verbo, adjetivo o sustantivo. Dado que este proceso es tedioso y sujeto a errores, en la práctica se prefieren los métodos de _stemming_. 
 
-### Stemming
+### Stemming {#stemming}
 
 Los métodos de _stemming_ le apuntan a encontrar la raíz de las palabras y usarla como método agrupador de palabras. Como es de esperarse, los algoritmos de _stemming_ dependen del lenguaje. 
 
@@ -122,9 +148,9 @@ d <- lapply(d, function(x){
 })
 ```
 
-# Análisis Univariado
+# Análisis Univariado {#univariado}
 
-## Modelo de Vectores Espaciales
+## Modelo de Vectores Espaciales {#espaciales}
 
 Se definirá el _vocabulario_ como el conjunto que contiene todas las palabras presentes en todos los documentos. 
 
@@ -175,9 +201,9 @@ En los documentos está el reto de lidiar con las palabras pegadas. Por ejemplo,
 
 En el Meta está de primero la palabra "guaro". Indagando en el documento se encontró que hay un municipio llamado "San Carlos de Guaroa" y el algoritmo luego de hacer el _stemm_ suprimió la "a" al final de "Guaroa". Este municipio tiene relevancia por las intenciones del departamento en aportar a sus necesidades sociales y económicas; nada que ver con el aguardiente. 
 
-# Análisis Multivariado
+# Análisis Multivariado {#multivariado}
 
-## Algoritmos de similaridad
+## Algoritmos de similaridad {#similaridad}
 
 Las [4 métricas](https://stats.stackexchange.com/questions/289400/quantify-the-similarity-of-bags-of-words) de similaridad más utilidades en la literatura son[^3]:
 
@@ -188,7 +214,7 @@ Las [4 métricas](https://stats.stackexchange.com/questions/289400/quantify-the-
 
 Según [Kilgarriff (1997)](http://www.aclweb.org/anthology/W/W97/W97-0122.pdf), el test ideal para calcular la similaridad entre dos documentos es el _Pearson chi2 test-based_. Sin embargo, el poder computacional y concepto teórico es significativamente superior a utilizar _Cosine Similarity_ y entregan resultados relativamente similares. El _Cosine Similarity_ ha demostrado en otros experimentos ser mejor que el _Spearman's rank correlation_; aún cuando es una alternativa viable para calcular la similaridad entre documentos. La _Jaccard Similarity_ es la más simple de las similaridades y no tiene en consideración la frecuencia con la que aparecen las palabras. Por esta razón, la similaridad a trabajar será el _Cosine Similarity_.
 
-### Correlación
+### Correlación {#correlacion}
 
 Cada Plan de Desarrollo se puede representar como un __vector__ de palabras. El coseno entre dos vectores determina cuán cercanos (igual a 1) o alejados (igual a -1) están en el plano n-dimensional. El cálculo del coseno es considerado también como el [_coeficiente de correlación no centrado_](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) entre dos vectores y matemáticamente es similar al coeficiente de correlación de Pearson[^4]. Por eso se usará este como medida de la similaridad. 
 
@@ -204,7 +230,7 @@ La matriz de correlación se ordenó por compomentes principales y por eso apare
 * Casanare es el departamento con mayor diferencias respecto a los demás departamentos. Esto puede deberse a las uniones de palabras en una sola o a diferencias reales en el contenido del documento. 
 * [En Octubre de 2016](http://www.portafolio.co/economia/gobierno/dnp-destaco-los-planes-de-desarrollo-departamentales-501057), el DNP entregó un reconocimiento a las gobernaciones con desarrollo robusto, intermedio y temprano a Antioquia, Nariño y Caquetá, respectivamente[^5]. En el correlograma, estas tres aparecen seguidas demostrando esta aparente similitud. 
 
-## Clasificación/Conglomerados
+## Clasificación/Conglomerados {#conglomerados}
 
 Si cada documento hiciese parte de una categoría _a priori_, se utilizarían algoritmos como:
 
@@ -225,7 +251,7 @@ Los algoritmos de conglomerados herárquicos están basados en distancias respec
 
 La mayor implicación en los algoritmos anteriores es que a cada "observación" (en nuestro caso "palabra") es asignado a una única categoría. Sin embargo, como sucede en el lenguaje natural, existen palabras que podrían hacer parte de varias categorías (o tópicos/temas). Por eso, el modelaje de tópicos será el escogido para clasificar los Planes de Desarrollo Departamentales. El modelaje de tópicos es un método de clasificación no-supervisada utilizado para encontrar grupos naturales de palabras que aparentemente no tienen relación. 
 
-### Asignación de Dirichlet Latente
+### Asignación de Dirichlet Latente {#dirichlet}
 
 La Asignación de Dirichlet Latente (LDA) es particularmente popular para encajar un modelo de tópicos[^6]. Toma cada documento como una mezcla de tópicos, y a cada tópico como una mezcla de palabras. Esto permite que una palabra pueda hacer parte de varios tópicos. Matemáticamente, este método estima simultáneamente la mezcla de palabras que están asociadas con cada tópico, al tiempo que identifica la mezcla de tópicos que describen cada documento.
 
@@ -298,7 +324,7 @@ beta_spread <- ap_topics %>%
 
 Las palabras más comunes en el tópico 2 son: "formacion", "fisic", "conserv", "natural", "direccion", "comunitari", "desplaz", "orden", "potencial", "coordin", "asistent" quizás infiendo soluciones a problemáticas sociales (comunitari, coordin, formacion) y de desplazamiento (fisic, orden, direccion). En el tópico 1 están las palabras "violenci", "viviend", "trabaj", "cultur", "climat", "urban", "saneamient", "tecnolog", "promocion", "interes", "document" posiblemente abordando más temáticas de salud (urban, violenc, climat, saneamient) y convivencia (cultur, trabaj, viviend, tecnolog). 
 
-# Probabilidades documento-tópico
+# Probabilidades documento-tópico {#topico}
 
 Además de estimar cada tópico como una mezcla de palabras, LDA también modela cada documento como una mezcla de tópicos. En el modelo, el estimador de estas probabilidades es llamado "gamma" (γ):
 
@@ -312,7 +338,7 @@ print(depart)
 
 Cada uno de estos valores es una proporción estimada de palabras que vienen de ese documento que son generadas por ese tópico. Por ejemplo, el modelo estima que el 76.9% de las palabras del PDT de Cesar construyen el tópico 2 mientras que el 73.1% del PDT de Casanare conforman el tópico 1.
 
-#### Tópico 1: Proyecto de salud
+#### Tópico 1: Proyecto de salud {#salud}
 
 ```
 head(depart[order(`1`, decreasing = T)], 6)
@@ -320,7 +346,7 @@ head(depart[order(`1`, decreasing = T)], 6)
 
 Los PDTs que mejor describen el tópico 1 son Casanare, Vaupés, Huila, Risaralda, Córdoba y Sucre. Resalta la diferencia que existe entre Casanare con un 73.1% respecto a Vaupés (66.6%) y Huila (63.9%). Cuando se retorna a la vista por PDT ponderado por TF-IDF, Casanare resalta de nuevo las palabras "saludsector" y "comunitarioprogram" e infiere una conexión de este tópico con salud. 
 
-#### Tópico 2: Educación y Cultura
+#### Tópico 2: Educación y Cultura {#educacion}
 
 ```
 head(depart[order(`2`, decreasing = T)], 6)
@@ -328,18 +354,18 @@ head(depart[order(`2`, decreasing = T)], 6)
 
 Los PDTs que mejor describen el tópico 2 son Cesar, Valle del Cauca, Chocó, Cauca, Amazonas y Magdalena. Al igual que en el tópico 1, hay relativa gran diferencia entre el primero (Cesar con 76.9%) y los demás (Valle del Cauca con 56.9% y Chocó con 56.7%). También se resalta que Valle del Cauca, Chocó y Cauca tengan esa cercanía en este tópico cuando geográficamente son vecinos: es posible que usen los mismos términos en sus documentos. Cesar por su lado resalta las palabras "deeducacionsecretari" y "dedeportesecretari". 
 
-# Apuntes
+# Apuntes {#apuntes}
 
 La hipótesis resultante del análisis LDA es que el tópico 1 tiene mayor énfasis en proyectos relacionados a la salud y el tópico 2 hacia proyectos sociales de índole educacional y cultural. Aún cuando resaltan palabras pegadas, la frecuencia con la que aparecen y su relevancia latente en comparación con los demás documentos hace que el modelo las tenga en cuenta. Esta hipótesis está sujeta a cambios por la calidad en los datos (palabras unidas). 
 
 Los ganadores del premio del DNP: Antioquia, Caquetá y Nariño tuvieron una distribución equitativa entre ambos tópicos (aprox. 50% en cada tópico) lo que infiere un balance entre los contenidos de salud, educación y cultura de sus documentos y potencialmente podría estar asociado al éxito de sus gobiernos.
 
-# Recomendaciones
+# Recomendaciones {#recomendaciones}
 
 1. El hecho que todos los PDT hayan tenido una correlación relativamente alta entre si (superior al 60%), enciende las alarmas de por qué Casanare es el más alejado. Este Departamento rico en petróleo atraviesa [crisis sociales](http://www.colombiainforma.info/la-crisis-que-deja-el-petroleo-en-casanare/) (en especial en salud) y [escándalos de corrupción](https://www.youtube.com/watch?v=UibMVMbO9Jk). Una recomendación sería investigar si este Plan de Desarrollo contiene lineamientos que expliquen los problemas de corrupción o si es necesario rechazar esta hipótesis debido a la calidad de datos disponible.
 2. La significativa diferencia de palabras de César respecto a los demás en su tópico destaca la recomendación de investigar a detalle este PDT. 
 
-# Referencias
+# Referencias {#referencias}
 
 [^1]: [A Brief Survey of Text Mining: Classification, Clustering and Extraction Techniques](https://arxiv.org/pdf/1707.02919.pdf)
 [^2]: [Text Mining with R. TF-IDF](https://www.tidytextmining.com/tfidf.html)
