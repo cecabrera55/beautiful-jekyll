@@ -12,6 +12,7 @@ published: true
 
 Esta página web, sus blogs y add-ins (complementos) fueron desarrollados en [Github](https://github.com/). Esta red social para entusiastas de la programación funciona también como host de páginas web estáticas y proyectos públicos (gratis) y privados (pago). Puedes encontrar códigos, reportes, páginas webs enteras y hasta programas desarrollados y publicados por grandes compañías.
 
+
 Además de su característica de red social, GitHub utiliza una tecnología llamada Git desarrollada para llevar el control de cambios sobre líneas de código, archivos y carpetas. Características adicionales de Git incluyen combinación de códigos, retroceso en versiones y desarrollo local, entre otras.
 
 Conocí Git en Salvador Bahía Brasil mientras trabajaba como Big Data Analyst y honestamente me costó tiempo entender cómo esto podía reemplazar a Dropbox o Google Drive. En la medida en que fui desarrollando [tableros de control](http://ikognitive.co:3838/DemoCRM/) (dashboards) en R-Shiny fui entendiendo lo clave que era hacer seguimiento a cada línea de código. Incluso tener una versión de producción (master) y ramas (branches) para controlar los cambios sin alterar la versión del cliente o usuario. 
