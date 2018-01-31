@@ -54,15 +54,17 @@ d <- data.table(readxl::read_excel(path = "Datos.xlsx", sheet = 1))
 # mostrar las primeras 6 filas de las primeras 7 columnas.
 head(d[, .(fecha, open, high, low, close, volume)])
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen1.png)
 
+![]({{ site.url }}/img/posts/stock_images/imagen1.png)
 
 En la hoja `campos` del archivo de Excel se encuentra la descripción de cada una de las columnas de la variable `d`.
 
 Graficamos el precio de cierre usando la librería `ggplot2`:
+
 ```
 ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
 ```
+
 ![]({{ site.url }}/img/posts/stock_images/imagen2.png)
 
 Antes de proceder a modelar los datos, los vamos a dividir en dos: un bloque de "training" para entrenar el modelo con el 80% de los datos y un bloque de "testing" para calcular el nivel de precisión de nuestro modelo con los datos más recientes. 
