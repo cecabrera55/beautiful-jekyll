@@ -54,15 +54,16 @@ d <- data.table(readxl::read_excel(path = "Datos.xlsx", sheet = 1))
 # mostrar las primeras 6 filas de las primeras 7 columnas.
 head(d[, .(fecha, open, high, low, close, volume)])
 ```
-
 ![]({{ site.url }}/img/posts/stock_images/imagen1.png)
 
 En la hoja `campos` del archivo de Excel se encuentra la descripción de cada una de las columnas de la variable `d`.
 
 Graficamos el precio de cierre usando la librería `ggplot2`:
 
+
 ```
 ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
+
 ```
 
 ![]({{ site.url }}/img/posts/stock_images/imagen2.png)
@@ -119,7 +120,7 @@ fitted.results <- ifelse(fitted.results > 0.5, 1, 0) # Cota de 50%
 misClasificError <- mean(fitted.results != test$close_trend)
 print(paste0('Precisión: ',round(100*(1-misClasificError), 1), "%"))
 ```
-
+![]({{ site.url }}/img/posts/stock_images/imagen6_.png)
 
 Una precisión del `64.9%` es relativamente baja. Hay que tomar en consideración que factores como escoger 80% de los datos y no otra cifra influye en el cálculo de los coeficientes y p.e. en la precisión del modelo. A su vez, es útil en este punto utilizar métodos de cross validación como k-fold u otros disponibles para iterar con las combinaciones de variables y parámetros que resulten en un mejor modelo.
 
