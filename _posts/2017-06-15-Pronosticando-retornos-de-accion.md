@@ -3,7 +3,7 @@ title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2017-06-15'
 published: yes
-share-img: /home/gerardo/Escritorio/stock_images/grafica1.png
+share-img: /img/posts/stock_images/imagen2.png
 tags:
 - Español
 - Trading
@@ -14,7 +14,7 @@ tags:
 - Pronostico
 - Acciones
 - Precios
-permalink: /blog/retorno/
+permalink: /es/blog/pronostico-retorno/
 ---
 
 En el [archivo de Excel](https://cecabrera.github.io/files/Datos.xlsx) hay información de precios desde el 10 de Abril de 2013 al 26 de Mayo de 2017 de la empresa "XYZ".
