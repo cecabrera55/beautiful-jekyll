@@ -55,7 +55,7 @@ sencilla?
 
 Analizar tal cantidad de datos (31 documentos y 59004 palabras) simultáneamente es una labor posible gracias a la [minería de texto](https://es.wikipedia.org/wiki/Miner%C3%ADa_de_textos). El objetivo de este blog es organizar, clasificar y visualizar los datos utilizando el lenguaje de programación [R](https://www.r-project.org/). El código fuente de este documento está alojado en [Github](https://github.com/cecabrera/pdt_dnp).
 
-Los paquetes de R necesarios para este análisis serán:
+Los paquetes de R necesarios son:
 
 ```
 require(shiny)
@@ -69,7 +69,7 @@ require(tidytext)
 require(topicmodels)
 ```
 
-Para comenzar, se almacena las rutas de los archivos de texto en una variable llamada `paths`. Esta lista será la ruta para cargar cada Plan de Desarrollo. Los nombres de cada Departamento se almacenarán en la variable `departaments`. 
+Para comenzar, se almacena las rutas de los archivos de texto en una variable llamada `paths`. Esta lista será la ruta para cargar cada Plan de Desarrollo. Los nombres de cada Departamento se almacenarán en la variable `departments`. 
 
 ```
 paths <- list.files(c("data"), pattern="\\.(TXT|txt)$", recursive = TRUE, full.names = TRUE)
@@ -82,7 +82,7 @@ print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 
 El preprocesamiento es un componente clave en muchos algoritmos de minado de texto y usualmente se resume en tareas como tokenización, filtrado, lematización y _stemming_ (o raíz de las palabras)[^1].
 
-Se cargan los 31 documentos en una sola lista llamada `d`. Cada elemento de la lista representará un Departamento y contendrá las palabras de su respectivo PDT como una _tabla de datos_. Se adiciona a dicha tabla una columna con un `1` para denotar que la palabra aparece una vez. Este procedimiento ayudará a agrupar las frecuencias de palabras.
+Se cargan los 31 documentos en una sola lista llamada `d`. Cada elemento de la lista representará un Departamento y contendrá las palabras de su respectivo PDT como una _tabla de datos_ de una columna. Se incrusta a la tabla una columna con `1` para denotar que la palabra aparece una vez y sirva luego para contar la frecuencia con la que aparece cada palabra. 
 
 ```
 d <- lapply(paths, function(x){
