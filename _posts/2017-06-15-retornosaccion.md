@@ -3,7 +3,8 @@ title: "Pronosticando los retornos de una acción"
 layout: post
 date: '2017-06-15'
 published: no
-share-img: /img/posts/stock_images/imagen2.png
+share-img: /img/blog/retornosaccion/imagen2.png
+permalink: /blog/retornosaccion/
 tags:
 - Español
 - Trading
@@ -14,13 +15,13 @@ tags:
 - Pronostico
 - Acciones
 - Precios
-permalink: /es/blog/pronostico-retorno/
 ---
 
-En el [archivo de Excel](https://cecabrera.github.io/files/Datos.xlsx) hay información de precios desde el 10 de Abril de 2013 al 26 de Mayo de 2017 de la empresa "XYZ".
+En el [archivo de Excel](https://cecabrera.github.io/files/blog/retornosaccion/datos.xlsx) hay información de precios desde el 10 de Abril de 2013 al 26 de Mayo de 2017 de la empresa "XYZ".
 
-Me dí a la tarea de desarrollar un modelo estadístico que pronosticara si el precio de una acción sube o baja en función de su valor histórico y otras variables. 
-Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósitos investigativos. El código fuente pueden hallarlo en mi [reposotorio (carpeta)](https://github.com/cecabrera/stock) en GitHub.
+Me dí a la tarea de desarrollar un modelo estadístico que pronosticara si el precio de una acción sube o baja en función de variables derivadas de su valor histórico.
+
+Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósitos investigativos. El código fuente pueden hallarlo en mi [repositorio (carpeta)](https://github.com/cecabrera/stock) en GitHub.
 
 
 ##  Tabla de contenidos
@@ -36,7 +37,7 @@ Este análisis fue desarrollado en R, Markdown y GitHub y es hecho con propósit
 El plan de trabajo de este informe se resume en:
 1. análisis de Regresión Logística para encontrar asociaciones entre los indicadores y el precio de la acción;
 2. análisis de ARIMAX para modelar el comportamiento de los retornos y calcular la tendencia y magnitud del precio en el corto plazo; 
-3. y finalmente una sucesión de códigos en GitHub para evaluar 25 modelos estadísticos en un bucle y determinar cuál tiene la mejor precisión al momento de pronosticar el precio de la acción. 
+3. códigos en GitHub para evaluar 25 modelos estadísticos en un bucle y determinar cuál tiene la mejor precisión al momento de pronosticar el precio de la acción. 
 
 Comenzamos cargando los paquetes a utilizar y los datos del archivo de Excel:
 ```
@@ -54,7 +55,7 @@ d <- data.table(readxl::read_excel(path = "Datos.xlsx", sheet = 1))
 # mostrar las primeras 6 filas de las primeras 7 columnas.
 head(d[, .(fecha, open, high, low, close, volume)])
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen1.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen1.png)
 
 En la hoja `campos` del archivo de Excel se encuentra la descripción de cada una de las columnas de la variable `d`.
 
@@ -66,7 +67,7 @@ ggplot(data = d, aes(x = fecha, y = close)) + geom_line()
 
 ```
 
-![]({{ site.url }}/img/posts/stock_images/imagen2.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen2.png)
 
 Antes de proceder a modelar los datos, los vamos a dividir en dos: un bloque de "training" para entrenar el modelo con el 80% de los datos y un bloque de "testing" para calcular el nivel de precisión de nuestro modelo con los datos más recientes. 
 
@@ -87,8 +88,8 @@ model <- glm(close_trend ~ ., family = binomial(link = 'logit'), data = train[, 
 ```
 summary(model)
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen3.png)
-![]({{ site.url }}/img/posts/stock_images/imagen4.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen3.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen4.png)
 
 Estadísticamente, las variables que 'explican' el comportamiento de `close_trend` son:
   
@@ -108,7 +109,7 @@ Mientras que no hay un equivalente al `R²` de los modelos de regresión lineal,
 require(pscl)
 pR2(model)["McFadden"]
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen5.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen5.png)
 
 ## Calculando la habilidad predictiva del modelo {#predictiva}
 
@@ -120,7 +121,7 @@ fitted.results <- ifelse(fitted.results > 0.5, 1, 0) # Cota de 50%
 misClasificError <- mean(fitted.results != test$close_trend)
 print(paste0('Precisión: ',round(100*(1-misClasificError), 1), "%"))
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen6_.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen6_.png)
 
 Una precisión del `64.9%` es relativamente baja. Hay que tomar en consideración que factores como escoger 80% de los datos y no otra cifra influye en el cálculo de los coeficientes y p.e. en la precisión del modelo. A su vez, es útil en este punto utilizar métodos de cross validación como k-fold u otros disponibles para iterar con las combinaciones de variables y parámetros que resulten en un mejor modelo.
 
@@ -134,14 +135,14 @@ pr <- prediction(p, test$close_trend)
 prf <- performance(pr, measure = "tpr", x.measure = "fpr")
 plot(prf)
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen6.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen6.png)
 
 ```
 auc <- performance(pr, measure = "auc")
 auc <- auc@y.values[[1]]
 auc
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen7.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen7.png)
 
 ## Análisis con modelos ARIMAX {#arimax}
 
@@ -150,21 +151,21 @@ d$returns <- c(NA, diff(d$open, lag = 1))
 
 print(adf.test(d$close))
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen8.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen8.png)
 ```
 _ # Por resultado del Augmented Dickey-Fuller Test la serie no es estacional. A stationary time series means a time series without trend, one having a constant mean and variance over time, which makes it easy for predicting values. _ 
 
 logical <- !is.na(d$returns)
 print(adf.test(d[logical, returns]))
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen9.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen9.png)
 
 ```
 qplot(y = returns, x = fecha, geom = "line", data = d[logical])
 # Ya es estacional por el p-valor inferior a cero.
 rm(logical)
 ```
-![]({{ site.url }}/img/posts/stock_images/imagen10.png)
+![]({{ site.url }}/img/blog/retornosaccion/imagen10.png)
 
 ```
 # Ya es estacional por el p-valor inferior a cero.
