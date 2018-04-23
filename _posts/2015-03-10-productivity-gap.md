@@ -145,7 +145,7 @@ Overall, the total labor productivity of Colombia related to United States produ
 
 <div style="text-align:center;"><a><img src="http://camicabrera.com/img/blog/productivitygap/mckinsey.png" alt=""></a></div>
 
-Low productivity has implications on the Colombians life quality as well as the state's finances via lost taxes and cost overruns from labor informality and throughout not collected contributions to health and pensions (Pagés, 2010).
+Low productivity has implications on Colombians life quality as well as the state's finances via lost taxes and cost overruns from labor informality and throughout not collected contributions to health and pensions (Pagés, 2010).
 
 Additionally, developed economies report fewer business hours, because this go hand in hand with quality of life of workers and their productivity. Norway works 27 hours a week, France 35 and the Netherlands 36. In Latin America, Chile is working on average 38 hours a week, 40 hours Ecuador and Colombia approximately 53 hours. "The global trend in the hours a person must labor a year demarcates that each time the days are reduced, as is shown that longer hours means lower productivity" (Ruiz Granados, 2014) (Translated by Author).
 
