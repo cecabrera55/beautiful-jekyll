@@ -4,7 +4,7 @@ layout: post
 date: '2017-07-27'
 permalink: /blog/setup-dkan-digitalocean/
 published: true
-share-img: "/img/posts/portaldatos/opendata_graph_PC.png"
+share-img: "/img/blog/portaldatos/opendata_graph_PC.png"
 tags:
 - Español
 - Spanish
@@ -238,7 +238,11 @@ Abre tu dirección `123.123.1.2`. Ya puedes ver que DKAN está listo para ser in
 
 # Paso 10: Prepara la instalación del DKAN {#prepara-dkan}
 
-![]({{ site.url }}/img/posts/portaldatos/error-instalacion.png "¡Aún falta modificar los permisos!")
+<div style="text-align:center;">
+  <a>
+    <img src="http://camicabrera.com/img/blog/portaldatos/error-instalacion.png" alt="¡Aún falta modificar los permisos!">
+  </a>
+</div>
 
 Si te apresuraste a instalar el DKAN, te habrás dado cuenta que aún faltan pasos por hacer: 
 
@@ -263,19 +267,31 @@ Un vez carga la página y la instalación inicia, ingresamos los parámetros de 
 - Usuario: `dkan`
 - Contraseña: `password123`
 
-![]({{ site.url }}/img/posts/portaldatos/setup-instalacion.png "Configuración de la base de datos")
+<div style="text-align:center;">
+  <a>
+    <img src="http://camicabrera.com/img/blog/portaldatos/setup-instalacion.png" alt="Configuración de la base de datos">
+  </a>
+</div>
 
 Click en "Guardar y Continuar".
 
 Digita la información de tu sitio web. El _Nombre del sitio_ va a ser el que aparece en la pestaña de tu navegador cuando cargue la página. Asegúrate de pasar también un correo electrónico válido. 
 
-![]({{ site.url }}/img/posts/portaldatos/setup.png "Configuración de la página por primera vez")
+<div style="text-align:center;">
+  <a>
+    <img src="http://camicabrera.com/img/blog/portaldatos/setup.png" alt="Configuración de la página por primera vez">
+  </a>
+</div>
 
 Continúa con la creación del usuario y contraseña del administrador de la plataforma y finaliza la instalacion. 
 
 # Paso 12: Actualiza los módulos de DKAN {#actualiza-dkan}
 
-![]({{ site.url }}/img/posts/portaldatos/actualizaciones.png "Actualizaciones disponibles")
+<div style="text-align:center;">
+  <a>
+    <img src="http://camicabrera.com/img/blog/portaldatos/actualizaciones.png" alt="Actualizaciones disponibles">
+  </a>
+</div>
 
 Revisa si hay módulos por actualizar. Estos aparecen en `http://123.123.1.2/admin/reports/updates/update`. Para realizar actualizaciones de módulos existen varias altenartivas, encontré tres: 
 
