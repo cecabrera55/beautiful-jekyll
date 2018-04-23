@@ -3,7 +3,7 @@ title: "Clasificación de Planes de Desarrollo"
 layout: post
 date: '2018-01-02'
 published: yes
-share-img: /img/posts/planes_desarrollo/imagen7.png
+share-img: /img/blog/planesdnp/imagen7.png
 tags:
 - Español
 - DNP
@@ -15,7 +15,7 @@ tags:
 - LDA
 - Data Cleaning
 - Machine Learning
-permalink: /blog/planes-desarrollo/
+permalink: /blog/planesdnp/
 ---
 
 Los Planes de Desarrollo Territorial (PDT) son los documentos que dan la hoja de ruta de cada Departamento de Colombia durante los 4 años de gobierno electo. Los documentos con sus contenidos textuales están disponibles [aquí](/files/blog/pdt_dnp/data.zip). Putumayo es el único [plan de desarrollo](https://www.putumayo.gov.co/images/documentos/planes_y_programas/ordeN_726_16.pdf) faltante en esta base de datos.
@@ -76,7 +76,12 @@ paths <- list.files(c("data"), pattern="\\.(TXT|txt)$", recursive = TRUE, full.n
 departments <- sub(pattern = ".txt.*", "" , sub(pattern = ".*/", "", paths))
 print(head(paths)) # Visualizar los primeros 6 elementos de la variable `paths`
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos1.png)
+
+<div style="text-align:center;">
+  <a href="http://camicabrera.com/img/blog/planesdnp/datos1.png">
+    <img src="http://camicabrera.com/img/blog/planesdnp/datos1.png" alt="">
+  </a>
+</div>
 
 ## Preprocesamiento {#preprocesamiento}
 
@@ -110,7 +115,11 @@ A continuación las primeras 50.
 stop_es <- c(stopwords(kind = "es"), "ee", "nn", "oo", "aa", "aaa", "dd", "rr", "cc", "pp", "tt", "yy", "zz", "xx", "aafront", "aai", "aati", "aatis", "ddee", "aaí")
 print(matrix(stop_es[1:50], nrow = 10, byrow = TRUE))
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos2.png)
+<div style="text-align:center;">
+  <a href="http://camicabrera.com/img/blog/planesdnp/datos2.png">
+    <img src="http://camicabrera.com/img/blog/planesdnp/datos2.png" alt="">
+  </a>
+</div>
 
 Las suprimimos de todos los documentos:
 
@@ -134,7 +143,11 @@ Utilizando el algoritmo de _stemming_ de Porter y tomando como ejemplo las 30 pa
 ```
 print(d$HUILA[, .N, keyby = HUILA][order(N, decreasing = T)][1:30,.(HUILA, stemDocument(x = HUILA,  language = "es"), N)])
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos3.png)
+<div style="text-align:center;">
+  <a href="http://camicabrera.com/img/blog/planesdnp/datos3.png">
+    <img src="http://camicabrera.com/img/blog/planesdnp/datos3.png" alt="">
+  </a>
+</div>
 
 La búsqueda del origen de las palabras _(stemming)_ es un procedimiento delicado. En el español, remover las tildes en las palabras cambia el acento y puede entregar una connotación distinta a la palabra de origen: no es lo mismo "hábito" que "habito" que "habitó". 
 
@@ -169,11 +182,21 @@ d <- lapply(d, function(x){
 d <- rbindlist(d, use.names = T)[, sum(f), keyby = .(depart, word)]
 print(d[order(V1, decreasing = T)])
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos4.png)
+<div style="text-align:center;">
+  <a href="http://camicabrera.com/img/blog/planesdnp/datos4.png">
+    <img src="http://camicabrera.com/img/blog/planesdnp/datos4.png" alt="">
+  </a>
+</div>
 
 Filtra por los departamentos. Cada departamento resalta las 15 palabras (raíces) más mencionadas en cada Plan de Desarrollo. 
 
-![]({{ site.url }}/img/posts/pdt_dnp/imagen1.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen2.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen3.png)
+<div style="text-align:center;">
+  <a>
+    <img src="http://camicabrera.com/img/blog/planesdnp/imagen1.png" alt="">
+    <img src="http://camicabrera.com/img/blog/planesdnp/imagen2.png" alt="">
+    <img src="http://camicabrera.com/img/blog/planesdnp/imagen3.png" alt="">
+  </a>
+</div>
 
 En VSM cada palabra es representada por un valor numérico que indica el peso (importancia) de la palabra en el documento. Se utilizará el modelo de _Term frequency-inverse document frequency_ (TF-IDF) para ponderar. Se moldea la tabla en una matriz de frecuencia:
 
@@ -181,7 +204,7 @@ En VSM cada palabra es representada por un valor numérico que indica el peso (i
 f <- dcast.data.table(d, formula = "word ~ depart", value.var = "V1", fill = 0)
 str(f)
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos5.png)
+![]({{ site.url }}/img/blog/planesdnp/datos5.png)
 
 La variable `f` contiene la frecuencia con la que aparece cada palabra para cada departamento. Se calcula el término de frecuencia `TF-IDF`:
 
@@ -195,7 +218,7 @@ q_melted <- melt.data.table(cbind(word = f$word, q), id.vars = "word", variable.
 
 La variable `q` contiene la frecuencia ponderada por el TF-IDF de cada palabra. La variable `q_melted` es la misma variable `q` reducida a 3 columnas. A continuación las palabras más relevantes de cada departamento luego de ponderar por TF-IDF.
 
-![]({{ site.url }}/img/posts/pdt_dnp/imagen4.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen5.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen6.png)
+![]({{ site.url }}/img/blog/planesdnp/imagen4.png) ![]({{ site.url }}/img/blog/planesdnp/imagen5.png) ![]({{ site.url }}/img/blog/planesdnp/imagen6.png)
 
 En los documentos está el reto de lidiar con las palabras pegadas. Por ejemplo, en Casanare hay palabras como "culturaprogram", "comunitarioprogram", "deportivosector" y "firmesector". En Arauca sucede algo similar: "propiosotr" haciendo alución a "propios otros" y "físicasecret" haciendo alución a "física secreto". Estas inconsistencias podrían comprometer la calidad de análisis entre documentos. 
 
@@ -222,7 +245,7 @@ Cada Plan de Desarrollo se puede representar como un __vector__ de palabras. El 
 corrplot(corr = cor(q, method = "pearson"), type = "lower", method = "pie", diag = TRUE, order = "FPC")
 ```
 
-![]({{ site.url }}/img/posts/pdt_dnp/imagen7.png)
+![]({{ site.url }}/img/blog/planesdnp/imagen7.png)
 
 La matriz de correlación se ordenó por compomentes principales y por eso aparecen primero los departamentos con mayor correlación y de último los de menos. Se resalta los siguientes hallazgos:
 
@@ -262,13 +285,13 @@ doc <- cast_dtm(data = d, document = depart, term = word, value = V1, weighting 
 print(doc)
 ```
 
-![]({{ site.url }}/img/posts/pdt_dnp/datos6.png)
+![]({{ site.url }}/img/blog/planesdnp/datos6.png)
 
 ```
 ap_lda <- LDA(doc, k = 2, control = list(seed = 1234))
 print(ap_lda)
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos7.png)
+![]({{ site.url }}/img/blog/planesdnp/datos7.png)
 # Probabilidades tópico-palabra
 
 Se comenzará con el análisis por-tópico-por-palabra extrayendo las probabilidades o β (“betas”) del modelo. 
@@ -277,7 +300,7 @@ Se comenzará con el análisis por-tópico-por-palabra extrayendo las probabilid
 ap_topics <- tidy(ap_lda, matrix = "beta")
 print(ap_topics)
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos8.png)
+![]({{ site.url }}/img/blog/planesdnp/datos8.png)
 
 Este procedimiento convirtió el modelo a un formato de una fila por tópico por palabra. Para cada combinación, el modelo computa la probabilidad que ese término haya sido generado por ese tópico. Por ejemplo, el término "abandon" tiene una probabilidad de 1.71e-04 de haber sido generado del tópico 1 y una del 3.28x-05 de haber sido generado del tópico 2. 
 
@@ -298,7 +321,7 @@ ap_top_terms %>%
   coord_flip()
 ```
 
-![]({{ site.url }}/img/posts/pdt_dnp/imagen8.png) ![]({{ site.url }}/img/posts/pdt_dnp/imagen9.png)
+![]({{ site.url }}/img/blog/planesdnp/imagen8.png) ![]({{ site.url }}/img/blog/planesdnp/imagen9.png)
 
 Esta gráfica permite entender los dos tópicos que fueron extraidos de los PDTs. Las palabras más comunes en el tópico 1 incluyen "población", "salud", "implementar", "proces", "indic" lo que puede sugerir que están más enfocados a la implementación de proyectos de salud. Aquellas palabras más comunes en el tópico 2 incluyen "social", "econom", "derech", "genero" y "niñ" infiriendo una inclinación hacia estrategias de interacción social (niñez, género, derecho) ajenas a la salud. Aquí se resalta una ventaja del modelaje de tópicos opuesta a los métodos de "conglomerados duros": lo tópicos en lenguaje natural se pueden superponer en términos de palabras. 
 
@@ -320,7 +343,7 @@ beta_spread <- ap_topics %>%
   coord_flip()
 ```
 
-![]({{ site.url }}/img/posts/pdt_dnp/imagen10.png)
+![]({{ site.url }}/img/blog/planesdnp/imagen10.png)
 
 Las palabras más comunes en el tópico 2 son: "formacion", "fisic", "conserv", "natural", "direccion", "comunitari", "desplaz", "orden", "potencial", "coordin", "asistent" quizás infiendo soluciones a problemáticas sociales (comunitari, coordin, formacion) y de desplazamiento (fisic, orden, direccion). En el tópico 1 están las palabras "violenci", "viviend", "trabaj", "cultur", "climat", "urban", "saneamient", "tecnolog", "promocion", "interes", "document" posiblemente abordando más temáticas de salud (urban, violenc, climat, saneamient) y convivencia (cultur, trabaj, viviend, tecnolog). 
 
@@ -334,7 +357,7 @@ ap_documents$gamma <- round(ap_documents$gamma*100, 1)
 depart <- dcast.data.table(data = as.data.table(ap_documents), formula = "document ~ topic", value.var = "gamma")
 print(depart)
 ```
-![]({{ site.url }}/img/posts/pdt_dnp/datos9.png)
+![]({{ site.url }}/img/blog/planesdnp/datos9.png)
 
 Cada uno de estos valores es una proporción estimada de palabras que vienen de ese documento que son generadas por ese tópico. Por ejemplo, el modelo estima que el 76.9% de las palabras del PDT de Cesar construyen el tópico 2 mientras que el 73.1% del PDT de Casanare conforman el tópico 1.
 
