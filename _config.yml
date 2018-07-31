@@ -43,11 +43,11 @@ author:
   linkedin: camilo-cabrera-21663b17
   github: cecabrera   
   twitter: CamiloECabrera
-  facebook: cecabrera55
-  xing: yourname
-  stackoverflow: yourlink
-  instagram: yourname 
-  youtube: yourlink # eg. user/cecabrera or channel/cecabrera
+#  facebook: cecabrera55
+#  xing: yourname
+#  stackoverflow: yourlink
+#  instagram: yourname 
+#  youtube: yourlink # eg. user/cecabrera or channel/cecabrera
   calendly: "cecabrera55/meeting"
   telephone: +57 316 4711686
 
@@ -57,8 +57,8 @@ footer-links-active:
   telephone: true
   rss: false
   linkedin: true
-  github: false
-  facebook: true
+  github: true
+  facebook: false
   twitter: false
   email: true
   xing: false
