@@ -24,9 +24,9 @@ description: Web page for people who is looking for someone to execute data scie
 # List of links in the navigation bar
 navbar-links:
   Blog: ""
-  About Me / Contact: "pages/aboutme"
-  Services: "pages/services"
-  Credits: "pages/credits"
+  About Me / Contact: "aboutme"
+  Services: "services"
+  Credits: "credits"
 # nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
