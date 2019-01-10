@@ -25,7 +25,7 @@ description: Web page for data science, business intelligence, analytics, dashbo
 navbar-links:
   Blog: ""
   About Me / Contact: "aboutme"
-  # Services: "services"
+  Services: "pages/services"
   Credits: "credits"
 # nav-search: "search"
 
