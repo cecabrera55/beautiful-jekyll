@@ -17,21 +17,21 @@ baseurl: ""
 title: Camilo Cabrera
 
 # Short description of your site
-description: Web page for data science, business intelligence, analytics, dashboards, visualizations, R, Python, Shiny, Pandas and D3
+description: Web page for people who is looking for someone to execute data science, business intelligence, analytics, dashboards, visualizations projects using R, Python, Shiny, Pandas and D3
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
   Blog: ""
-  About Me / Contact: "aboutme"
+  About Me / Contact: "pages/aboutme"
   Services: "pages/services"
-  Credits: "credits"
+  Credits: "pages/credits"
 # nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/Firma-Digital-Camilo-Cabrera.jpg"
+avatar: "avatar.jpg"
 
 # --- Footer options --- #
 
@@ -75,7 +75,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "cecabrera55@gmail.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "camicabrera.com"
 
 # --- Misc --- #
 
@@ -122,7 +122,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - README.md
   - CNAME
   - Vagrantfile
 
